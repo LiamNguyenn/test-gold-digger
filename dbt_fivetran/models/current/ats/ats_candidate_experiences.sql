@@ -58,3 +58,4 @@ select e.id
 from 
   swag_job_profiles p 
   join candidate_experience e on p.id = e.user_id
+
