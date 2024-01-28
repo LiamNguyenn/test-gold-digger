@@ -30,8 +30,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models: 
-  +post-hook: 
-    - "{{ mask_model() }}"
+#  +post-hook:
+#    - "{{ mask_model() }}"
   +bind: false # Materialize all views as late-binding
   dbt_project: 
     current:
@@ -245,17 +245,17 @@ vars:
       event_properties:
         - name: date_created 
 
-on-run-start:
-  - "{{ format_phone_number_e164_udf() }}"
-
-on-run-end:
-  - '{{ grant_select(schema="tableau", user="tableau") }}'
-  - '{{ grant_select(schema="outreach", user="tableau") }}'
-  - '{{ grant_select(schema="employment_index", user="tableau") }}'
-  - '{{ grant_select(schema="ces", user="tableau") }}'
-  - '{{ grant_select(schema="sales", user="tableau") }}'
-  - '{{ grant_select(schema="salary_guide", user="salary_guide") }}'
-  - '{{ grant_select(schema="postgres_public", user="eng_microservice_readonly") }}'
-  - '{{ grant_select(schema="exports", user="hightouch_dev") }}'
-  - '{{ grant_select(schema="exports", user="census_dev") }}'
-  - "{{ mask_all_sources() if target.name == 'prod' }}"
+#on-run-start:
+#  - "{{ format_phone_number_e164_udf() }}"
+#
+#on-run-end:
+#  - '{{ grant_select(schema="tableau", user="tableau") }}'
+#  - '{{ grant_select(schema="outreach", user="tableau") }}'
+#  - '{{ grant_select(schema="employment_index", user="tableau") }}'
+#  - '{{ grant_select(schema="ces", user="tableau") }}'
+#  - '{{ grant_select(schema="sales", user="tableau") }}'
+#  - '{{ grant_select(schema="salary_guide", user="salary_guide") }}'
+#  - '{{ grant_select(schema="postgres_public", user="eng_microservice_readonly") }}'
+#  - '{{ grant_select(schema="exports", user="hightouch_dev") }}'
+#  - '{{ grant_select(schema="exports", user="census_dev") }}'
+#  - "{{ mask_all_sources() if target.name == 'prod' }}"
