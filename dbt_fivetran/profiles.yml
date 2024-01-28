@@ -19,5 +19,5 @@ default:
       port: 5439
       dbname: dev
       schema: "{{ env_var('DBT_DEV_SCHEMA') }}"
-      threads: 4
+      threads: 1
       ra3_node: true
