@@ -40,15 +40,13 @@ jobs:
 
     # run dbt docs command
     - name: 'Run dbt docs'
+      shell: bash -l {0}
+      env:
+        DBT_PROFILES_DIR: ${{ github.workspace }}/dbt_fivetran
+        DBT_PROJECT_DIR: ${{ github.workspace }}/dbt_fivetran
       run: |
         poetry run dbt deps
         poetry run dbt docs generate --target prod
-      env:
-        DBT_REDSHIFT_HOST: ${{ secrets.REDSHIFT_HOST }}
-        DBT_USER: ${{ secrets.REDSHIFT_USERNAME }}
-        DBT_PASSWORD: ${{ secrets.REDSHIFT_PASSWORD }}
-        DBT_DATABASE: dev
-        DBT_DEV_SCHEMA: ci
 
     # push publish dir to gh-pages branch
     - name: 'Push to gh-pages'
