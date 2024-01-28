@@ -1,0 +1,172 @@
+version: 2
+
+models:
+    - name: employment_index_median_hours_worked_age_group
+      schema: employment_index
+      alias: median_hours_worked_age_group
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (month || age_group)
+          tests:            
+            - not_null
+            - unique
+
+    - name: employment_index_median_hours_worked_aus
+      schema: employment_index
+      alias: median_hours_worked_aus
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: month
+          tests:
+            - not_null
+            - unique
+
+    - name: employment_index_median_hours_worked_company_size
+      schema: employment_index
+      alias: median_hours_worked_company_size
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (month || company_size)
+          tests:
+            - not_null
+            - unique
+
+    - name: employment_index_median_hours_worked_employment_type
+      schema: employment_index
+      alias: median_hours_worked_employment_type
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (month || employment_type)
+          tests:
+            - not_null
+            - unique
+
+    - name: employment_index_median_hours_worked_industry
+      schema: employment_index
+      alias: median_hours_worked_industry
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (month || industry)
+          tests:
+            - not_null
+            - unique
+
+    - name: employment_index_median_hours_worked_state
+      schema: employment_index
+      alias: median_hours_worked_state
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (month || residential_state)
+          tests:
+            - not_null
+            - unique
+
+    - name: employment_index_median_hours_worked_monthly_change
+      schema: employment_index
+      alias: median_hours_worked_monthly_change
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: month
+          tests:
+            - not_null
+            - unique
+
+    - name: employment_index_eh_pay_category
+      schema: employment_index
+      alias: eh_pay_category
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: month
+          tests:
+            - not_null
+        - name: member_id
+          tests:
+            - not_null
+            
+    - name: employment_index_pca_industry
+      schema: employment_index
+      alias: pca_industry
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (industry || category || month)
+          tests:
+            - unique
+            - not_null
+
+    - name: employment_index_pca_state
+      schema: employment_index
+      alias: pca_state
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (residential_state || category || month)
+          tests:
+            - unique
+            - not_null
+
+    - name: employment_index_pca_aus
+      schema: employment_index
+      alias: pca_aus
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (month || category)
+          tests:
+            - not_null
+            - unique
+    
+    - name: employment_index_pca_monthly_change
+      schema: employment_index
+      alias: pca_monthly_change
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (category || month)
+          tests:
+            - not_null
+            - unique
+                
+    - name: employment_index_pca_age_group
+      schema: employment_index
+      alias: pca_age_group
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (category || month || age_group)
+          tests:            
+            - not_null
+            - unique
+
+    - name: employment_index_pca_company_size
+      schema: employment_index
+      alias: pca_company_size
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (category || month || company_size)
+          tests:            
+            - not_null
+            - unique

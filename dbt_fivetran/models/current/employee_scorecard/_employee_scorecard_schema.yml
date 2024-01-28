@@ -1,0 +1,37 @@
+version: 2
+
+models:
+    - name: employee_scorecard_cohort
+      schema: employee_scorecard
+      columns:
+        - name: member_id
+          tests:
+            - not_null
+            - unique
+
+    - name: employee_scorecard_bradford_factor
+      schema: employee_scorecard
+      alias: bradford_factor
+      columns:
+        - name: member_id
+          tests:
+            - not_null
+            - unique
+
+    - name: employee_scorecard_absenteeism
+      schema: employee_scorecard
+      alias: absenteeism
+      columns:
+        - name: member_id
+          tests:
+            - not_null
+            - unique
+
+    - name: employee_scorecard_sickness
+      schema: employee_scorecard
+      alias: sickness_scorecard
+      columns:
+        - name: member_id
+          tests:
+            - not_null
+            - unique

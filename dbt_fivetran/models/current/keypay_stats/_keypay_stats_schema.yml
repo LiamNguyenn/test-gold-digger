@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: keypay_stats_analysis_file
+    schema: keypay_stats
+    alias: analysis_file
+    columns:
+      - name: id
+        tests:          
+        - not_null
+        - unique
+
+  - name: keypay_stats_analysis_folder_summary
+    schema: keypay_stats
+    alias: analysis_folder_summary
+    columns:
+      - name: id
+        tests:          
+        - not_null
+        - unique
+
+  - name: keypay_stats_analysis_project_summary
+    schema: keypay_stats
+    alias: analysis_project_summary
+    columns:
+      - name: id
+        tests:          
+        - not_null
+        - unique

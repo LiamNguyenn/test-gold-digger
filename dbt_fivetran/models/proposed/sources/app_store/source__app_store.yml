@@ -1,0 +1,136 @@
+version: 2
+sources:
+- name: app_store
+  tables:
+  - name: stg_app_store__review
+    columns:
+    - name: app_id
+      data_type: bigint
+    - name: id
+      data_type: bigint
+    - name: date_day
+      data_type: date
+    - name: rating
+      data_type: integer
+    - name: edited
+      data_type: boolean
+    - name: review_title
+      data_type: character varying
+    - name: review_content
+      data_type: character varying
+    - name: total_views
+      data_type: integer
+    - name: helpful_views
+      data_type: integer
+    - name: nickname
+      data_type: character varying
+    - name: app_version
+      data_type: character varying
+    - name: last_modified
+      data_type: timestamp with time zone
+  - name: stg_app_store__app
+    columns:
+    - name: app_id
+      data_type: bigint
+    - name: is_enabled
+      data_type: boolean
+    - name: app_name
+      data_type: character varying
+  - name: review
+    columns:
+    - name: app_id
+      data_type: bigint
+    - name: id
+      data_type: bigint
+    - name: rating
+      data_type: integer
+    - name: edited
+      data_type: boolean
+    - name: title
+      data_type: character varying
+    - name: total_views
+      data_type: integer
+    - name: nickname
+      data_type: character varying
+    - name: app_version_string
+      data_type: character varying
+    - name: helpful_views
+      data_type: integer
+    - name: last_modified
+      data_type: timestamp with time zone
+    - name: country_code
+      data_type: character varying
+    - name: content
+      data_type: character varying
+    - name: is_editable
+      data_type: boolean
+    - name: is_required
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: app
+    columns:
+    - name: id
+      data_type: bigint
+    - name: is_enabled
+      data_type: boolean
+    - name: name
+      data_type: character varying
+    - name: asset_token
+      data_type: character varying
+    - name: pre_order_info
+      data_type: character varying
+    - name: icon_url
+      data_type: character varying
+    - name: app_opt_in_rate
+      data_type: bigint
+    - name: ios
+      data_type: boolean
+    - name: tvos
+      data_type: boolean
+    - name: is_bundle
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: sales_account
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: finance_account
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone

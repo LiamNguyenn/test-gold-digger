@@ -1,0 +1,2220 @@
+version: 2
+sources:
+- name: keypay_s3
+  tables:
+  - name: employee_monthly
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: firstname
+      data_type: character varying
+    - name: surname
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: date_of_birth
+      data_type: character varying
+    - name: residential_street_address
+      data_type: character varying
+    - name: residential_suburb_id
+      data_type: character varying
+    - name: start_date
+      data_type: character varying
+    - name: end_date
+      data_type: character varying
+    - name: gender
+      data_type: character varying
+    - name: payrollid
+      data_type: character varying
+    - name: pay_run_default_id
+      data_type: character varying
+    - name: tax_file_declaration_id
+      data_type: character varying
+    - name: email
+      data_type: character varying
+    - name: home_phone
+      data_type: character varying
+    - name: work_phone
+      data_type: character varying
+    - name: mobile_phone
+      data_type: character varying
+    - name: employee_onboarding_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: payrun_monthly
+    columns:
+    - name: id
+      data_type: character varying
+    - name: date_finalised
+      data_type: character varying
+    - name: pay_period_starting
+      data_type: character varying
+    - name: pay_period_ending
+      data_type: character varying
+    - name: date_paid
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: invoice_id
+      data_type: character varying
+    - name: date_first_finalised
+      data_type: character varying
+    - name: pay_run_lodgement_data_id
+      data_type: character varying
+    - name: notification_date
+      data_type: character varying
+    - name: finalised_by_id
+      data_type: character varying
+    - name: pay_cycle_id
+      data_type: character varying
+    - name: pay_cycle_frequency_id
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: employee
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: firstname
+      data_type: character varying
+    - name: surname
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: date_of_birth
+      data_type: character varying
+    - name: residential_street_address
+      data_type: character varying
+    - name: residential_suburb_id
+      data_type: character varying
+    - name: start_date
+      data_type: character varying
+    - name: end_date
+      data_type: character varying
+    - name: gender
+      data_type: character varying
+    - name: payrollid
+      data_type: character varying
+    - name: pay_run_default_id
+      data_type: character varying
+    - name: tax_file_declaration_id
+      data_type: character varying
+    - name: email
+      data_type: character varying
+    - name: home_phone
+      data_type: character varying
+    - name: work_phone
+      data_type: character varying
+    - name: mobile_phone
+      data_type: character varying
+    - name: employee_onboarding_id
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: pension_scheme_contribution_plan
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_contribution_percentage
+      data_type: double precision
+    - name: employer_contribution_percentage
+      data_type: double precision
+    - name: pension_type
+      data_type: character varying
+    - name: max_earnings_threshold
+      data_type: double precision
+    - name: min_earnings_threshold
+      data_type: double precision
+    - name: contribution_group_name
+      data_type: character varying
+    - name: contribution_group_id
+      data_type: character varying
+    - name: contribution_plan_name
+      data_type: character varying
+    - name: reporting_frequency
+      data_type: character varying
+    - name: calculate_on_qualifying_earnings
+      data_type: boolean
+    - name: pension_scheme_id
+      data_type: character varying
+    - name: contribution_plan_id
+      data_type: character varying
+    - name: collection_source_id
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: salary_sacrifice_deduction_category_id
+      data_type: character varying
+    - name: salary_sacrifice_pay_category_ids
+      data_type: character varying
+    - name: employee_contribution_pay_category_ids
+      data_type: character varying
+    - name: employer_contribution_pay_category_ids
+      data_type: character varying
+    - name: is_auto_enrolment_scheme
+      data_type: character varying
+    - name: lower_earnings_disregard
+      data_type: character varying
+    - name: lower_default_earnings_disregard_type
+      data_type: character varying
+    - name: upper_earnings_cap
+      data_type: character varying
+    - name: upper_default_earnings_cap_type
+      data_type: character varying
+    - name: use_tax_month_pay_period
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: salary_sacrifice_percentage
+      data_type: character varying
+    - name: nic_saving_rebate_percentage
+      data_type: character varying
+  - name: statutory_settings
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: income_tax_number__encrypted
+      data_type: character varying
+    - name: e_number
+      data_type: character varying
+    - name: epf_number
+      data_type: character varying
+    - name: socso_number
+      data_type: character varying
+    - name: hrdf_status
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user_employee
+    columns:
+    - name: user_id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: deduction_category
+    columns:
+    - name: id
+      data_type: character varying
+    - name: deduction_category_name
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: tax_exempt
+      data_type: boolean
+    - name: is_deleted
+      data_type: boolean
+    - name: source
+      data_type: character varying
+    - name: external_reference_id
+      data_type: character varying
+    - name: payment_summary_classification_id
+      data_type: character varying
+    - name: expense_general_ledger_mapping_code
+      data_type: character varying
+    - name: liability_general_ledger_mapping_code
+      data_type: character varying
+    - name: sgc_calculation_impact
+      data_type: character varying
+    - name: minimum_wage_deduction_impact
+      data_type: character varying
+    - name: is_system
+      data_type: boolean
+    - name: deduction_category_ext_sg_id
+      data_type: character varying
+    - name: deduction_category_ext_uk_id
+      data_type: character varying
+    - name: is_resc
+      data_type: boolean
+    - name: is_name_read_only
+      data_type: boolean
+    - name: is_allow_pre_tax_super
+      data_type: boolean
+    - name: is_allow_member_voluntary
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: leave_accrual
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: accrued_amount
+      data_type: double precision
+    - name: accrual_status_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: csn_details
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: cpf_submission_number
+      data_type: character varying
+    - name: csn_type
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: contribution_info_deduction
+    columns:
+    - name: contribution_info_id
+      data_type: character varying
+    - name: deduction_id
+      data_type: character varying
+    - name: failed
+      data_type: boolean
+    - name: id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: s3_run_logs
+    columns:
+    - name: job_id
+      data_type: character varying
+    - name: org_job_id
+      data_type: character varying
+    - name: job_name
+      data_type: character varying
+    - name: s3_file_name
+      data_type: character varying
+    - name: s3_bucket_name
+      data_type: character varying
+    - name: s3_modified_time
+      data_type: timestamp without time zone
+    - name: schema_name
+      data_type: character varying
+    - name: table_name
+      data_type: character varying
+    - name: start_time
+      data_type: timestamp without time zone
+    - name: end_time
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: message
+      data_type: character varying
+  - name: employee_expense
+    columns:
+    - name: id
+      data_type: character varying
+    - name: pay_run_id
+      data_type: character varying
+    - name: pay_run_total_id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: employee_expense_category_id
+      data_type: character varying
+    - name: location_id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: amount
+      data_type: double precision
+    - name: notes
+      data_type: character varying
+    - name: external_id
+      data_type: character varying
+    - name: employee_recurring_expense_id
+      data_type: character varying
+    - name: employee_expense_request_id
+      data_type: character varying
+    - name: tax_code
+      data_type: character varying
+    - name: tax_rate
+      data_type: character varying
+    - name: tax_code_display_name
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: payrun
+    columns:
+    - name: id
+      data_type: character varying
+    - name: date_finalised
+      data_type: character varying
+    - name: pay_period_starting
+      data_type: character varying
+    - name: pay_period_ending
+      data_type: character varying
+    - name: date_paid
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: invoice_id
+      data_type: character varying
+    - name: date_first_finalised
+      data_type: character varying
+    - name: pay_run_lodgement_data_id
+      data_type: character varying
+    - name: notification_date
+      data_type: character varying
+    - name: finalised_by_id
+      data_type: character varying
+    - name: pay_cycle_id
+      data_type: character varying
+    - name: pay_cycle_frequency_id
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: journal_default_account
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: account_type
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: accrual_status
+    columns:
+    - name: id
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: location
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: businessid
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: parentid
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: employee_expense_request
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: created_by_user_id
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: status_updated_by_user_id
+      data_type: character varying
+    - name: date_status_updated_utc
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: status_update_notes
+      data_type: character varying
+    - name: pay_run_total_id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: date_first_approved_utc
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: bacs_details
+    columns:
+    - name: id
+      data_type: character varying
+    - name: businessid
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: business
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: abn
+      data_type: character varying
+    - name: legal_name
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: industry_id
+      data_type: character varying
+    - name: industry_name
+      data_type: character varying
+    - name: address_line1
+      data_type: character varying
+    - name: address_line2
+      data_type: character varying
+    - name: suburb_id
+      data_type: character varying
+    - name: billing_plan_id
+      data_type: character varying
+    - name: commence_billing_from
+      data_type: character varying
+    - name: to_be_deleted
+      data_type: character varying
+    - name: white_label_id
+      data_type: character varying
+    - name: electronic_payroll_lodgement_enabled
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: pay_cycle
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: pay_cycle_frequencyid
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: last_pay_run
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: aba_detailsid
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: employee_deduction_category
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: deduction_category_id
+      data_type: character varying
+    - name: from_date
+      data_type: character varying
+    - name: to_date
+      data_type: character varying
+    - name: amount
+      data_type: double precision
+    - name: employee_super_fund_id
+      data_type: character varying
+    - name: expiry_date
+      data_type: character varying
+    - name: maximum_amount_paid
+      data_type: character varying
+    - name: is_active
+      data_type: boolean
+    - name: bank_account_id
+      data_type: character varying
+    - name: deleted
+      data_type: boolean
+    - name: notes
+      data_type: character varying
+    - name: external_reference_id
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: deduction_type
+      data_type: character varying
+    - name: preserved_earnings
+      data_type: character varying
+    - name: preserved_earnings_amount
+      data_type: double precision
+    - name: preserved_earnings_amount_not_reached_action
+      data_type: character varying
+    - name: carry_forward_unpaid_deductions
+      data_type: boolean
+    - name: payment_reference
+      data_type: character varying
+    - name: employee_pension_contribution_plan_id
+      data_type: character varying
+    - name: additional_data
+      data_type: character varying
+    - name: priority
+      data_type: character varying
+    - name: student_loan_deduction_option
+      data_type: character varying
+    - name: tiered_deduction_settings_id
+      data_type: character varying
+    - name: paid_to_external_service
+      data_type: character varying
+    - name: employee_deduction_category_ext_sg_id
+      data_type: character varying
+    - name: employee_deduction_category_ext_my_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: paid_to_tax_office
+      data_type: character varying
+    - name: carry_forward_unused_preserved_earnings
+      data_type: character varying
+  - name: aba_details
+    columns:
+    - name: id
+      data_type: character varying
+    - name: businessid
+      data_type: character varying
+    - name: extracted_at
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: sync_logs
+    columns:
+    - name: job_id
+      data_type: character varying
+    - name: org_job_id
+      data_type: character varying
+    - name: job_name
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: schema_name
+      data_type: character varying
+    - name: table_name
+      data_type: character varying
+    - name: start_time
+      data_type: timestamp without time zone
+    - name: end_time
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: message
+      data_type: character varying
+  - name: white_label
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: region_id
+      data_type: character varying
+    - name: support_email
+      data_type: character varying
+    - name: primary_champion_id
+      data_type: character varying
+    - name: function_enable_super_choice_marketplace
+      data_type: boolean
+    - name: default_billing_plan_id
+      data_type: character varying
+    - name: reseller_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: payrun_default
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: from_date
+      data_type: character varying
+    - name: to_date
+      data_type: character varying
+    - name: job_title
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: default_pay_category_id
+      data_type: character varying
+    - name: is_payroll_tax_exempt
+      data_type: boolean
+    - name: employment_agreement_id
+      data_type: character varying
+    - name: default_pay_cycle_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: super_payment
+    columns:
+    - name: id
+      data_type: character varying
+    - name: pay_run_total_id
+      data_type: character varying
+    - name: employee_super_fund_id
+      data_type: character varying
+    - name: amount
+      data_type: double precision
+    - name: pay_run_id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: contribution_type
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: pay_category
+    columns:
+    - name: id
+      data_type: character varying
+    - name: pay_category_name
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: rate_unit_id
+      data_type: character varying
+    - name: default_super_rate
+      data_type: character varying
+    - name: is_tax_exempt
+      data_type: boolean
+    - name: linked_pay_category_id
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: external_reference_id
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: is_payroll_tax_exempt
+      data_type: boolean
+    - name: pay_category_type
+      data_type: character varying
+    - name: business_award_package_id
+      data_type: character varying
+    - name: payment_summary_classification_id
+      data_type: character varying
+    - name: general_ledger_mapping_code
+      data_type: character varying
+    - name: super_liability_mapping_code
+      data_type: character varying
+    - name: super_expense_mapping_code
+      data_type: character varying
+    - name: is_w1_exempt
+      data_type: boolean
+    - name: number_of_decimal_places
+      data_type: character varying
+    - name: is_national_insurance_exempt
+      data_type: boolean
+    - name: minimum_wage_calculation_impact
+      data_type: character varying
+    - name: exclude_from_average_earnings
+      data_type: character varying
+    - name: cpf_classification_id
+      data_type: character varying
+    - name: include_in_gross_rate_of_pay
+      data_type: boolean
+    - name: exclude_from_ordinary_earnings
+      data_type: boolean
+    - name: hide_units_on_pay_slip
+      data_type: boolean
+    - name: pay_category_ext_my_id
+      data_type: character varying
+    - name: rounding_method
+      data_type: character varying
+    - name: pay_category_ext_nz_id
+      data_type: character varying
+    - name: pay_category_ext_uk_id
+      data_type: character varying
+    - name: allowance_description
+      data_type: character varying
+    - name: pay_category_ext_sg_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: accrues_leave
+      data_type: character varying
+    - name: penalty_loading_multiplier
+      data_type: character varying
+    - name: rate_loading_multiplier
+      data_type: character varying
+  - name: payrun_total
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: payrun_id
+      data_type: character varying
+    - name: total_hours
+      data_type: double precision
+    - name: gross_earnings
+      data_type: double precision
+    - name: net_earnings
+      data_type: double precision
+    - name: is_excluded_from_billing
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: invoice_line_item
+    columns:
+    - name: id
+      data_type: character varying
+    - name: invoice_id
+      data_type: character varying
+    - name: total_including_gst
+      data_type: double precision
+    - name: abn
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: quantity
+      data_type: double precision
+    - name: billing_code
+      data_type: character varying
+    - name: billing_plan
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: unit_price_including_gst
+      data_type: character varying
+  - name: expense
+    columns:
+    - name: id
+      data_type: character varying
+    - name: expense_date
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: unit_cost
+      data_type: double precision
+    - name: quantity
+      data_type: double precision
+    - name: invoice_id
+      data_type: character varying
+    - name: notes
+      data_type: character varying
+    - name: expense_type
+      data_type: character varying
+    - name: displayed_unit_cost
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: pay_cycle_frequency
+    columns:
+    - name: id
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: super_fund_product
+    columns:
+    - name: id
+      data_type: character varying
+    - name: abn
+      data_type: character varying
+    - name: product_code
+      data_type: character varying
+    - name: product_type
+      data_type: character varying
+    - name: business_name
+      data_type: character varying
+    - name: product_name
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: super_stream_status
+      data_type: character varying
+    - name: is_managed_by_system
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: fair_work_award
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: employment_type
+    columns:
+    - name: id
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: pay_day_filing
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: pay_run_id
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: date_last_modified
+      data_type: character varying
+    - name: date_submitted
+      data_type: character varying
+    - name: version
+      data_type: character varying
+    - name: pay_day_filing_lodgement_data_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: suburb
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: postcode
+      data_type: character varying
+    - name: state
+      data_type: character varying
+    - name: country
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: fair_work_award_selection
+    columns:
+    - name: id
+      data_type: character varying
+    - name: fair_work_award_id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: date_time_utc
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: white_label_contact
+    columns:
+    - name: id
+      data_type: character varying
+    - name: white_label_id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: contact_type
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: email
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: award_package
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: fair_work_award_id
+      data_type: character varying
+    - name: is_disabled
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user_employee_group
+    columns:
+    - name: id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: employee_group_id
+      data_type: character varying
+    - name: permissions
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: employee_history
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: employee_history_action_id
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: expense_type
+    columns:
+    - name: id
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: unit_cost
+      data_type: double precision
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: employment_agreement
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: classification
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: external_reference_id
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: business_award_package_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: billing_plan
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: function_employee_onboarding
+      data_type: character varying
+    - name: price_per_unit
+      data_type: double precision
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: earnings_line
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: pay_category_id
+      data_type: character varying
+    - name: pay_run_id
+      data_type: character varying
+    - name: units
+      data_type: double precision
+    - name: location_id
+      data_type: character varying
+    - name: pay_run_total_id
+      data_type: character varying
+    - name: rate
+      data_type: double precision
+    - name: earnings_line_status_id
+      data_type: character varying
+    - name: external_reference_id
+      data_type: character varying
+    - name: net_earnings
+      data_type: double precision
+    - name: net_earnings_reporting
+      data_type: double precision
+    - name: earnings_line_ext_au_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: device_token
+    columns:
+    - name: id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: platform
+      data_type: character varying
+    - name: endpoint
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: industry
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: leave_request
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: from_date
+      data_type: character varying
+    - name: to_date
+      data_type: character varying
+    - name: total_hours
+      data_type: double precision
+    - name: requested_date
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: leave_category_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user_report_access
+    columns:
+    - name: id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: access_type
+      data_type: character varying
+    - name: no_reporting_restriction
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: invoice
+    columns:
+    - name: id
+      data_type: character varying
+    - name: date
+      data_type: character varying
+    - name: gst_rate
+      data_type: double precision
+    - name: billing_region_id
+      data_type: character varying
+    - name: invoicee_id
+      data_type: character varying
+    - name: invoicee_type_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: resellers
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: billing_name
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: commence_billing_from
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: default_region_id
+      data_type: character varying
+  - name: employee_pay_category
+    columns:
+    - name: id
+      data_type: character varying
+    - name: calculated_rate
+      data_type: double precision
+    - name: employee_id
+      data_type: character varying
+    - name: standard_weekly_hours
+      data_type: double precision
+    - name: is_default
+      data_type: boolean
+    - name: from_date
+      data_type: character varying
+    - name: to_date
+      data_type: character varying
+    - name: user_supplied_rate
+      data_type: double precision
+    - name: standard_daily_hours
+      data_type: character varying
+    - name: pay_category_rate_unit_id
+      data_type: character varying
+    - name: employee_rate_unit_id
+      data_type: character varying
+    - name: expiry_date
+      data_type: character varying
+    - name: pay_category_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: region
+    columns:
+    - name: id
+      data_type: character varying
+    - name: currency
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: culturename
+      data_type: character varying
+    - name: defaultstandardhoursperday
+      data_type: double precision
+    - name: commencebillingfrom
+      data_type: character varying
+    - name: minimumbillableamount
+      data_type: double precision
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: super_details_default_fund
+    columns:
+    - name: id
+      data_type: character varying
+    - name: super_details_id
+      data_type: character varying
+    - name: usi
+      data_type: character varying
+    - name: abn
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: tax_file_declaration
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: employment_type_id
+      data_type: character varying
+    - name: from_date
+      data_type: character varying
+    - name: to_date
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: business_award_package
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: award_package_id
+      data_type: character varying
+    - name: current_version_id
+      data_type: character varying
+    - name: award_package_name
+      data_type: character varying
+    - name: installation_status
+      data_type: character varying
+    - name: installation_status_last_updated_utc
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user_business
+    columns:
+    - name: user_id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: is_single_sign_on_enabled
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: leave_allowance_template
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: external_reference_id
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: business_award_package_id
+      data_type: character varying
+    - name: leave_accrual_start_date_type
+      data_type: character varying
+    - name: leave_year_start
+      data_type: character varying
+    - name: leave_loading_calculated_from_pay_category_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user_whitelabel
+    columns:
+    - name: user_id
+      data_type: character varying
+    - name: whitelabel_id
+      data_type: character varying
+    - name: is_default_parent
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: userid
+      data_type: character varying
+  - name: employee_super_fund
+    columns:
+    - name: id
+      data_type: character varying
+    - name: super_fund_name
+      data_type: character varying
+    - name: member_number
+      data_type: character varying
+    - name: allocated_percentage
+      data_type: character varying
+    - name: fixed_amount
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: deleted
+      data_type: boolean
+    - name: super_fund_product_id
+      data_type: character varying
+    - name: has_non_super_stream_compliant_fund
+      data_type: boolean
+    - name: date_employee_nominated_utc
+      data_type: character varying
+    - name: super_details_default_fund_id
+      data_type: character varying
+    - name: self_managed_super_fund_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: allocate_balance
+      data_type: character varying
+  - name: pay_event
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: date_created_utc
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: pay_run_id
+      data_type: character varying
+    - name: date_lodged_utc
+      data_type: character varying
+    - name: date_response_received_utc
+      data_type: character varying
+    - name: pay_run_lodgement_data_id
+      data_type: character varying
+    - name: is_deleted
+      data_type: boolean
+    - name: stp_version
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: super_details
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: date_registered_utc
+      data_type: character varying
+    - name: enabled
+      data_type: boolean
+    - name: date_beam_terms_accepted_utc
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user_reseller
+    columns:
+    - name: userid
+      data_type: character varying
+    - name: reseller_id
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+    - name: user_id
+      data_type: character varying
+  - name: location_restriction
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: filter_type
+      data_type: character varying
+    - name: value
+      data_type: character varying
+    - name: permissions
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: deduction
+    columns:
+    - name: id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: pay_run_total_id
+      data_type: character varying
+    - name: deduction_category_id
+      data_type: character varying
+    - name: amount
+      data_type: double precision
+    - name: pay_run_id
+      data_type: character varying
+    - name: employee_super_fund_id
+      data_type: character varying
+    - name: contribution_info_id
+      data_type: character varying
+    - name: associated_employee_deduction_category_id
+      data_type: character varying
+    - name: bank_account_id
+      data_type: character varying
+    - name: is_resc
+      data_type: boolean
+    - name: bank_account_bsb
+      data_type: character varying
+    - name: bank_account_number
+      data_type: character varying
+    - name: bank_account_type
+      data_type: character varying
+    - name: is_member_voluntary
+      data_type: boolean
+    - name: associated_employee_pension_contribution_plan_id
+      data_type: character varying
+    - name: is_pension_scheme_salary_sacrifice
+      data_type: boolean
+    - name: additional_data
+      data_type: character varying
+    - name: paid_to_tax_office
+      data_type: character varying
+    - name: payg_adjustment_id
+      data_type: character varying
+    - name: bank_account_swift
+      data_type: character varying
+    - name: bank_account_branch_code
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: pay_run_lodgement_data
+    columns:
+    - name: id
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: is_test
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: user
+    columns:
+    - name: id
+      data_type: character varying
+    - name: first_name
+      data_type: character varying
+    - name: last_name
+      data_type: character varying
+    - name: email
+      data_type: character varying
+    - name: is_active
+      data_type: boolean
+    - name: is_admin
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: rate_unit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: contribution_info
+    columns:
+    - name: id
+      data_type: character varying
+    - name: cont_amount
+      data_type: double precision
+    - name: cont_type
+      data_type: character varying
+    - name: super_member_id
+      data_type: character varying
+    - name: employee_id
+      data_type: character varying
+    - name: failed
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: leave_category
+    columns:
+    - name: id
+      data_type: character varying
+    - name: leave_category_name
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: exclude_from_termination_payout
+      data_type: boolean
+    - name: is_deleted
+      data_type: boolean
+    - name: unit_type
+      data_type: character varying
+    - name: source
+      data_type: character varying
+    - name: date_created
+      data_type: character varying
+    - name: deduct_from_primary_pay_category
+      data_type: boolean
+    - name: deduct_from_pay_category_id
+      data_type: character varying
+    - name: transfer_to_pay_category_id
+      data_type: character varying
+    - name: leave_category_type
+      data_type: character varying
+    - name: entitlement_period
+      data_type: character varying
+    - name: contingent_period
+      data_type: character varying
+    - name: automatically_accrues
+      data_type: boolean
+    - name: standard_hours_per_year
+      data_type: character varying
+    - name: units
+      data_type: double precision
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: timesheet_line
+    columns:
+    - name: id
+      data_type: bigint
+    - name: employee_id
+      data_type: bigint
+    - name: start_time
+      data_type: character varying
+    - name: end_time
+      data_type: character varying
+    - name: units
+      data_type: double precision
+    - name: date_created
+      data_type: character varying
+    - name: submitted_start_time
+      data_type: character varying
+    - name: submitted_end_time
+      data_type: character varying
+    - name: pay_category_id
+      data_type: bigint
+    - name: status
+      data_type: bigint
+    - name: leave_request_id
+      data_type: bigint
+    - name: consolidated_with_timesheet_line_id
+      data_type: bigint
+    - name: pay_run_total_id
+      data_type: bigint
+    - name: business_id
+      data_type: bigint
+    - name: auto_approved_by_roster_shift_id
+      data_type: bigint
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: payrun_total_history
+    columns:
+    - name: id
+      data_type: bigint
+    - name: employee_id
+      data_type: bigint
+    - name: payrun_id
+      data_type: bigint
+    - name: total_hours
+      data_type: double precision
+    - name: gross_earnings
+      data_type: double precision
+    - name: net_earnings
+      data_type: double precision
+    - name: is_excluded_from_billing
+      data_type: bigint
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: earnings_line_ext_au
+    columns:
+    - name: id
+      data_type: bigint
+    - name: earnings_line_id
+      data_type: bigint
+    - name: pay_run_id
+      data_type: bigint
+    - name: average_total_earnings_amount
+      data_type: double precision
+    - name: average_total_earnings_payg_amount
+      data_type: double precision
+    - name: average_additional_payments_amount
+      data_type: double precision
+    - name: full_earnings_payg_amount
+      data_type: double precision
+    - name: calculated_payg_amount
+      data_type: double precision
+    - name: max_payg_amount
+      data_type: double precision
+    - name: gross_earnings_amount
+      data_type: double precision
+    - name: gross_earnings_payg_amount
+      data_type: double precision
+    - name: pre_adjustment_payg_withholding_amount
+      data_type: double precision
+    - name: gross_earnings_stsl_amount
+      data_type: double precision
+    - name: average_total_earnings_stsl_amount
+      data_type: double precision
+    - name: full_earnings_stsl_amount
+      data_type: double precision
+    - name: calculated_stsl_amount
+      data_type: double precision
+    - name: lump_sum_e_financial_year
+      data_type: bigint
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: superfund_ato
+    columns:
+    - name: abn
+      data_type: character varying
+    - name: fund_name
+      data_type: character varying
+    - name: usi
+      data_type: character varying
+    - name: product_name
+      data_type: character varying
+    - name: contribution_restrictions
+      data_type: character varying
+    - name: from_date
+      data_type: character varying
+    - name: to_date
+      data_type: character varying
+    - name: _transaction_date
+      data_type: timestamp without time zone
+    - name: _etl_date
+      data_type: timestamp without time zone
+  - name: zoom_info
+    columns:
+    - name: record_id
+      data_type: bigint
+    - name: _id
+      data_type: bigint
+    - name: company_name
+      data_type: character varying
+    - name: abn
+      data_type: bigint
+    - name: country
+      data_type: character varying
+    - name: match_status
+      data_type: character varying
+    - name: zoom_info_company_id
+      data_type: bigint
+    - name: website
+      data_type: character varying
+    - name: founded_year
+      data_type: bigint
+    - name: company_hq_phone
+      data_type: character varying
+    - name: revenue_in_000_s_usd_
+      data_type: bigint
+    - name: revenue_range_in_usd_
+      data_type: character varying
+    - name: est_hr_department_budget_in_000_s_usd_
+      data_type: bigint
+    - name: employees
+      data_type: bigint
+    - name: employee_range
+      data_type: character varying
+    - name: past_1_year_employee_growth_rate
+      data_type: numeric
+    - name: past_2_year_employee_growth_rate
+      data_type: numeric
+    - name: sic_code_1
+      data_type: bigint
+    - name: sic_code_2
+      data_type: bigint
+    - name: sic_codes
+      data_type: character varying
+    - name: naics_code_1
+      data_type: bigint
+    - name: naics_code_2
+      data_type: bigint
+    - name: naics_codes
+      data_type: character varying
+    - name: primary_industry
+      data_type: character varying
+    - name: primary_sub_industry
+      data_type: character varying
+    - name: all_industries
+      data_type: character varying
+    - name: all_sub_industries
+      data_type: character varying
+    - name: industry_hierarchical_category
+      data_type: character varying
+    - name: secondary_industry_hierarchical_category
+      data_type: character varying
+    - name: alexa_rank
+      data_type: bigint
+    - name: zoom_info_company_profile_url
+      data_type: character varying
+    - name: linked_in_company_profile_url
+      data_type: character varying
+    - name: facebook_company_profile_url
+      data_type: character varying
+    - name: twitter_company_profile_url
+      data_type: character varying
+    - name: ownership_type
+      data_type: character varying
+    - name: business_model
+      data_type: character varying
+    - name: certified_active_company
+      data_type: character varying
+    - name: certification_date
+      data_type: character varying
+    - name: defunct_company
+      data_type: character varying
+    - name: total_funding_amount_in_000_s_usd_
+      data_type: bigint
+    - name: recent_funding_amount_in_000_s_usd_
+      data_type: bigint
+    - name: recent_funding_round
+      data_type: character varying
+    - name: recent_funding_date
+      data_type: date
+    - name: recent_investors
+      data_type: character varying
+    - name: all_investors
+      data_type: character varying
+    - name: company_street_address
+      data_type: character varying
+    - name: company_city
+      data_type: character varying
+    - name: company_state
+      data_type: character varying
+    - name: company_zip_code
+      data_type: character varying
+    - name: company_country
+      data_type: character varying
+    - name: full_address
+      data_type: character varying
+    - name: number_of_locations
+      data_type: bigint
+    - name: company_is_acquired
+      data_type: character varying
+    - name: company_id_ultimate_parent_
+      data_type: bigint
+    - name: entity_name_ultimate_parent_
+      data_type: character varying
+    - name: company_id_immediate_parent_
+      data_type: bigint
+    - name: entity_name_immediate_parent_
+      data_type: character varying
+    - name: relationship_immediate_parent_
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: bank_payment_file_details
+    columns:
+    - name: id
+      data_type: character varying
+    - name: business_id
+      data_type: character varying
+    - name: file_format
+      data_type: character varying
+    - name: originating_account_number
+      data_type: character varying
+    - name: originating_account_name
+      data_type: character varying
+    - name: lodgement_reference
+      data_type: character varying
+    - name: merge_multiple_account_payments
+      data_type: boolean
+    - name: payment_additional_content
+      data_type: character varying
+    - name: transaction_reference_number
+      data_type: character varying
+    - name: is_confidential
+      data_type: boolean
+    - name: is_payment_integration
+      data_type: boolean
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: reseller_contact
+    columns:
+    - name: id
+      data_type: character varying
+    - name: reseller_id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: contact_type
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: email
+      data_type: character varying
+    - name: _file
+      data_type: character varying
+    - name: _transaction_date
+      data_type: date
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: _modified
+      data_type: timestamp without time zone
+  - name: bank_account
+    columns:
+      - name: id
+        data_type: character varying
+      - name: employee_id
+        data_type: character varying
+      - name: external_reference_id
+        data_type: character varying
+      - name: source
+        data_type: character varying
+      - name: account_type
+        data_type: character varying
+      - name: _file
+        data_type: character varying
+      - name: _transaction_date
+        data_type: date
+      - name: _etl_date
+        data_type: timestamp without time zone
+      - name: _modified
+        data_type: timestamp without time zone

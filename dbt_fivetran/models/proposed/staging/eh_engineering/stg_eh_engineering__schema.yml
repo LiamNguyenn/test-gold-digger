@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_eh_engineering__service_ownership
+    description: "This is the staging table for service_ownership, sourced directly from eh_engineering.service_ownership table"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: row
+        tests:
+          - unique
+          - not_null
+      - name: service
+        tests:
+          - not_null
+
+  - name: stg_eh_engineering__squad_members
+    description: "This is the staging table for service_ownership, sourced directly from eh_engineering.squad_members table"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: row
+        tests:
+          - unique
+          - not_null
+      - name: squad
+        tests:
+          - not_null

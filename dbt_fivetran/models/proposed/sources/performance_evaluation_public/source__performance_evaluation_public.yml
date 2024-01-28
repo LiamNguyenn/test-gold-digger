@@ -1,0 +1,104 @@
+version: 2
+sources:
+- name: performance_evaluation_public
+  tables:
+  - name: members
+    columns:
+    - name: id
+      data_type: character varying
+    - name: role
+      data_type: character varying
+    - name: independent_contractor
+      data_type: boolean
+    - name: company_email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: last_name
+      data_type: character varying
+    - name: active
+      data_type: boolean
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: locale
+      data_type: character varying
+    - name: organisation_id
+      data_type: character varying
+    - name: avatar_url
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: user_id
+      data_type: character varying
+    - name: legacy_id
+      data_type: integer
+    - name: known_as
+      data_type: character varying
+    - name: first_name
+      data_type: character varying
+    - name: job_title
+      data_type: character varying
+    - name: email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: terminated
+      data_type: boolean
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: submissions
+    columns:
+    - name: id
+      data_type: character varying
+    - name: review_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: reviewer_id
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: reviewee_id
+      data_type: character varying
+    - name: review_type
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone

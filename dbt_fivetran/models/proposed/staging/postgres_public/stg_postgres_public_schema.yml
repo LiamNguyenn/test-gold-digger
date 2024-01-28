@@ -1,0 +1,42 @@
+version: 2
+models:
+  - name: stg_postgres_public__users
+    description: "This is the staging table for the users table, sourced directly from postgres_public.users table. This view has been filtered to exclude records marked as deleted by Fivetran and marked as shadow data"
+    meta: 
+      upstream_system_owner: "eh-platform"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: uuid
+        tests:
+          - not_null
+          - unique
+      - name: email
+        meta:
+          sensitive: true
+          masking_rules:
+            full_mask:
+              mask_function: sha2-256
+  - name: stg_postgres_public__user_infos
+    description: "This is the staging table for the user info table, sourced directly from postgres_public.user_infos table"
+    meta: 
+      upstream_system_owner: "eh-platform"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+  - name: stg_postgres_public__members
+    description: "This is the staging table for the members table, sourced directly from postgres_public.members table. This view has been filtered to exclude records marked as deleted by Fivetran and marked as shadow data"
+    meta: 
+      upstream_system_owner: "eh-platform"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique

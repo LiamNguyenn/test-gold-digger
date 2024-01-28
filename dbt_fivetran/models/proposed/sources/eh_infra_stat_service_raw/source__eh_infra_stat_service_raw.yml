@@ -1,0 +1,107 @@
+version: 2
+sources:
+- name: eh_infra_stat_service_raw
+  tables:
+  - name: daily_report_sentry_issues
+    columns:
+    - name: id
+      data_type: character varying
+    - name: squad_owner
+      data_type: character varying
+    - name: environment
+      data_type: character varying
+    - name: date_index
+      data_type: integer
+    - name: platform
+      data_type: character varying
+    - name: last_seen
+      data_type: timestamp without time zone
+    - name: first_seen
+      data_type: timestamp without time zone
+    - name: first_seen_to_last_seen
+      data_type: double precision
+    - name: num_comments
+      data_type: integer
+    - name: user_count
+      data_type: integer
+    - name: culprit
+      data_type: character varying
+    - name: title
+      data_type: character varying
+    - name: assigned_to_id
+      data_type: character varying
+    - name: assigned_to_email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: assigned_to_type
+      data_type: character varying
+    - name: source_type
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: is_public
+      data_type: boolean
+    - name: has_seen
+      data_type: boolean
+    - name: short_id
+      data_type: character varying
+    - name: event_count
+      data_type: integer
+    - name: permalink
+      data_type: character varying
+    - name: level
+      data_type: character varying
+    - name: is_subscribed
+      data_type: boolean
+    - name: is_bookmarked
+      data_type: boolean
+    - name: project_id
+      data_type: integer
+    - name: project_name
+      data_type: character varying
+    - name: project_slug
+      data_type: character varying
+    - name: source_created_at
+      data_type: timestamp without time zone
+    - name: source_updated_at
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: issues_id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp without time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp without time zone
+    - name: done
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone

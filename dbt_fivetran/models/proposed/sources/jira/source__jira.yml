@@ -1,0 +1,585 @@
+version: 2
+sources:
+- name: jira
+  tables:
+  - name: issue_field_history
+    columns:
+    - name: field_id
+      data_type: character varying
+    - name: issue_id
+      data_type: integer
+    - name: time
+      data_type: timestamp without time zone
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: author_id
+      data_type: character varying
+    - name: is_active
+      data_type: boolean
+  - name: issue_watcher
+    columns:
+    - name: issue_id
+      data_type: integer
+    - name: user_id
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: comment
+    columns:
+    - name: id
+      data_type: integer
+    - name: issue_id
+      data_type: integer
+    - name: author_id
+      data_type: character varying
+    - name: update_author_id
+      data_type: character varying
+    - name: body
+      data_type: character varying
+    - name: created
+      data_type: timestamp without time zone
+    - name: updated
+      data_type: timestamp without time zone
+    - name: is_public
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: issue
+    columns:
+    - name: id
+      data_type: integer
+    - name: key
+      data_type: character varying
+    - name: parent_id
+      data_type: integer
+    - name: status_category_changed
+      data_type: timestamp without time zone
+    - name: issue_type
+      data_type: integer
+    - name: time_spent
+      data_type: double precision
+    - name: project
+      data_type: integer
+    - name: _time_spent
+      data_type: double precision
+    - name: resolution
+      data_type: integer
+    - name: resolved
+      data_type: timestamp without time zone
+    - name: work_ratio
+      data_type: double precision
+    - name: last_viewed
+      data_type: timestamp without time zone
+    - name: created
+      data_type: timestamp without time zone
+    - name: priority
+      data_type: integer
+    - name: remaining_estimate
+      data_type: double precision
+    - name: _original_estimate
+      data_type: double precision
+    - name: assignee
+      data_type: character varying
+    - name: updated
+      data_type: timestamp without time zone
+    - name: status
+      data_type: integer
+    - name: original_estimate
+      data_type: double precision
+    - name: description
+      data_type: character varying
+    - name: _remaining_estimate
+      data_type: double precision
+    - name: summary
+      data_type: character varying
+    - name: creator
+      data_type: character varying
+    - name: reporter
+      data_type: character varying
+    - name: environment
+      data_type: character varying
+    - name: due_date
+      data_type: date
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: security_level
+      data_type: integer
+    - name: parent
+      data_type: integer
+  - name: issue_multiselect_history
+    columns:
+    - name: field_id
+      data_type: character varying
+    - name: issue_id
+      data_type: integer
+    - name: time
+      data_type: timestamp without time zone
+    - name: _fivetran_id
+      data_type: character varying
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: author_id
+      data_type: character varying
+    - name: is_active
+      data_type: boolean
+  - name: issue_board
+    columns:
+    - name: board_id
+      data_type: integer
+    - name: issue_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: board
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: type
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: project_board
+    columns:
+    - name: board_id
+      data_type: integer
+    - name: project_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: issue_link
+    columns:
+    - name: issue_id
+      data_type: integer
+    - name: related_issue_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: relationship
+      data_type: character varying
+  - name: worklog
+    columns:
+    - name: issue_id
+      data_type: integer
+    - name: id
+      data_type: integer
+    - name: updated
+      data_type: timestamp without time zone
+    - name: started
+      data_type: timestamp without time zone
+    - name: comment
+      data_type: character varying
+    - name: time_spent_seconds
+      data_type: bigint
+    - name: update_author_id
+      data_type: character varying
+    - name: author_id
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: user_group
+    columns:
+    - name: user_id
+      data_type: character varying
+    - name: group_name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: epic
+    columns:
+    - name: id
+      data_type: integer
+    - name: key
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: summary
+      data_type: character varying
+    - name: done
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: sprint
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: start_date
+      data_type: timestamp without time zone
+    - name: end_date
+      data_type: timestamp without time zone
+    - name: complete_date
+      data_type: timestamp without time zone
+    - name: board_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: goal
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: version
+    columns:
+    - name: id
+      data_type: integer
+    - name: project_id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: archived
+      data_type: boolean
+    - name: released
+      data_type: boolean
+    - name: overdue
+      data_type: boolean
+    - name: start_date
+      data_type: date
+    - name: release_date
+      data_type: date
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: field
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: is_custom
+      data_type: boolean
+    - name: is_array
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: status
+    columns:
+    - name: id
+      data_type: integer
+    - name: description
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: status_category_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: user
+    columns:
+    - name: id
+      data_type: character varying
+    - name: locale
+      data_type: character varying
+    - name: time_zone
+      data_type: character varying
+    - name: email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: name
+      data_type: character varying
+    - name: username
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: project_role_actor
+    columns:
+    - name: id
+      data_type: integer
+    - name: project_id
+      data_type: integer
+    - name: project_role_id
+      data_type: integer
+    - name: user_id
+      data_type: character varying
+    - name: group_name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: issue_type
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: subtask
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: field_option
+    columns:
+    - name: id
+      data_type: integer
+    - name: parent_id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: permission_holder
+    columns:
+    - name: _fivetran_id
+      data_type: character varying
+    - name: permission_scheme_id
+      data_type: integer
+    - name: permission_id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: group_name
+      data_type: character varying
+    - name: project_role_id
+      data_type: integer
+    - name: user_custom_field
+      data_type: character varying
+    - name: group_custom_field
+      data_type: character varying
+    - name: type
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: permission_scheme
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: project
+    columns:
+    - name: id
+      data_type: integer
+    - name: key
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: project_type_key
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: project_category_id
+      data_type: integer
+    - name: lead_id
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: permission_scheme_id
+      data_type: integer
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: component
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: project_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp without time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp without time zone
+    - name: done
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: project_role
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: request
+    columns:
+    - name: issue_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: request_type_id
+      data_type: integer
+  - name: security_scheme
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: default_level_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: sla
+    columns:
+    - name: issue_id
+      data_type: bigint
+    - name: sla_id
+      data_type: bigint
+    - name: _fivetran_id
+      data_type: character varying
+    - name: start_time
+      data_type: timestamp without time zone
+    - name: stop_time
+      data_type: timestamp without time zone
+    - name: breached
+      data_type: boolean
+    - name: goal_duration
+      data_type: bigint
+    - name: elapsed_time
+      data_type: bigint
+    - name: remaining_time
+      data_type: bigint
+    - name: paused
+      data_type: boolean
+    - name: within_calendar_hours
+      data_type: boolean
+    - name: is_ongoing_cycle
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: approver
+    columns:
+    - name: approval_id
+      data_type: bigint
+    - name: approver_id
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: approval
+    columns:
+    - name: id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: request_type
+    columns:
+    - name: id
+      data_type: integer
+    - name: service_desk_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: issue_type_id
+      data_type: integer
+    - name: project_id
+      data_type: integer
+  - name: permission
+    columns:
+    - name: id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: type
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: project_category
+    columns:
+    - name: id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+  - name: resolution
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: security_scheme_level
+    columns:
+    - name: scheme_id
+      data_type: integer
+    - name: level_id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: security_level
+    columns:
+    - name: id
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: priority
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: status_category
+    columns:
+    - name: id
+      data_type: integer
+    - name: name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone

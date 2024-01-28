@@ -1,0 +1,44 @@
+version: 2
+models:
+  - name: salesforce__call_performance_daily
+    description: "Each record represents a daily summary of the number of call activities"
+    schema: salesforce
+    columns:
+      - name: date_day
+        data_type: timestamp without time zone
+        description: "Day of event, in UTC."
+        tests:
+          - not_null
+
+      - name: owner_id
+        data_type: character varying
+        description: "Id of the owner of this opportunity/tasks."
+
+      - name: total_call_duration_in_sec
+        data_type: bigint
+        description: "Total call duration of owner."
+
+      - name: total_calls
+        data_type: bigint
+        description: "Total number of calls, owner have made, task with type = 'Call'"
+        tests:
+          - dbt_utils.expression_is_true:
+              expression: "> 0"
+              config:
+                where: "total_call_duration_in_sec > 0"
+
+      - name: total_connects
+        data_type: bigint
+        description: "Total number of connects, owner have made, task with type = 'Connect', Call Attempt is not a connect."
+
+      - name: total_connect_to_opps
+        data_type: bigint
+        description: "Number of connects that turned into opportunity, this opportunity is not setup a demo set, so field 'demo_sat_date' is set to null."
+
+      - name: connect_to_opp_ratio
+        data_type: numeric
+        description: "% of connects to opportunity."
+
+      - name: call_to_connect_ratio
+        data_type: numeric
+        description: "% of calls to connects."

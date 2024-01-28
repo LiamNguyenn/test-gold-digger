@@ -1,0 +1,199 @@
+version: 2
+
+models:
+    - name: ebenefits_v_heroshop_transactions_order_details
+      schema: ebenefits
+      alias: _v_heroshop_transactions_order_details
+      columns:
+        - name: transactions_id
+          tests:            
+            - not_null
+        - name: order_id
+          tests:            
+            - not_null
+        - name: order_details_id
+          tests:            
+            - not_null
+
+    - name: ebenefits_instapay_transactions_with_member_profile
+      schema: ebenefits
+      alias: instapay_transactions_with_member_profile
+      columns:
+        - name: transaction_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_instapay_eligible_member_profile
+      schema: ebenefits
+      alias: instapay_eligible_member_profile
+      columns:
+        - name: member_id
+          tests:            
+            - not_null
+            - unique
+    
+    - name: ebenefits_instapay_members_aggregation
+      schema: ebenefits
+      alias: instapay_members_aggregation
+      columns:
+        - name: date
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_paysplit_members
+      schema: ebenefits
+      alias: paysplit_members
+      columns:
+        - name: member_id
+          tests:            
+            - not_null
+            - unique
+    
+    - name: ebenefits_paysplit_members_aggregation
+      schema: ebenefits
+      alias: paysplit_members_aggregation
+      columns:
+        - name: date
+          tests:            
+            - not_null
+            - unique
+    
+    - name: ebenefits_wallet_customers
+      schema: ebenefits
+      alias: wallet_customers
+      columns:
+        - name: id
+          tests:            
+            - not_null
+            - unique
+    
+    - name: ebenefits_v_user_mapping
+      schema: ebenefits
+      alias: _v_user_mapping
+      columns:
+        - name: eben_uuid
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_instapay_blacklist_organisations
+      schema: ebenefits
+      alias: _v_instapay_blacklist_organisations
+      columns:
+        - name: organisation_uuid
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_instapay_on_off_organisations
+      schema: ebenefits
+      alias: _v_instapay_on_off_organisations
+      columns:
+        - name: organisation_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_money_pillar_blacklist_organisations
+      schema: ebenefits
+      alias: _v_money_pillar_blacklist_organisations
+      columns:
+        - name: organisation_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_money_pillar_blacklist_users
+      schema: ebenefits
+      alias: _v_money_pillar_blacklist_users
+      columns:
+        - name: user_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_money_pillar_on_off_users
+      schema: ebenefits
+      alias: _v_money_pillar_on_off_users
+      columns:
+        - name: user_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_benefits_pillar_blacklist_organisations
+      schema: ebenefits
+      alias: _v_benefits_pillar_blacklist_organisations
+      columns:
+        - name: organisation_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_benefits_pillar_blacklist_users
+      schema: ebenefits
+      alias: _v_benefits_pillar_blacklist_users
+      columns:
+        - name: user_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_benefits_pillar_on_off_users
+      schema: ebenefits
+      alias: _v_benefits_pillar_on_off_users
+      columns:
+        - name: user_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_worklife_refused_organisations
+      schema: ebenefits
+      alias: _v_worklife_refused_organisations
+      columns:
+        - name: organisation_uuid
+          tests:            
+            - not_null
+            - unique
+                
+    - name: ebenefits_v_international_benefits_refused_organisations
+      schema: ebenefits
+      alias: _v_international_benefits_refused_organisations
+      columns:
+        - name: organisation_uuid
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_international_benefits_on_off_organisations
+      schema: ebenefits
+      alias: _v_international_benefits_on_off_organisations
+      columns:
+        - name: organisation_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_v_swag_store_on_off_users
+      schema: ebenefits
+      alias: _v_swag_store_on_off_users
+      columns:
+        - name: user_id
+          tests:            
+            - not_null
+            - unique
+
+    - name: ebenefits_users
+      schema: ebenefits
+      alias: users
+      config:
+        grants:
+          select: ['ebenefits']
+      columns:
+        - name: user_id   
+          tests:            
+            - not_null
+            - unique

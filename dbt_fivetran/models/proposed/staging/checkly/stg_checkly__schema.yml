@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_checkly__all_checks_results
+    description: "This is the staging table for all_checks_results, sourced directly from stg_checkly.all_checks_results table"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: check_id
+        tests:
+          - not_null
+
+  - name: stg_checkly__all_checks
+    description: "This is the staging table for all_checks, sourced directly from stg_checkly.all_checks table"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique:
+              config:
+                severity: warn
+          - not_null
+      - name: name
+        tests:
+          - not_null

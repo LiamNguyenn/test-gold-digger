@@ -1,0 +1,261 @@
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'dbt_project'
+version: '1.6.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'default'
+
+# These configurations specify where dbt should look for different types of files.
+# The `source-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+
+# In this example config, we tell dbt to build all models in the example/ directory
+# as tables. These settings can be overridden in the individual model files
+# using the `{{ config(...) }}` macro.
+models: 
+  +post-hook: 
+    - "{{ mask_model() }}"
+  +bind: false # Materialize all views as late-binding
+  dbt_project: 
+    current:
+      +tags: current
+      example: 
+        schema: test
+        materialized: table
+      ats:
+        schema: ats
+        materialized: table
+      billing:
+        schema: billing
+        materialized: table
+      github:       
+        schema: github
+        materialized: table
+      ces:
+        schema: ces
+        materialized: table
+      checkly:
+        schema: checkly
+        materialized: table
+      customer_support:
+        schema: customer_support
+        materialized: table  
+      customers:
+        schema: customers      
+        materialized: table  
+      ebenefits:
+        schema: ebenefits
+        materialized: table
+      employee_scorecard:
+        schema: employee_scorecard
+        materialized: view
+      employment_hero:
+        schema: employment_hero
+        materialized: table  
+      int__keypay:
+        schema: int__keypay
+        materialized: table
+      int__keypay_dwh:
+        schema: int__keypay_dwh
+        materialized: table
+      keypay:
+        schema: keypay
+        materialized: table  
+      keypay_dwh:
+        schema: keypay_dwh
+        materialized: table
+      keypay_stats:
+        schema: keypay_stats
+        materialized: view
+      mart__keypay:
+        schema: mart__keypay
+        materialized: table
+      mp:
+        schema: mp
+        materialized: table  
+      one_platform:
+        schema: one_platform
+        materialized: table  
+      organics:
+        schema: organics
+        materialized: table  
+      proserv:
+        schema: proserv
+        materialized: table  
+      sales:
+        schema: sales
+        materialized: table
+      stg__keypay:
+        schema: stg__keypay
+        materialized: view
+      stg__keypay_dwh:
+        schema: stg__keypay_dwh
+        materialized: view
+      swag:
+        schema: swag
+        materialized: table
+      marketing:
+        schema: marketing
+        materialized: table
+      employment_index:
+        schema: employment_index
+        materialized: table
+      salary_guide:
+        schema: salary_guide
+        materialized: view
+      tableau:
+        schema: tableau
+        materialized: table
+      outreach:
+        schema: outreach
+        materialized: view
+      admin:
+        schema: admin
+        materialized: view
+      exports:
+        schema: exports
+        materialized: table
+      salesforce:
+        schema: salesforce
+    proposed:
+      sources:
+        keypay_s3:
+          schema: keypay_s3
+          materialized: table
+      staging:
+        +schema: staging
+        +materialized: view
+        dates:
+          materialized: table
+      intermediate:
+        +schema: intermediate
+        dates:
+          materialized: table
+        ebenefits:
+          materialized: view
+        keypay:
+          materialized: table
+        postgres_public:
+          materialized: table
+      mart:
+        +schema: mart
+        +materialized: table
+
+  # these models are from fivetran/salesforce 
+  # so they have different resource-path
+  salesforce_source:
+    database: dev
+    +schema: salesforce
+  salesforce:
+    database: dev
+    schema: salesforce
+    materialized: table
+    intermediate:
+      materialized: table
+
+snapshots:
+  dbt_project: 
+    current:
+      marketing:
+        +target_schema: marketing
+
+vars:
+  salesforce__user_role_enabled: true # Disable if you do not have the user_role table 
+  salesforce__lead_enabled: true # Disable if you do not have the lead table
+  salesforce__event_enabled: true # Disable if you do not have the event table
+  salesforce__task_enabled: true # Disable if you do not have the task table
+  salesforce__opportunity_line_item_enabled: true # Disable if you do not have the opportunity_line_item table
+  salesforce__order_enabled: true # Disable if you do not have the order table
+  salesforce__product_2_enabled: true # Disable if you do not have the product_2 table
+  salesforce__profile_enabled: true
+  salesforce_opportunity_identifier: "opportunity__formula" # Update opportunity table to add formula field of ARR
+
+  salesforce__opportunity_pass_through_columns: # pass columns from opportunity source 
+    - name: "demo_sat_date_c"
+      alias: "demo_sat_date"
+    - name: "admin_opportunity_c"
+    - name: "became_mql_date"
+    - name: "existing_customer_revenue_type_c"
+    - name: "industry_c"
+    - name: "lead_source_sub_type_c"
+    - name: "lead_source_type_c" 
+    - name: "lost_reason_c"
+    - name: "lost_sub_reason_c"
+    - name: "opportunity_employees_c"
+    - name: "opportunity_originator_c"
+    - name: "originating_lead_id_c"
+    - name: "quote_arr_c"
+    - name: "quote_srr_c"
+    - name: "annual_recurring_revenue_c"
+
+  salesforce__lead_pass_through_columns: # pass columns from lead source
+    - name: "industry_primary_c"
+    - name: "industry_secondary_c"
+    - name: "lost_reason_c" 
+    - name: "lost_sub_reason_c"
+    - name: "mql_score_c"
+    - name: "numer_of_employees"
+    - name: "requested_demo_date_time"
+    - name: "sal_date"
+    - name: "sal_score_c"
+    - name: "sql_score_c"
+  
+  salesforce__account_pass_through_columns: # pass columns from lead source
+    - name: "geo_code_c"
+
+  salesforce__user_pass_through_columns: # pass columns from lead source
+    - name: "market"
+
+
+  # Export Braze configuration
+  exports_braze__events:
+    - model: int_exports__sign_in_app_events
+      event_properties: # all event propperties will have prefix event_prop_<your_properties>
+        - name: device
+          alias: device_type
+    - model: "int_exports__swag_user_events"
+      event_properties:
+        - name: public_profile_enabled 
+        - name: shopnow_offer_module
+        - name: shopnow_offer_type 
+        - name: shopnow_offer_category 
+    - model: "int_exports__swag_cashback_transactions"
+      event_properties:
+        - name: retailer
+        - name: type_of_offer
+        - name: cashback_received
+    - model: int_exports__jobs_swagapp_dotcom_events
+      event_properties:
+        - name: date_created 
+
+on-run-start:
+  - "{{ format_phone_number_e164_udf() }}"
+
+on-run-end:
+  - '{{ grant_select(schema="tableau", user="tableau") }}'
+  - '{{ grant_select(schema="outreach", user="tableau") }}'
+  - '{{ grant_select(schema="employment_index", user="tableau") }}'
+  - '{{ grant_select(schema="ces", user="tableau") }}'
+  - '{{ grant_select(schema="sales", user="tableau") }}'
+  - '{{ grant_select(schema="salary_guide", user="salary_guide") }}'
+  - '{{ grant_select(schema="postgres_public", user="eng_microservice_readonly") }}'
+  - '{{ grant_select(schema="exports", user="hightouch_dev") }}'
+  - '{{ grant_select(schema="exports", user="census_dev") }}'
+  - "{{ mask_all_sources() if target.name == 'prod' }}"

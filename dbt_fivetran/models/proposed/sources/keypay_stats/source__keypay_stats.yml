@@ -1,0 +1,208 @@
+version: 2
+sources:
+- name: keypay_stats
+  tables:
+  - name: analysis_project_summary
+    columns:
+    - name: id
+      data_type: bigint
+    - name: date
+      data_type: date
+    - name: project
+      data_type: character varying
+    - name: elapsed_time
+      data_type: character varying
+    - name: numberofmodels
+      data_type: bigint
+    - name: numberofcommands
+      data_type: bigint
+    - name: numberofservices
+      data_type: bigint
+    - name: numberofjobhandles
+      data_type: bigint
+    - name: numberoftypescripts
+      data_type: bigint
+  - name: analysis_folder_summary
+    columns:
+    - name: id
+      data_type: bigint
+    - name: date
+      data_type: date
+    - name: datatype
+      data_type: character varying
+    - name: project
+      data_type: character varying
+    - name: folder
+      data_type: character varying
+    - name: numberofitems
+      data_type: bigint
+  - name: analysis_file
+    columns:
+    - name: id
+      data_type: bigint
+    - name: date
+      data_type: date
+    - name: datatype
+      data_type: character varying
+    - name: project
+      data_type: character varying
+    - name: folder
+      data_type: character varying
+    - name: filename
+      data_type: character varying
+    - name: classname
+      data_type: character varying
+  - name: analysis_folder_summary_headerless
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: _modified
+      data_type: timestamp with time zone
+    - name: column_0
+      data_type: date
+    - name: column_1
+      data_type: character varying
+    - name: column_2
+      data_type: character varying
+    - name: column_3
+      data_type: character varying
+    - name: column_4
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: analysis_file_headerless
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: _modified
+      data_type: timestamp with time zone
+    - name: column_0
+      data_type: date
+    - name: column_1
+      data_type: character varying
+    - name: column_2
+      data_type: character varying
+    - name: column_3
+      data_type: character varying
+    - name: column_4
+      data_type: character varying
+    - name: column_5
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: column_6
+      data_type: character varying
+    - name: column_7
+      data_type: character varying
+  - name: analysis_project_summary_headerless
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: _modified
+      data_type: timestamp with time zone
+    - name: column_0
+      data_type: date
+    - name: column_1
+      data_type: character varying
+    - name: column_2
+      data_type: character varying
+    - name: column_3
+      data_type: bigint
+    - name: column_4
+      data_type: bigint
+    - name: column_5
+      data_type: bigint
+    - name: column_6
+      data_type: bigint
+    - name: column_7
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: column_9
+      data_type: bigint
+    - name: column_8
+      data_type: bigint
+    - name: column_10
+      data_type: bigint
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: analysis_project_summary_test
+    columns:
+    - name: id
+      data_type: integer
+    - name: date
+      data_type: timestamp without time zone
+    - name: project
+      data_type: character varying
+    - name: elapsed_time
+      data_type: character varying
+    - name: numberofmodels
+      data_type: integer
+    - name: numberofcommands
+      data_type: integer
+    - name: numberofservices
+      data_type: integer
+    - name: numberofjobhandles
+      data_type: integer
+    - name: numberoftypescripts
+      data_type: integer
+  - name: analysis_folder_summary_test
+    columns:
+    - name: id
+      data_type: integer
+    - name: date
+      data_type: timestamp without time zone
+    - name: datatype
+      data_type: character varying
+    - name: project
+      data_type: character varying
+    - name: folder
+      data_type: character varying
+    - name: numberofitems
+      data_type: integer
+  - name: analysis_file_test
+    columns:
+    - name: id
+      data_type: integer
+    - name: date
+      data_type: timestamp without time zone
+    - name: datatype
+      data_type: character varying
+    - name: project
+      data_type: character varying
+    - name: folder
+      data_type: character varying
+    - name: filename
+      data_type: character varying
+    - name: classname
+      data_type: character varying

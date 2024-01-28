@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: keypay_dwh_business
+    schema: keypay_dwh
+    alias: business
+
+
+  - name: keypay_dwh_employee
+    schema: keypay_dwh
+    alias: employee
+
+
+  - name: keypay_dwh_suburb
+    schema: keypay_dwh
+    alias: suburb

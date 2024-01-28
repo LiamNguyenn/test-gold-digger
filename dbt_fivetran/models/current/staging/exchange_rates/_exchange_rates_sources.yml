@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+  - name: exchange_rates
+    tables:
+      - name: rate

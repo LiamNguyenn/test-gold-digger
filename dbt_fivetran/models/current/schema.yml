@@ -1,0 +1,84 @@
+version: 2
+
+models:
+
+    - name: mp_daumau_by_account
+      schema: mp
+      alias: daumau_by_account
+      columns:
+        - name: date   
+          tests:            
+            - not_null   
+        - name: account_id
+          tests:            
+            - not_null   
+        - name: "(date || account_id )"
+          tests:            
+            - unique                        
+
+    - name: mp_wau
+      schema: mp
+      alias: wau
+      columns:
+        - name: date   
+          tests:            
+            - not_null   
+            - unique  
+            
+    - name: mp_daumau
+      schema: mp
+      alias: daumau
+      columns:
+        - name: date   
+          tests:            
+            - not_null   
+            - unique  
+
+    - name: mp_daily_members
+      schema: mp
+      alias: daily_members
+      columns:
+        - name: date   
+          tests:            
+            - not_null                
+
+
+    - name: mp_swag_daumau
+      schema: mp
+      alias: swag_daumau
+      columns:
+        - name: date  
+          tests:            
+            - not_null
+            - unique
+    
+    - name: mp_swag_daumau_country
+      schema: mp
+      alias: swag_daumau_country
+      columns:
+        - name: date   
+          tests:            
+            - not_null   
+        - name: "(date || country )"
+          tests:            
+            - unique           
+
+    - name: tableau_org_module_mapping
+      schema: tableau
+      alias: org_module_mapping
+      columns:
+        - name: "(date || organisation_id || module)" 
+          tests:            
+            - not_null
+            - unique
+            
+    - name: companydash_mmau_exclu_payroll
+      schema: tableau
+      alias: companydash_mmau_exclu_payroll
+      columns:
+        - name: "(date || country)"
+          tests:            
+            - not_null
+            - unique:
+                config:
+                  severity: warn

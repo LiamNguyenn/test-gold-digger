@@ -1,0 +1,332 @@
+version: 2
+sources:
+- name: csv
+  tables:
+  - name: more_common_job_titles
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: title_original
+      data_type: character varying
+    - name: lemmatized_title
+      data_type: character varying
+    - name: orgs_original
+      data_type: bigint
+    - name: employees_original
+      data_type: bigint
+    - name: title_common
+      data_type: character varying
+  - name: security_group_legacy_mapping
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: manegerial
+      data_type: character varying
+    - name: related_old_legacy_permissions
+      data_type: character varying
+    - name: related_old_legacy_permissions_keys
+      data_type: character varying
+    - name: new_key
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: foreign_exchange_rates
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: date
+      data_type: date
+    - name: usd
+      data_type: numeric
+    - name: index
+      data_type: numeric
+    - name: cny
+      data_type: numeric
+    - name: jpy
+      data_type: numeric
+    - name: eur
+      data_type: numeric
+    - name: krw
+      data_type: numeric
+    - name: gbp
+      data_type: numeric
+    - name: sgd
+      data_type: numeric
+    - name: inr
+      data_type: numeric
+    - name: thb
+      data_type: numeric
+    - name: nzd
+      data_type: numeric
+    - name: twd
+      data_type: numeric
+    - name: myr
+      data_type: numeric
+    - name: idr
+      data_type: bigint
+    - name: vnd
+      data_type: bigint
+    - name: aed
+      data_type: numeric
+    - name: pgk
+      data_type: numeric
+    - name: hkd
+      data_type: numeric
+    - name: cad
+      data_type: numeric
+    - name: zar
+      data_type: character varying
+    - name: sar
+      data_type: character varying
+    - name: chf
+      data_type: numeric
+    - name: sek
+      data_type: character varying
+    - name: php
+      data_type: character varying
+    - name: sdr
+      data_type: numeric
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: lemmatized_job_titles
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: title
+      data_type: character varying
+    - name: employees
+      data_type: bigint
+    - name: listagg
+      data_type: character varying
+    - name: lemmatized_title
+      data_type: character varying
+    - name: orgs
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: test_connector_postgres
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: schema
+      data_type: character varying
+    - name: max_varchar
+      data_type: integer
+    - name: database
+      data_type: character varying
+    - name: size
+      data_type: integer
+    - name: diststyle
+      data_type: character varying
+    - name: table_id
+      data_type: integer
+    - name: tbl_rows
+      data_type: integer
+    - name: table
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: australian_postcodes_localities
+    columns:
+    - name: id
+      data_type: bigint
+    - name: postcode
+      data_type: character varying
+    - name: locality
+      data_type: character varying
+    - name: state
+      data_type: character varying
+    - name: long
+      data_type: numeric
+    - name: lat
+      data_type: numeric
+    - name: dc
+      data_type: character varying
+    - name: type
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: sa_3
+      data_type: bigint
+    - name: sa_3_name
+      data_type: character varying
+    - name: sa_4
+      data_type: bigint
+    - name: sa_4_name
+      data_type: character varying
+    - name: region
+      data_type: character varying
+    - name: lat_precise
+      data_type: numeric
+    - name: long_precise
+      data_type: numeric
+    - name: sa_1_maincode_2011
+      data_type: bigint
+    - name: sa_1_maincode_2016
+      data_type: bigint
+    - name: sa_2_maincode_2016
+      data_type: bigint
+    - name: sa_2_name_2016
+      data_type: character varying
+    - name: sa_3_code_2016
+      data_type: bigint
+    - name: sa_3_name_2016
+      data_type: character varying
+    - name: sa_4_code_2016
+      data_type: bigint
+    - name: sa_4_name_2016
+      data_type: character varying
+    - name: ra_2011
+      data_type: bigint
+    - name: ra_2016
+      data_type: bigint
+    - name: mmm_2015
+      data_type: bigint
+    - name: mmm_2019
+      data_type: bigint
+    - name: ced
+      data_type: character varying
+    - name: altitude
+      data_type: numeric
+    - name: chargezone
+      data_type: character varying
+    - name: phn_code
+      data_type: character varying
+    - name: phn_name
+      data_type: character varying
+    - name: lgaregion
+      data_type: character varying
+    - name: electorate
+      data_type: character varying
+    - name: electoraterating
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: abs_weekly_earnings
+    columns:
+    - name: to_date
+      data_type: date
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: earnings_males_full_time_adult_ordinary_time_earnings_
+      data_type: numeric
+    - name: earnings_males_full_time_adult_total_earnings_
+      data_type: numeric
+    - name: earnings_males_total_earnings_
+      data_type: numeric
+    - name: earnings_females_full_time_adult_ordinary_time_earnings_
+      data_type: numeric
+    - name: earnings_females_full_time_adult_total_earnings_
+      data_type: numeric
+    - name: earnings_females_total_earnings_
+      data_type: numeric
+    - name: earnings_persons_full_time_adult_ordinary_time_earnings_
+      data_type: numeric
+    - name: earnings_persons_full_time_adult_total_earnings_
+      data_type: numeric
+    - name: earnings_persons_total_earnings_
+      data_type: numeric
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: abs_cpi_au
+    columns:
+    - name: date
+      data_type: date
+    - name: index
+      data_type: numeric
+    - name: yearly_change_percentage
+      data_type: numeric
+    - name: period_change_percentage
+      data_type: numeric
+  - name: abs_business_state_industry_size_2021
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: state
+      data_type: character varying
+    - name: anzsic_industry
+      data_type: character varying
+    - name: non_employing
+      data_type: bigint
+    - name: _1_19_employees
+      data_type: bigint
+    - name: _20_199_employees
+      data_type: bigint
+    - name: _200_employees
+      data_type: bigint
+    - name: total
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: suburb_geo_location
+    columns:
+    - name: id
+      data_type: bigint
+    - name: postcode
+      data_type: character varying
+    - name: city
+      data_type: character varying
+    - name: state
+      data_type: character varying
+    - name: lat
+      data_type: numeric
+    - name: long
+      data_type: numeric
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: country_geo_location
+    columns:
+    - name: _file
+      data_type: character varying
+    - name: _line
+      data_type: bigint
+    - name: country
+      data_type: character varying
+    - name: latitude
+      data_type: numeric
+    - name: longitude
+      data_type: numeric
+    - name: name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone

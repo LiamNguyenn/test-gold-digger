@@ -1,0 +1,443 @@
+version: 2
+sources:
+- name: employment_schedules_public
+  tables:
+  - name: peo_host_activities
+    columns:
+    - name: id
+      data_type: character varying
+    - name: organisation_id
+      data_type: character varying
+    - name: contact_name
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: activity_type
+      data_type: integer
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: contact_email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: unsubscribed_emails
+    columns:
+    - name: id
+      data_type: character varying
+    - name: user_id
+      data_type: character varying
+    - name: group
+      data_type: integer
+    - name: feature
+      data_type: integer
+    - name: item_id
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: compensations
+    columns:
+    - name: member_id
+      data_type: character varying
+    - name: last_action_at
+      data_type: timestamp without time zone
+    - name: approver_id
+      data_type: character varying
+    - name: payment_amount
+      data_type: double precision
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: approved_date
+      data_type: date
+    - name: payment_currency
+      data_type: character varying
+    - name: allowance_type
+      data_type: integer
+    - name: organisation_id
+      data_type: character varying
+    - name: payment_type
+      data_type: character varying
+    - name: additional_details
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: id
+      data_type: character varying
+    - name: created_by_id
+      data_type: character varying
+    - name: payment_date
+      data_type: date
+    - name: status
+      data_type: integer
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: last_submitted_at
+      data_type: timestamp without time zone
+    - name: payment_country
+      data_type: character varying
+    - name: commented_date
+      data_type: date
+    - name: comment
+      data_type: character varying
+    - name: declined_reason
+      data_type: character varying
+    - name: declined_at
+      data_type: timestamp without time zone
+    - name: comment_at
+      data_type: timestamp without time zone
+    - name: internal_comment_at
+      data_type: timestamp without time zone
+    - name: internal_comment
+      data_type: character varying
+    - name: payroll_currency
+      data_type: character varying
+    - name: payroll_amount
+      data_type: double precision
+    - name: aud_amount
+      data_type: double precision
+    - name: recurrence_config_id
+      data_type: character varying
+    - name: processed_date
+      data_type: date
+    - name: managed_by_user_id
+      data_type: character varying
+  - name: employment_proposals
+    columns:
+    - name: file_url
+      data_type: character varying
+    - name: file_name
+      data_type: character varying
+    - name: dispatched_at
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: dispatcher_name
+      data_type: character varying
+    - name: employment_schedule_id
+      data_type: character varying
+    - name: dispatched_ip
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: file_type
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: id
+      data_type: character varying
+    - name: file_external_id
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: reviewer_emails
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: signed_ip
+      data_type: character varying
+    - name: approver_signature
+      data_type: character varying
+    - name: client_status
+      data_type: integer
+    - name: approver_job_title
+      data_type: character varying
+    - name: internal_status
+      data_type: integer
+    - name: approver_id
+      data_type: character varying
+    - name: approver_name
+      data_type: character varying
+    - name: signed_at
+      data_type: timestamp without time zone
+    - name: receipted_at
+      data_type: timestamp without time zone
+    - name: receipted_ip
+      data_type: character varying
+    - name: included_msa
+      data_type: boolean
+  - name: employment_agreements
+    columns:
+    - name: reviewer_ip
+      data_type: character varying
+    - name: reviewed_at
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: employment_schedule_id
+      data_type: character varying
+    - name: dispatched_ip
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: dispatcher_id
+      data_type: character varying
+    - name: reviewer_id
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: attachment_id
+      data_type: character varying
+    - name: notifier_emails
+      data_type: character varying
+    - name: id
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: file_url
+      data_type: character varying
+    - name: reviewer_emails
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: file_name
+      data_type: character varying
+    - name: file_type
+      data_type: character varying
+    - name: dispatched_at
+      data_type: timestamp without time zone
+    - name: file_external_id
+      data_type: character varying
+    - name: dispatcher_name
+      data_type: character varying
+    - name: status
+      data_type: integer
+  - name: compensation_recurrence_configs
+    columns:
+    - name: end_date
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: id
+      data_type: character varying
+    - name: recurrence_type
+      data_type: integer
+    - name: status
+      data_type: integer
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: employment_schedule_change_requests
+    columns:
+    - name: summary
+      data_type: character varying
+    - name: assigned_to_id
+      data_type: character varying
+    - name: requested_by_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: description
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: id
+      data_type: character varying
+    - name: deleted_at
+      data_type: timestamp without time zone
+    - name: employment_schedule_id
+      data_type: character varying
+    - name: status
+      data_type: integer
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: request_from
+      data_type: integer
+    - name: file_ids
+      data_type: character varying
+    - name: assigned_to_ids
+      data_type: character varying
+    - name: source_request_id
+      data_type: character varying
+    - name: source_request_type
+      data_type: integer
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: termination_requests
+    columns:
+    - name: member_id
+      data_type: character varying
+    - name: managed_by_ids
+      data_type: character varying
+    - name: requested_by_id
+      data_type: character varying
+    - name: approve_outstanding_entitlements
+      data_type: boolean
+    - name: status_changed_at
+      data_type: timestamp without time zone
+    - name: termination_reason
+      data_type: character varying
+    - name: last_day_of_notice
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: resignation_letter_file_id
+      data_type: character varying
+    - name: require_payment_in_lieu
+      data_type: boolean
+    - name: declined_by
+      data_type: character varying
+    - name: date_notice_was_given
+      data_type: timestamp without time zone
+    - name: termination_type
+      data_type: integer
+    - name: approved_by_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: termination_date
+      data_type: timestamp without time zone
+    - name: termination_request_status
+      data_type: integer
+    - name: reason_for_resignation
+      data_type: character varying
+    - name: work_country
+      data_type: character varying
+    - name: notice_period
+      data_type: double precision
+    - name: reason_for_early_termination
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: notice_period_type
+      data_type: character varying
+    - name: id
+      data_type: character varying
+    - name: declined_by_id
+      data_type: character varying
+    - name: declined_reason
+      data_type: character varying
+  - name: employment_proposal_approver_histories
+    columns:
+    - name: from_member_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: to_member_id
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: comment
+      data_type: character varying
+    - name: id
+      data_type: character varying
+    - name: employment_proposal_id
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: feedbacks
+    columns:
+    - name: targeted_member_id
+      data_type: character varying
+    - name: requested_by_member_id
+      data_type: character varying
+    - name: organisation_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: event_name
+      data_type: integer
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: id
+      data_type: character varying
+    - name: content
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: target_object_type
+      data_type: integer
+    - name: target_object_id
+      data_type: character varying
+  - name: visited_pages
+    columns:
+    - name: member_id
+      data_type: character varying
+    - name: page_name
+      data_type: character varying
+    - name: visited
+      data_type: boolean
+    - name: id
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: gt_settings
+    columns:
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: description
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: id
+      data_type: bigint
+    - name: value
+      data_type: character varying
+    - name: deleted_at
+      data_type: timestamp without time zone
+    - name: key
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone

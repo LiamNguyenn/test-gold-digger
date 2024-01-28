@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: employment_hero_v_au_fulltime_job_title_salary
+    columns:
+      - name: member_id
+        tests:            
+          - not_null   
+          - unique 
+
+  - name: keypay_v_au_fulltime_job_title_salary
+    columns:
+      - name: "(business_id || employee_id)"
+        tests:            
+          - not_null   
+          - unique 
+  
+  - name: keypay_v_au_fulltime_job_title_default_salary
+    columns:
+      - name: "(organisation_id || member_id)"
+        tests:            
+          - not_null   
+          - unique 
+
+  - name: one_platform_v_au_fulltime_job_title_salary
+    columns:
+      - name: "(op_org_id || op_member_id)"
+        tests:            
+          - not_null   
+          - unique 
+
+  - name: salary_guide_au_fulltime_salary_feature
+    columns:
+      - name: "(common_job_title || residential_state || industry)"
+        tests:                        
+          - unique 
+
+  - name: match_job_titles
+    description: Map the processed job titles to the matched job title from the reference job list
+    columns:
+      - name: member_id
+        tests:            
+          - not_null   
+      - name: matched_title
+        tests:            
+          - not_null
+      - name: seniority
+        tests:            
+          - not_null
+          
+  - name: salary_range
+    description: Provide the salary range for each job title from the reference job list with a breakdown by different dimensions
+    columns:
+      - name: "id"
+        tests:                        
+          - unique
+          - not_null
+      - name: confidence_level
+        tests:
+          - accepted_values:
+              values: ['low', 'mid', 'high', 'very_high', 'insufficient_data']
+      - name: seniority
+        tests:
+          - accepted_values:
+              values: ['all', 'junior', 'intermediate', 'senior', 'lead', 'manager', 'head', 'director', 'chief']
+      - name: employment_type
+        tests:
+          - accepted_values:
+              values: ['all','casual', 'full-time', 'part-time']
+
+  - name: eh_paying_employee_job_titles
+    columns:
+      - name: member_id
+        tests:
+          - not_null
+          - unique
+  
+  - name: eh_internal_engineering_salary_range
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+  
+  - name: eh_internal_non_engineering_salary_range
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique

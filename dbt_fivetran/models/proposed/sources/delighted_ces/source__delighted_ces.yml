@@ -1,0 +1,183 @@
+version: 2
+sources:
+- name: delighted_ces
+  tables:
+  - name: person
+    columns:
+    - name: id
+      data_type: bigint
+    - name: properties_delighted_source
+      data_type: character varying
+    - name: properties_delighted_page_url
+      data_type: character varying
+    - name: properties_delighted_referrer_url
+      data_type: character varying
+    - name: properties_delighted_country
+      data_type: character varying
+    - name: properties_delighted_page
+      data_type: character varying
+    - name: properties_question_product_name
+      data_type: character varying
+    - name: properties_delighted_device_type
+      data_type: character varying
+    - name: properties_locale
+      data_type: character varying
+    - name: properties_feature
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: properties_delighted_browser
+      data_type: character varying
+    - name: properties_delighted_operating_system
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: properties_delighted_visitor_type
+      data_type: character varying
+    - name: properties_feature_code
+      data_type: character varying
+    - name: properties_member_uuid
+      data_type: character varying
+  - name: response
+    columns:
+    - name: id
+      data_type: bigint
+    - name: person_id
+      data_type: bigint
+    - name: survey_type
+      data_type: character varying
+    - name: score
+      data_type: integer
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: comment
+      data_type: character varying
+    - name: permalink
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: properties_delighted_browser
+      data_type: character varying
+    - name: properties_delighted_source
+      data_type: character varying
+    - name: properties_delighted_page
+      data_type: character varying
+    - name: properties_delighted_operating_system
+      data_type: character varying
+    - name: properties_delighted_referrer_url
+      data_type: character varying
+    - name: properties_question_product_name
+      data_type: character varying
+    - name: properties_locale
+      data_type: character varying
+    - name: properties_feature
+      data_type: character varying
+    - name: properties_delighted_country
+      data_type: character varying
+    - name: properties_feature_code
+      data_type: character varying
+    - name: properties_member_uuid
+      data_type: character varying
+    - name: properties_delighted_page_url
+      data_type: character varying
+    - name: properties_delighted_device_type
+      data_type: character varying
+    - name: properties_delighted_visitor_type
+      data_type: character varying
+    - name: properties_app_version
+      data_type: character varying
+    - name: properties_platform
+      data_type: character varying
+  - name: response_answer
+    columns:
+    - name: id
+      data_type: bigint
+    - name: question_id
+      data_type: character varying
+    - name: response_id
+      data_type: bigint
+    - name: free_response
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: scale
+      data_type: integer
+  - name: response_answer_selection
+    columns:
+    - name: id
+      data_type: character varying
+    - name: response_answer_id
+      data_type: bigint
+    - name: text
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp without time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp without time zone
+    - name: done
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: person_tag
+    columns:
+    - name: person_id
+      data_type: bigint
+    - name: tag
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: response_note
+    columns:
+    - name: id
+      data_type: bigint
+    - name: response_id
+      data_type: bigint
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: user_email
+      data_type: character varying
+    - name: text
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: question
+    columns:
+    - name: id
+      data_type: character varying
+    - name: text
+      data_type: character varying
+    - name: type
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone

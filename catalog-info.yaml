@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: gold-diggers
+  tags:
+    - internal
+    - jupyter
+  annotations:
+    github.com/project-slug: Thinkei/gold-diggers
+spec:
+  type: service
+  system: core-technology
+  lifecycle: production

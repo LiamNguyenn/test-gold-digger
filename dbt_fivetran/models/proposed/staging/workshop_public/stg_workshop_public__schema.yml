@@ -1,0 +1,86 @@
+version: 2
+
+models:
+  - name: stg_workshop_public__pingdom_checks
+    description: "This is the staging table for pingdom_checks, sourced directly from workshop_public.pingdom_checks table. This table excludes the rows deleted by fivetran.
+ "
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: "squad-peacemakers"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+        tests:
+          - not_null
+
+  - name: stg_workshop_public__pingdom_check_stats
+    description: "This is the staging table for pingdom_check_stats, sourced directly from workshop_public.pingdom_check_stats table. This table excludes the rows deleted by fivetran"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: "squad-peacemakers"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: pingdom_check_id
+        tests:
+          - not_null
+
+  - name: stg_workshop_public__prometheus_services
+    description: "This is the staging table for prometheus_services, sourced directly from workshop_public.prometheus_services table. This table excludes the rows deleted by fivetran"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: "squad-peacemakers"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+        tests:
+          - not_null
+
+  - name: stg_workshop_public__prometheus_service_stats
+    description: "This is the staging table for prometheus_service_stats, sourced directly from workshop_public.prometheus_service_stats table. This table excludes the rows deleted by fivetran"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: "squad-peacemakers"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: prometheus_service_id
+        tests:
+          - not_null
+
+  - name: stg_workshop_public__source_usages
+    description: "This is the staging table for source_usages, sourced directly from workshop_public.source_usages table. This table excludes the rows deleted by fivetran"
+    schema: staging
+    materialized: view
+    meta: 
+      upstream_system_owner: "squad-peacemakers"
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: source
+        tests:
+          - not_null

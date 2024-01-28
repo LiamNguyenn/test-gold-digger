@@ -1,0 +1,6 @@
+version: 2
+models:
+  - name: int_enrich_date_spine
+    description: Date spines for generating date dimensions
+    schema: intermediate
+    materialized: table

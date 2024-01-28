@@ -1,0 +1,32 @@
+version: 2
+models:
+  - name: stg_eh_product_workstream_ownership
+    description: This is the staging table for workstream_ownership, sourced directly from eh_product.workstream_ownership table
+    meta: 
+      upstream_system_owner: "product"
+      data_owner: "gold-diggers"
+    columns:
+      - name: row
+        tests:
+          - unique
+          - not_null
+      - name: product_owner
+        tests:
+          - not_null
+      - name: workstream
+        tests:
+          - not_null
+      - name: product_family
+      - name: product_line
+      - name: product_escalation
+  - name: stg_eh_product_squad_board_ownership
+    description: This is the staging table for squad_board_ownership, sourced directly from eh_product.squad_board_ownership table
+    meta: 
+      upstream_system_owner: "product"
+      data_owner: "gold-diggers"
+    columns:
+      - name: row
+        tests:
+          - unique
+          - not_null
+      - name: board_name

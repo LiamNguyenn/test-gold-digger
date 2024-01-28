@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: int_pingdom_check_uptime_raw
+    description: "The intermediate table contains the uptime (in seconds) for every day for every HR service. The service name from the source table is replaced with a cleansed service name from int_cleansed_service_names. It excludes the cases where no information was captured for any service for any day (i.e when unknown_time = 86399) "
+    schema: intermediate
+    materialized: view
+    meta: 
+      logic_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: pingdom_check_stats_id
+        description: Unique id from pingdom_check_stats. This is the PK
+      - name: pingdom_check_id
+        description: The id of the service for which the check was done. All values here should be found in pingdom_check.id
+      - name: service_name
+        description: "Name of the service. Eg: external-auth, keypay-webhook, herodollar-purchase"
+      - name: date
+        description: The date on which the check was done
+      - name: up_time
+        description: Uptime (in seconds) for the given date and service

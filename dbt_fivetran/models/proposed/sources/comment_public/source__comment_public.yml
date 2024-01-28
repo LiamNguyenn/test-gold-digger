@@ -1,0 +1,80 @@
+version: 2
+sources:
+- name: comment_public
+  tables:
+  - name: comments
+    columns:
+    - name: id
+      data_type: character varying
+    - name: member_id
+      data_type: character varying
+    - name: is_system
+      data_type: boolean
+    - name: thread_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: content_type
+      data_type: integer
+    - name: user_id
+      data_type: character varying
+    - name: comment_source_id
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: deleted_at
+      data_type: timestamp without time zone
+    - name: content
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: comment_sources
+    columns:
+    - name: id
+      data_type: character varying
+    - name: member_id
+      data_type: character varying
+    - name: organisation_id
+      data_type: character varying
+    - name: external_source_id
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: type
+      data_type: character varying
+    - name: deleted_at
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone

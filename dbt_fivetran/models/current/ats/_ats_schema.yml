@@ -1,0 +1,161 @@
+version: 2
+
+models:
+    - name: ats_jobs_created
+      schema: ats
+      alias: jobs_created
+      columns:
+        - name: job_id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_jobs_posted
+      schema: ats
+      alias: jobs_posted
+      columns:
+        - name: job_boards_post_id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_job_applications
+      schema: ats
+      alias: job_applications
+      columns:
+        - name: id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_job_application_profile
+      schema: ats
+      alias: job_application_profile
+      columns:
+        - name: candidate_job_id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_candidate_profiles
+      schema: ats
+      alias: candidate_profiles
+      columns:
+        - name: id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_candidate_experiences
+      schema: ats
+      alias: candidate_experiences
+      columns:
+        - name: id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_hiring_essentials_organisations
+      schema: ats
+      alias: hiring_essentials_organisations
+      columns:
+        - name: organisation_id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_smart_match_candidates_shown
+      schema: ats
+      alias: smart_match_candidates_shown
+      columns:
+        - name: time 
+          tests:
+            - not_null
+        - name: org_uuid
+          tests:
+            - not_null
+        - name: user_uuid
+          tests:
+            - not_null
+
+    - name: ats_smart_match_candidates_previewed
+      schema: ats
+      alias: smart_match_candidates_previewed
+      columns:
+        - name: time
+          tests:
+            - not_null
+        - name: org_uuid
+          tests:
+            - not_null
+        - name: user_uuid
+          tests:
+            - not_null  
+
+    - name: ats_smart_match_candidates_shortlisted_actioned
+      schema: ats
+      alias: smart_match_candidates_shortlisted_actioned
+      columns:
+        - name: time
+          tests:
+            - not_null
+        - name: org_uuid
+          tests:
+            - not_null
+        - name: user_uuid
+          tests:
+            - not_null
+
+    - name: ats_smart_match_candidates_saved_actioned
+      schema: ats
+      alias: smart_match_candidates_saved_actioned
+      columns:
+        - name: time
+          tests:
+            - not_null
+        - name: org_uuid
+          tests:
+            - not_null
+        - name: user_uuid
+          tests:
+            - not_null  
+
+    - name: ats_smart_match_funnel
+      schema: ats
+      alias: smart_match_funnel
+      columns:
+        - name: id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_feedback
+      schema: ats
+      alias: feedback
+
+    - name: ats_smart_match_employer_actions
+      schema: ats
+      alias: smart_match_employer_actions
+      columns:
+        - name: id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_smart_match_employees
+      schema: ats
+      alias: smart_match_employees
+      columns:
+        - name: member_id
+          tests:
+            - not_null
+            - unique
+
+    - name: ats_smart_match_employers
+      schema: ats
+      alias: smart_match_employers
+      columns:
+        - name: org_uuid
+          tests:
+            - not_null
+        

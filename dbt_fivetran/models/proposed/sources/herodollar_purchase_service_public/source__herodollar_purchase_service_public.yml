@@ -1,0 +1,86 @@
+version: 2
+sources:
+- name: herodollar_purchase_service_public
+  tables:
+  - name: invoices
+    columns:
+    - name: id
+      data_type: character varying
+    - name: invoice_id
+      data_type: integer
+    - name: transaction_id
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: transactions
+    columns:
+    - name: id
+      data_type: character varying
+    - name: error_message
+      data_type: character varying
+    - name: transaction_id
+      data_type: integer
+    - name: amount
+      data_type: numeric
+    - name: ip_addresses
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: payee_id
+      data_type: character varying
+    - name: payee_type
+      data_type: character varying
+    - name: points
+      data_type: integer
+    - name: purchase_method
+      data_type: character varying
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: rate
+      data_type: double precision
+    - name: payer_id
+      data_type: character varying
+    - name: net_amount
+      data_type: numeric
+    - name: payment_processor
+      data_type: integer
+    - name: status
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: payment_processor_transaction_id
+      data_type: character varying
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone

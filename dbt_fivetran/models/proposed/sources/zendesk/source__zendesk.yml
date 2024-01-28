@@ -1,0 +1,2366 @@
+version: 2
+sources:
+- name: zendesk
+  tables:
+  - name: ticket_field_add_on_s_to_churn_
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: user_tag
+    columns:
+    - name: tag
+      data_type: character varying
+    - name: user_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket
+    columns:
+    - name: url
+      data_type: character varying
+    - name: id
+      data_type: bigint
+    - name: external_id
+      data_type: character varying
+    - name: via_channel
+      data_type: character varying
+    - name: via_source_from_id
+      data_type: bigint
+    - name: via_source_from_title
+      data_type: character varying
+    - name: via_source_rel
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: type
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: priority
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: recipient
+      data_type: character varying
+    - name: requester_id
+      data_type: bigint
+    - name: submitter_id
+      data_type: bigint
+    - name: assignee_id
+      data_type: bigint
+    - name: organization_id
+      data_type: bigint
+    - name: group_id
+      data_type: bigint
+    - name: forum_topic_id
+      data_type: bigint
+    - name: problem_id
+      data_type: bigint
+    - name: has_incidents
+      data_type: boolean
+    - name: is_public
+      data_type: boolean
+    - name: due_at
+      data_type: timestamp without time zone
+    - name: ticket_form_id
+      data_type: bigint
+    - name: brand_id
+      data_type: bigint
+    - name: allow_channelback
+      data_type: boolean
+    - name: custom_recruitment_platform
+      data_type: boolean
+    - name: custom_quickbooks_online
+      data_type: boolean
+    - name: custom_key_pay
+      data_type: boolean
+    - name: custom_employer_end_user_
+      data_type: character varying
+    - name: custom_time_spent_last_update_sec_
+      data_type: bigint
+    - name: custom_organisation
+      data_type: character varying
+    - name: custom_job_adder
+      data_type: boolean
+    - name: custom_total_time_spent_sec_
+      data_type: bigint
+    - name: custom_diy_payroll
+      data_type: boolean
+    - name: custom_developer_task
+      data_type: character varying
+    - name: custom_myob
+      data_type: boolean
+    - name: custom_xero
+      data_type: boolean
+    - name: custom_escalate_to_developer
+      data_type: boolean
+    - name: custom_escalate_to_payroll_specialist
+      data_type: boolean
+    - name: custom_hr_platform
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: custom_requester_name
+      data_type: character varying
+    - name: custom_affecting_ability_to_work_48_hr_urgent
+      data_type: boolean
+    - name: custom_affecting_ability_to_pay_48_hr_urgent
+      data_type: boolean
+    - name: custom_employee_pay_
+      data_type: boolean
+    - name: custom_help_me_with
+      data_type: character varying
+    - name: custom_affected_user
+      data_type: character varying
+    - name: custom_affecting_ability_to_work_24_hr_urgent
+      data_type: boolean
+    - name: custom_affecting_ability_to_pay_24_hr_urgent
+      data_type: boolean
+    - name: custom_bill_or_churn_
+      data_type: character varying
+    - name: custom_phone_number
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: via_source_to_name
+      data_type: character varying
+    - name: via_source_to_address
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: custom_order_already_complete
+      data_type: boolean
+    - name: custom_associated_product_service
+      data_type: character varying
+    - name: custom_linked_ticket_data_field
+      data_type: character varying
+    - name: custom_need_help_with_hs_orders_
+      data_type: character varying
+    - name: subject
+      data_type: character varying
+    - name: custom_invoice_number_billing_period
+      data_type: character varying
+    - name: custom_partner_enquiry_type
+      data_type: character varying
+    - name: custom_business_portal_or_client_issue
+      data_type: character varying
+    - name: custom_enquiry_type
+      data_type: character varying
+    - name: custom_type_of_partner_request
+      data_type: character varying
+    - name: custom_where_training_
+      data_type: character varying
+    - name: custom_escalate_ticket_to_technical_support
+      data_type: boolean
+    - name: custom_redirect_ticket_to_partner_partner_org_level_1_support_req_
+      data_type: boolean
+    - name: custom_platform
+      data_type: character varying
+    - name: custom_invoice_date
+      data_type: date
+    - name: custom_feature_subcategory_for_integrations
+      data_type: character varying
+    - name: custom_feature_subcategory_for_employee_self_service
+      data_type: character varying
+    - name: custom_feature_subcategory_for_payroll
+      data_type: character varying
+    - name: custom_feature_subcategory_for_employee_management
+      data_type: character varying
+    - name: custom_product_categories
+      data_type: character varying
+    - name: custom_feature_subcategory_for_employee_engagement
+      data_type: character varying
+    - name: custom_feature_subcategory_for_work_life_or_equivalent_
+      data_type: character varying
+    - name: custom_feature_subcategory_for_compliance
+      data_type: character varying
+    - name: custom_feature_subcategory_for_system_configuration
+      data_type: character varying
+    - name: custom_feature_subcategory_for_time_and_attendance
+      data_type: character varying
+    - name: custom_hr_platform_product_categories
+      data_type: character varying
+    - name: custom_product
+      data_type: character varying
+    - name: custom_admin_t_f
+      data_type: boolean
+    - name: custom_feature_subcategory_for_reporting
+      data_type: character varying
+    - name: custom_related_to_integration_t_f
+      data_type: boolean
+    - name: custom_feature_subcategory_for_performance_management
+      data_type: character varying
+    - name: custom_feature_subcategory_for_content_management
+      data_type: character varying
+    - name: custom_request_type
+      data_type: character varying
+    - name: custom_feature_subcategory_for_workflow_management
+      data_type: character varying
+    - name: custom_internal_tools
+      data_type: character varying
+    - name: custom_escalation_path
+      data_type: character varying
+    - name: custom_feature_subcategory_for_recruitment
+      data_type: character varying
+    - name: custom_hero_pay_platform_product_categories
+      data_type: character varying
+    - name: custom_related_to_integration_true_if_checked_
+      data_type: boolean
+    - name: custom_is_this_person_a_admin_true_if_checked_
+      data_type: boolean
+    - name: custom_support_task
+      data_type: character varying
+    - name: custom_feature_subcategory_for_beta_feature
+      data_type: character varying
+    - name: system_location
+      data_type: character varying
+    - name: system_raw_email_identifier
+      data_type: character varying
+    - name: system_json_email_identifier
+      data_type: character varying
+    - name: system_ip_address
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: system_latitude
+      data_type: double precision
+    - name: system_longitude
+      data_type: double precision
+    - name: system_message_id
+      data_type: character varying
+    - name: system_machine_generated
+      data_type: boolean
+    - name: custom_linked_data
+      data_type: character varying
+    - name: custom_crm_request_type
+      data_type: character varying
+    - name: custom_crm_weekly_time_saving_hours_
+      data_type: double precision
+    - name: custom_segment
+      data_type: character varying
+    - name: custom_employees
+      data_type: character varying
+    - name: custom_industry
+      data_type: character varying
+    - name: custom_state
+      data_type: character varying
+    - name: custom_hr_subplan
+      data_type: character varying
+    - name: custom_email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: custom_org_creation_date
+      data_type: date
+    - name: custom_error_analysis
+      data_type: boolean
+    - name: merged_ticket_ids
+      data_type: character varying
+    - name: system_ccs
+      data_type: character varying
+    - name: custom_covid_19_
+      data_type: boolean
+    - name: custom_lifecycle_stage
+      data_type: character varying
+    - name: custom_escalation_type
+      data_type: character varying
+    - name: custom_nps_type
+      data_type: character varying
+    - name: system_client
+      data_type: character varying
+    - name: custom_escalation_source
+      data_type: character varying
+    - name: custom_escalation_category
+      data_type: character varying
+    - name: custom_escalation_reason
+      data_type: character varying
+    - name: custom_client_i_e_cemh_9999_ei_group_
+      data_type: character varying
+    - name: custom_lost_to_competitor_name_if_applicable_
+      data_type: character varying
+    - name: custom_client_saved_y_n_
+      data_type: character varying
+    - name: custom_does_this_client_have_employment_hero_payroll_
+      data_type: boolean
+    - name: custom_churn_reason
+      data_type: character varying
+    - name: custom_client_lifecycle_stage
+      data_type: character varying
+    - name: custom_billing_enquiry_reason
+      data_type: character varying
+    - name: custom_subplan
+      data_type: character varying
+    - name: custom_competitor
+      data_type: character varying
+    - name: custom_latest_invoice_arr
+      data_type: character varying
+    - name: custom_how_did_you_save_this_customer_
+      data_type: character varying
+    - name: custom_churn_category
+      data_type: character varying
+    - name: custom_describe_reason_other_
+      data_type: character varying
+    - name: custom_request_category
+      data_type: character varying
+    - name: custom_expectation_subcategories
+      data_type: character varying
+    - name: custom_experience_subcategories
+      data_type: character varying
+    - name: custom_describe_source_other_
+      data_type: character varying
+    - name: custom_explain_other_
+      data_type: character varying
+    - name: custom_financial_subcategories
+      data_type: character varying
+    - name: custom_employees_active_pending_
+      data_type: character varying
+    - name: custom_last_invoice_arr
+      data_type: bigint
+    - name: custom_flag_for_removal_
+      data_type: boolean
+    - name: custom_provided_product_feedback_
+      data_type: boolean
+    - name: custom_starting_score
+      data_type: character varying
+    - name: custom_closing_score
+      data_type: character varying
+    - name: custom_any_other_types_of_feedback_
+      data_type: character varying
+    - name: custom_reason_for_other_classification
+      data_type: character varying
+    - name: custom_project_phase_details
+      data_type: character varying
+    - name: custom_why_should_we_remove_
+      data_type: character varying
+    - name: custom_service_offering
+      data_type: character varying
+    - name: custom_customer_start_date
+      data_type: character varying
+    - name: custom_support_response_time_complaint_
+      data_type: boolean
+    - name: custom_support_quality_complaint_
+      data_type: boolean
+    - name: custom_specific_service_offering
+      data_type: character varying
+    - name: custom_customer_journey_phase
+      data_type: character varying
+    - name: custom_arr_churned
+      data_type: bigint
+    - name: custom_end_user_type
+      data_type: character varying
+    - name: custom_employee_request_sent_to_admin
+      data_type: character varying
+    - name: custom_project_manager
+      data_type: character varying
+    - name: custom_number_of_employees
+      data_type: character varying
+    - name: custom_bdm
+      data_type: character varying
+    - name: custom_arr_
+      data_type: character varying
+    - name: custom_escalation_accountability_status
+      data_type: character varying
+    - name: custom_close_reason
+      data_type: character varying
+    - name: custom_payroll_specialist_if_payroll_
+      data_type: character varying
+    - name: custom_escalation_reason_imps
+      data_type: character varying
+    - name: custom_review_status
+      data_type: character varying
+    - name: custom_template_manager_sub_category
+      data_type: character varying
+    - name: custom_slack_channel_id
+      data_type: character varying
+    - name: via_source_from_address
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: custom_what_question_was_asked_
+      data_type: character varying
+    - name: custom_provided_feedback_
+      data_type: boolean
+    - name: custom_asked_a_question_
+      data_type: boolean
+    - name: custom_hero_academy_workshop
+      data_type: character varying
+    - name: custom_please_summarise_feedback
+      data_type: character varying
+    - name: custom_feature_request_raised_
+      data_type: boolean
+    - name: followup_ids
+      data_type: character varying
+    - name: via_followup_source_id
+      data_type: bigint
+    - name: custom_partial_churn
+      data_type: boolean
+    - name: custom_full_churn
+      data_type: boolean
+    - name: custom_churned_add_on_
+      data_type: boolean
+    - name: custom_churned_payroll_
+      data_type: boolean
+    - name: custom_churned_hr_
+      data_type: boolean
+    - name: custom_hr_churn_
+      data_type: boolean
+    - name: custom_outcome
+      data_type: character varying
+    - name: custom_payroll_churn_
+      data_type: boolean
+    - name: custom_add_on_churn_
+      data_type: boolean
+    - name: custom_provided_hero_academy_service_delivery_feedback_
+      data_type: boolean
+    - name: custom_provided_support_feedback_
+      data_type: boolean
+    - name: custom_provided_pro_serv_feedback_
+      data_type: boolean
+    - name: custom_unresponsive_to_csm_follow_up
+      data_type: boolean
+    - name: custom_has_phone_support_
+      data_type: boolean
+    - name: custom_provided_other_feedback_
+      data_type: boolean
+    - name: custom_provided_other_customer_feedback_
+      data_type: boolean
+    - name: custom_employment_hero_payroll_platform_product_categories
+      data_type: character varying
+    - name: custom_hr_category_place_holder_tim_
+      data_type: character varying
+    - name: custom_employee_can_be_handled_by_admin
+      data_type: character varying
+    - name: custom_churn_date
+      data_type: character varying
+    - name: custom_churn_notice_date
+      data_type: character varying
+    - name: custom_hr_platform_enquiry_location
+      data_type: character varying
+    - name: custom_enquiry_type_
+      data_type: character varying
+    - name: custom_project_contact_name
+      data_type: character varying
+    - name: custom_link_to_saleforce_account
+      data_type: character varying
+    - name: custom_link_to_asana_project
+      data_type: character varying
+    - name: custom_specific_service_offering_hr_
+      data_type: character varying
+    - name: custom_specific_service_offering_payroll_
+      data_type: character varying
+    - name: custom_nps_topic
+      data_type: character varying
+    - name: custom_user_involved_in_setup_
+      data_type: character varying
+    - name: custom_enter_the_something_else_comment
+      data_type: character varying
+    - name: custom_improve_training_and_support_topic
+      data_type: character varying
+    - name: custom_responsive_to_csm_follow_up_
+      data_type: character varying
+    - name: custom_feature_request_enhancement_raised_
+      data_type: character varying
+    - name: custom_what_change_does_the_client_want_
+      data_type: character varying
+    - name: custom_mentioned_proserv_feedback_
+      data_type: character varying
+    - name: custom_nps_score
+      data_type: character varying
+    - name: custom_functionality_mentioned
+      data_type: character varying
+    - name: custom_parent_ticket_number
+      data_type: bigint
+    - name: custom_user_involved_in_setup_sale_or_implementation_
+      data_type: character varying
+    - name: custom_what_change_does_the_client_want_nps_comment_
+      data_type: character varying
+    - name: custom_churn_risk_
+      data_type: boolean
+    - name: custom_why_is_follow_up_not_required_
+      data_type: character varying
+    - name: custom_hr_platform_creation_date
+      data_type: character varying
+    - name: custom_hr_go_live_date
+      data_type: character varying
+    - name: custom_red_flag_requires_another_check_in_
+      data_type: boolean
+    - name: custom_feedback_summary
+      data_type: character varying
+    - name: custom_responsive_to_check_in_
+      data_type: character varying
+    - name: custom_has_an_employee_acknowledged_policy_
+      data_type: character varying
+    - name: custom_how_many_support_tickets_sent_since_go_live_
+      data_type: bigint
+    - name: custom_has_an_employee_submitted_a_leave_request_
+      data_type: character varying
+    - name: custom_has_an_employee_completed_a_certification_
+      data_type: character varying
+    - name: custom_has_an_employee_signed_a_contract_
+      data_type: character varying
+    - name: custom_check_in_summary
+      data_type: character varying
+    - name: custom_account_management_task_summary
+      data_type: character varying
+    - name: custom_product_accounts_
+      data_type: character varying
+    - name: custom_enquiry_type_accounts_
+      data_type: character varying
+    - name: custom_credit_request_accounts
+      data_type: boolean
+    - name: custom_implementation_start_date
+      data_type: character varying
+    - name: custom_why_is_the_client_a_red_flag_
+      data_type: character varying
+    - name: custom_additional_professional_service
+      data_type: character varying
+    - name: custom_why_does_the_customer_wish_to_merge_orgs_
+      data_type: character varying
+    - name: custom_is_this_customer_integrated_with_payroll_
+      data_type: character varying
+    - name: custom_award_name
+      data_type: character varying
+    - name: custom_how_many_orgs_does_the_customer_wish_to_split_into_
+      data_type: bigint
+    - name: custom_does_the_customer_have_phone_support_
+      data_type: character varying
+    - name: custom_is_the_ticket_5_days_old_
+      data_type: character varying
+    - name: custom_urgency_reason
+      data_type: character varying
+    - name: custom_why_does_the_customer_wish_to_split_orgs_
+      data_type: character varying
+    - name: custom_requesting_customer_s_phone_number
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: custom_requesting_customer_s_email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: custom_requesting_customer_s_name
+      data_type: character varying
+    - name: custom_experience_reasons_select_all_that_apply_
+      data_type: character varying
+    - name: custom_hr_subplan_to_churn_
+      data_type: character varying
+    - name: custom_churn_request_related_to_financial_reasons_
+      data_type: character varying
+    - name: custom_please_copy_paste_the_customer_s_request_here_in_their_own_words_
+      data_type: character varying
+    - name: custom_please_provide_detail_of_any_product_reasons_related_to_churn_request_type_n_a_if_none_
+      data_type: character varying
+    - name: custom_requester_s_name_organisation_and_contact_details_not_required_for_zendesk_agents_
+      data_type: character varying
+    - name: custom_payroll_to_churn_
+      data_type: character varying
+    - name: custom_csat_sent_to_customer
+      data_type: boolean
+    - name: custom_contract_terms_request_type
+      data_type: character varying
+    - name: custom_cs_ticket_outcome_summary
+      data_type: character varying
+    - name: custom_security_enquiry
+      data_type: character varying
+    - name: custom_related_to_upsell_
+      data_type: boolean
+    - name: custom_why_is_the_customer_requesting_training_
+      data_type: character varying
+    - name: custom_how_many_orgs_does_the_client_wish_to_merge_
+      data_type: character varying
+    - name: custom_is_the_ticket_3_days_old_
+      data_type: character varying
+    - name: custom_summarise_something_else_
+      data_type: character varying
+    - name: custom_admin_training_ticket_topic
+      data_type: character varying
+    - name: custom_customer_live_
+      data_type: character varying
+    - name: custom_opportunity_link
+      data_type: character varying
+    - name: custom_have_you_attached_a_screenshot_of_the_filters_applied_
+      data_type: boolean
+    - name: custom_have_you_attached_screenshots_of_the_issue_
+      data_type: boolean
+    - name: custom_leave_requests
+      data_type: character varying
+    - name: custom_to
+      data_type: date
+    - name: custom_do_you_have_access_to_your_recovery_code_
+      data_type: character varying
+    - name: custom_pay_finalisation
+      data_type: character varying
+    - name: custom_employment_hero_payroll
+      data_type: character varying
+    - name: custom_time_sheet_request_details
+      data_type: character varying
+    - name: custom_ato_reporting
+      data_type: character varying
+    - name: custom_manage_jobs
+      data_type: character varying
+    - name: custom_discounts
+      data_type: character varying
+    - name: custom_independent_contractor
+      data_type: character varying
+    - name: custom_templates
+      data_type: character varying
+    - name: custom_pay_runs
+      data_type: character varying
+    - name: custom_order_number_indicated
+      data_type: character varying
+    - name: custom_payrun_issue
+      data_type: character varying
+    - name: custom_pay_finalisation_timeline
+      data_type: character varying
+    - name: custom_order_history
+      data_type: character varying
+    - name: custom_which_payrun_do_they_relate_to_
+      data_type: character varying
+    - name: custom_which_employee_
+      data_type: character varying
+    - name: custom_manage_hiring_process
+      data_type: character varying
+    - name: custom_employee_name
+      data_type: character varying
+    - name: custom_which_timesheet_url_or_dates_
+      data_type: character varying
+    - name: custom_platform_import
+      data_type: character varying
+    - name: custom_rostering
+      data_type: character varying
+    - name: custom_payrun_link
+      data_type: character varying
+    - name: custom_leave_payroll
+      data_type: character varying
+    - name: custom_custom_survey
+      data_type: character varying
+    - name: custom_which_review_
+      data_type: character varying
+    - name: custom_which_pay_schedule_
+      data_type: character varying
+    - name: custom_organisation_id
+      data_type: character varying
+    - name: custom_from
+      data_type: date
+    - name: custom_is_this_for_import_export_of_current_employees_
+      data_type: character varying
+    - name: custom_platform_of_enquiry
+      data_type: character varying
+    - name: custom_pay_run_settings
+      data_type: character varying
+    - name: custom_business
+      data_type: character varying
+    - name: custom_which_location_
+      data_type: character varying
+    - name: custom_what_is_the_error_
+      data_type: character varying
+    - name: custom_purpose_of_ticket
+      data_type: character varying
+    - name: custom_manage_job_board
+      data_type: character varying
+    - name: custom_locations_public_holidays
+      data_type: character varying
+    - name: custom_link_to_the_report_you_are_running
+      data_type: character varying
+    - name: custom_email_used
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: custom_account_management
+      data_type: character varying
+    - name: custom_employment_hero_hr
+      data_type: character varying
+    - name: custom_organisation_chart
+      data_type: character varying
+    - name: custom_which_payrun_
+      data_type: character varying
+    - name: custom_payrun_today_
+      data_type: character varying
+    - name: custom_which_batch_batch_id_
+      data_type: character varying
+    - name: custom_has_the_user_followed_the_recommended_action_to_address_the_sync_error_
+      data_type: character varying
+    - name: custom_manage_candidates
+      data_type: character varying
+    - name: custom_payroll_report_pack
+      data_type: character varying
+    - name: custom_do_you_use_employment_hero_hr_
+      data_type: character varying
+    - name: custom_which_expenses_
+      data_type: character varying
+    - name: custom_payroll
+      data_type: character varying
+    - name: custom_post_to_job_board
+      data_type: character varying
+    - name: custom_company_settings
+      data_type: character varying
+    - name: custom_payroll_tasks
+      data_type: character varying
+    - name: custom_company_feed
+      data_type: character varying
+    - name: custom_link_to_the_pay_event
+      data_type: character varying
+    - name: custom_payroll_reports
+      data_type: character varying
+    - name: custom_insta_pay
+      data_type: character varying
+    - name: custom_clock_me_in
+      data_type: character varying
+    - name: custom_superannuation_super_payments
+      data_type: character varying
+    - name: custom_payroll_integration_issues_dashboard
+      data_type: character varying
+    - name: custom_reviews
+      data_type: character varying
+    - name: custom_timesheets
+      data_type: character varying
+    - name: custom_is_this_the_beta_version_or_the_original_
+      data_type: character varying
+    - name: custom_general_settings
+      data_type: character varying
+    - name: custom_employee_employer
+      data_type: character varying
+    - name: custom_on_behalf_of
+      data_type: character varying
+    - name: custom_workzone
+      data_type: character varying
+    - name: custom_public_holiday
+      data_type: character varying
+    - name: custom_self_service_account_management
+      data_type: character varying
+    - name: custom_error_presenting
+      data_type: character varying
+    - name: custom_asset_register
+      data_type: character varying
+    - name: custom_time_and_attendance
+      data_type: character varying
+    - name: custom_assigned_to
+      data_type: character varying
+    - name: custom_asset_code
+      data_type: character varying
+    - name: custom_is_this_related_to_a_live_job
+      data_type: character varying
+    - name: custom_actions
+      data_type: character varying
+    - name: custom_which_safety_incident_
+      data_type: character varying
+    - name: custom_business_management
+      data_type: character varying
+    - name: custom_which_goal_
+      data_type: character varying
+    - name: custom_name
+      data_type: character varying
+    - name: custom_which_asset
+      data_type: character varying
+    - name: custom_notifications
+      data_type: character varying
+    - name: custom_expenses
+      data_type: character varying
+    - name: custom_report_packs
+      data_type: character varying
+    - name: custom_menu
+      data_type: character varying
+    - name: custom_which_shift_s_
+      data_type: character varying
+    - name: custom_dashboard
+      data_type: character varying
+    - name: custom_team
+      data_type: character varying
+    - name: custom_add_ons
+      data_type: character varying
+    - name: custom_benefits
+      data_type: character varying
+    - name: custom_status
+      data_type: character varying
+    - name: custom_job_title
+      data_type: character varying
+    - name: custom_goals
+      data_type: character varying
+    - name: custom_payroll_settings
+      data_type: character varying
+    - name: custom_workflow_settings
+      data_type: character varying
+    - name: custom_categories
+      data_type: character varying
+    - name: custom_reports
+      data_type: character varying
+    - name: custom_employee_reports
+      data_type: character varying
+    - name: custom_workflows
+      data_type: character varying
+    - name: custom_existing_documents
+      data_type: character varying
+    - name: custom_stage_of_hiring_process
+      data_type: character varying
+    - name: custom_related_to_a_candidate_
+      data_type: character varying
+    - name: custom_date_created
+      data_type: character varying
+    - name: custom_what_issue_are_you_facing_
+      data_type: character varying
+    - name: custom_customisation
+      data_type: character varying
+    - name: custom_safety
+      data_type: character varying
+    - name: custom_hr_timesheets
+      data_type: character varying
+    - name: custom_learning
+      data_type: character varying
+    - name: custom_personnel
+      data_type: character varying
+    - name: custom_sample_document
+      data_type: character varying
+    - name: custom_asset_name_
+      data_type: character varying
+    - name: custom_contractor_name
+      data_type: character varying
+    - name: custom_document_name
+      data_type: character varying
+    - name: custom_employee_onboarding_wizard
+      data_type: character varying
+    - name: custom_compliance_reports
+      data_type: character varying
+    - name: custom_leave
+      data_type: character varying
+    - name: custom_i_have_an_order
+      data_type: character varying
+    - name: custom_new_or_existing
+      data_type: character varying
+    - name: custom_employee
+      data_type: character varying
+    - name: custom_which_template
+      data_type: character varying
+    - name: custom_checklist_settings
+      data_type: character varying
+    - name: custom_files
+      data_type: character varying
+    - name: custom_leave_report
+      data_type: character varying
+    - name: custom_coaching
+      data_type: character varying
+    - name: custom_tasks
+      data_type: character varying
+    - name: custom_date_range
+      data_type: character varying
+    - name: custom_pay_conditions
+      data_type: character varying
+    - name: custom_leave_category
+      data_type: character varying
+    - name: custom_payroll_integration_issues
+      data_type: character varying
+    - name: custom_which_job_board_
+      data_type: character varying
+    - name: custom_employee_engagement
+      data_type: character varying
+    - name: custom_recognition
+      data_type: character varying
+    - name: custom_which_security_group
+      data_type: character varying
+    - name: custom_warning_or_error
+      data_type: character varying
+    - name: custom_are_you_able_to_submit_
+      data_type: character varying
+    - name: custom_was_the_batch_submitted_today_
+      data_type: character varying
+    - name: custom_business_settings
+      data_type: character varying
+    - name: custom_advanced
+      data_type: character varying
+    - name: custom_business_name
+      data_type: character varying
+    - name: custom_order_number
+      data_type: character varying
+    - name: custom_policy_name
+      data_type: character varying
+    - name: custom_award
+      data_type: character varying
+    - name: custom_is_this_related_to_being_unable_to_export_your_journal_
+      data_type: character varying
+    - name: custom_headcount_reports
+      data_type: character varying
+    - name: custom_which_rule_
+      data_type: character varying
+    - name: custom_date_range_of_happiness_survey
+      data_type: character varying
+    - name: custom_which_custom_survey_
+      data_type: character varying
+    - name: custom_is_this_custom_or_under_the_award_
+      data_type: character varying
+    - name: custom_document_type
+      data_type: character varying
+    - name: custom_csm_follow_up_notes
+      data_type: character varying
+    - name: custom_which_pay_category_
+      data_type: character varying
+    - name: custom_leave_allowance_template
+      data_type: character varying
+    - name: custom_which_public_holiday_calendar_
+      data_type: character varying
+    - name: custom_use_in_employee_file_
+      data_type: character varying
+    - name: custom_use_in_onboarding_process_
+      data_type: character varying
+    - name: custom_feature_subcategory_for_expenses
+      data_type: character varying
+    - name: custom_payroll_integrations_
+      data_type: character varying
+    - name: custom_ticket_reason_summary_what_is_the_purpose_of_this_ticket_
+      data_type: character varying
+    - name: custom_employee_file_name
+      data_type: character varying
+    - name: custom_is_this_related_to_being_unable_to_submit_a_payment_
+      data_type: character varying
+    - name: custom_comment
+      data_type: character varying
+    - name: custom_file_uploads
+      data_type: character varying
+    - name: custom_which_policy
+      data_type: character varying
+    - name: custom_which_area_is_this_related_to_
+      data_type: character varying
+    - name: custom_figures_current_and_correct
+      data_type: character varying
+    - name: custom_employment_agreement
+      data_type: character varying
+    - name: custom_published_
+      data_type: character varying
+    - name: custom_rule_set
+      data_type: character varying
+    - name: custom_lodgment_enabled
+      data_type: character varying
+    - name: custom_payment_method
+      data_type: character varying
+    - name: custom_content_management
+      data_type: character varying
+    - name: custom_integrations
+      data_type: character varying
+    - name: custom_performance_management
+      data_type: character varying
+    - name: custom_system_configuration
+      data_type: character varying
+    - name: custom_work_life_or_equivalent_
+      data_type: character varying
+    - name: custom_rate_template
+      data_type: character varying
+    - name: custom_reporting
+      data_type: character varying
+    - name: custom_recruitment
+      data_type: character varying
+    - name: custom_employee_self_service
+      data_type: character varying
+    - name: custom_employee_management
+      data_type: character varying
+    - name: custom_location_of_payslip_issue
+      data_type: character varying
+    - name: custom_workflow_management
+      data_type: character varying
+    - name: custom_compliance
+      data_type: character varying
+    - name: custom_batch_processed
+      data_type: character varying
+    - name: custom_business_organisation_id
+      data_type: character varying
+    - name: custom_beta_feature
+      data_type: character varying
+    - name: custom_induction_content_name
+      data_type: character varying
+    - name: custom_other_superannuation_reason_for_other
+      data_type: character varying
+    - name: custom_expenses_options
+      data_type: character varying
+    - name: custom_other_payroll_provide_details_
+      data_type: character varying
+    - name: custom_other_hr_provide_details_
+      data_type: character varying
+    - name: custom_work_type
+      data_type: character varying
+    - name: custom_related_org_id_s_
+      data_type: character varying
+    - name: custom_which_expense_category_
+      data_type: character varying
+    - name: custom_requester_s_name_organisation_and_contact_details
+      data_type: character varying
+    - name: custom_feedback
+      data_type: character varying
+    - name: custom_which_kiosk_
+      data_type: character varying
+    - name: custom_goals_reports
+      data_type: character varying
+    - name: custom_which_deduction_category_
+      data_type: character varying
+    - name: custom_hr_guide_name
+      data_type: character varying
+    - name: custom_service_offering_
+      data_type: character varying
+    - name: custom_salesforce_account_link
+      data_type: character varying
+    - name: custom_project_type
+      data_type: character varying
+    - name: custom_call_availability
+      data_type: character varying
+    - name: custom_account_name
+      data_type: character varying
+    - name: custom_current_time_and_attendance_solution
+      data_type: character varying
+    - name: custom_opportunity_arr
+      data_type: bigint
+    - name: custom_solution_consultant_escalation_reason
+      data_type: character varying
+    - name: custom_employee_number
+      data_type: bigint
+    - name: custom_current_payroll_solution
+      data_type: character varying
+    - name: custom_investigation_required_to_solve_ticket
+      data_type: character varying
+    - name: custom_escalation_valid_
+      data_type: character varying
+    - name: custom_which_employer_liability_category_
+      data_type: character varying
+    - name: custom_what_event_has_lead_this_request_from_the_customer_
+      data_type: character varying
+    - name: custom_date_assigned
+      data_type: character varying
+    - name: custom_ticket_id_not_required_for_agents_
+      data_type: character varying
+    - name: custom_product_swag_
+      data_type: character varying
+    - name: custom_purpose_of_ticket_swag_
+      data_type: character varying
+    - name: custom_pillar
+      data_type: character varying
+    - name: custom_user_swag_
+      data_type: character varying
+    - name: custom_employment_hero_app
+      data_type: character varying
+    - name: custom_customer_success_contact_reason
+      data_type: character varying
+    - name: custom_status_id
+      data_type: bigint
+    - name: custom_country
+      data_type: character varying
+    - name: custom_my_documents
+      data_type: character varying
+    - name: custom_select_a_product
+      data_type: character varying
+    - name: custom_please_add_details_of_the_qualifications
+      data_type: character varying
+  - name: audit_log
+    columns:
+    - name: id
+      data_type: bigint
+    - name: action
+      data_type: character varying
+    - name: actor_id
+      data_type: bigint
+    - name: source_id
+      data_type: bigint
+    - name: source_type
+      data_type: character varying
+    - name: source_label
+      data_type: character varying
+    - name: change_description
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_schedule
+    columns:
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: ticket_id
+      data_type: bigint
+    - name: schedule_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_comment_attachment
+    columns:
+    - name: id
+      data_type: bigint
+    - name: ticket_comment_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_follower
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_collaborator
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: user
+    columns:
+    - name: id
+      data_type: bigint
+    - name: url
+      data_type: character varying
+    - name: email
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: time_zone
+      data_type: character varying
+    - name: phone
+      data_type: character varying
+      meta:
+        sensitive: true
+        masking_rules:
+          full_mask:
+            mask_function: sha2-256
+    - name: locale_id
+      data_type: bigint
+    - name: locale
+      data_type: character varying
+    - name: organization_id
+      data_type: bigint
+    - name: role
+      data_type: character varying
+    - name: verified
+      data_type: boolean
+    - name: authenticity_token
+      data_type: character varying
+    - name: external_id
+      data_type: character varying
+    - name: alias
+      data_type: character varying
+    - name: active
+      data_type: boolean
+    - name: shared
+      data_type: boolean
+    - name: shared_agent
+      data_type: boolean
+    - name: last_login_at
+      data_type: timestamp without time zone
+    - name: two_factor_auth_enabled
+      data_type: boolean
+    - name: signature
+      data_type: character varying
+    - name: details
+      data_type: character varying
+    - name: notes
+      data_type: character varying
+    - name: custom_role_id
+      data_type: bigint
+    - name: moderator
+      data_type: boolean
+    - name: ticket_restriction
+      data_type: character varying
+    - name: only_private_comments
+      data_type: boolean
+    - name: restricted_agent
+      data_type: boolean
+    - name: suspended
+      data_type: boolean
+    - name: chat_only
+      data_type: boolean
+    - name: remote_photo_url
+      data_type: character varying
+    - name: custom_premium_support
+      data_type: boolean
+    - name: custom_txt_embeddable_zendesk_user_fields_system_embeddable_last_seen_title
+      data_type: character varying
+    - name: custom_txt_nps_internal_api_client_system_nps_comment
+      data_type: character varying
+    - name: custom_txt_nps_internal_api_client_system_nps_rating
+      data_type: bigint
+    - name: custom_is_managed_payroll_client_
+      data_type: boolean
+    - name: custom_txt_nps_internal_api_client_system_last_nps_survey_date
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: custom_custom_organisation_id
+      data_type: bigint
+    - name: custom_id
+      data_type: bigint
+    - name: custom_organisation_id
+      data_type: double precision
+    - name: name
+      data_type: character varying
+    - name: custom_employee_status
+      data_type: character varying
+    - name: custom_hero_dollar_balance
+      data_type: double precision
+    - name: custom_2_fa_enabled
+      data_type: character varying
+    - name: custom_last_login_at
+      data_type: timestamp without time zone
+    - name: custom_out_of_office_agent_out_
+      data_type: boolean
+    - name: iana_time_zone
+      data_type: character varying
+    - name: report_csv
+      data_type: boolean
+    - name: default_group_id
+      data_type: bigint
+    - name: custom_employee_type
+      data_type: character varying
+  - name: ticket_sla_policy
+    columns:
+    - name: sla_policy_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: policy_applied_at
+      data_type: timestamp without time zone
+  - name: ticket_tag
+    columns:
+    - name: tag
+      data_type: character varying
+    - name: ticket_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_tag_history
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: updated
+      data_type: timestamp without time zone
+    - name: tag
+      data_type: character varying
+    - name: tagged
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: alert_recipient
+    columns:
+    - name: user_id
+      data_type: bigint
+    - name: ticket_alert_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_comment
+    columns:
+    - name: id
+      data_type: bigint
+    - name: body
+      data_type: character varying
+    - name: ticket_id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: facebook_comment
+      data_type: boolean
+    - name: voice_comment
+      data_type: boolean
+    - name: tweet
+      data_type: boolean
+    - name: created
+      data_type: timestamp without time zone
+    - name: public
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: transcription_status
+      data_type: character varying
+    - name: voice_comment_transcription_visible
+      data_type: boolean
+    - name: recording_url
+      data_type: character varying
+    - name: trusted
+      data_type: boolean
+    - name: started_at
+      data_type: timestamp without time zone
+    - name: location
+      data_type: character varying
+    - name: from
+      data_type: character varying
+    - name: to
+      data_type: character varying
+    - name: call_duration
+      data_type: bigint
+    - name: call_id
+      data_type: bigint
+    - name: transcription_text
+      data_type: character varying
+  - name: ticket_field_history
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: updated
+      data_type: timestamp without time zone
+    - name: field_name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: value
+      data_type: character varying
+  - name: ticket_field_methods_of_communication
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_macro_reference
+    columns:
+    - name: id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: via_channel
+      data_type: character varying
+    - name: via_source_from_id
+      data_type: bigint
+    - name: via_source_from_title
+      data_type: character varying
+    - name: via_source_from_address
+      data_type: character varying
+    - name: via_source_to_name
+      data_type: character varying
+    - name: via_source_to_address
+      data_type: character varying
+    - name: via_source_rel
+      data_type: character varying
+    - name: macro_title
+      data_type: character varying
+    - name: macro_deleted
+      data_type: boolean
+    - name: created
+      data_type: timestamp without time zone
+    - name: user_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: macro_id
+      data_type: character varying
+  - name: ticket_alert
+    columns:
+    - name: id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: via_channel
+      data_type: character varying
+    - name: via_source_from_id
+      data_type: bigint
+    - name: via_source_from_title
+      data_type: character varying
+    - name: via_source_to_name
+      data_type: character varying
+    - name: via_source_to_address
+      data_type: character varying
+    - name: via_source_rel
+      data_type: character varying
+    - name: type
+      data_type: character varying
+    - name: body
+      data_type: character varying
+    - name: subject
+      data_type: character varying
+    - name: created
+      data_type: timestamp without time zone
+    - name: user_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: resource
+      data_type: character varying
+    - name: via_source_from_address
+      data_type: character varying
+  - name: organization
+    columns:
+    - name: id
+      data_type: bigint
+    - name: external_id
+      data_type: character varying
+    - name: url
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: details
+      data_type: character varying
+    - name: notes
+      data_type: character varying
+    - name: group_id
+      data_type: bigint
+    - name: shared_tickets
+      data_type: boolean
+    - name: shared_comments
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: custom_organisation_id
+      data_type: bigint
+    - name: custom_hr_advisorary
+      data_type: boolean
+    - name: custom_technical_phone_support
+      data_type: boolean
+    - name: custom_payroll_advisoary
+      data_type: boolean
+    - name: custom_hr_advisory
+      data_type: boolean
+    - name: custom_payroll_advisory
+      data_type: boolean
+    - name: custom_reseller
+      data_type: character varying
+    - name: custom_white_label
+      data_type: character varying
+    - name: custom_payroll_connection
+      data_type: character varying
+    - name: custom_payroll_admins
+      data_type: character varying
+    - name: custom_sub_plan
+      data_type: character varying
+    - name: custom_benefits_access
+      data_type: character varying
+    - name: custom_instapay_access
+      data_type: character varying
+    - name: custom_lms_status
+      data_type: character varying
+    - name: custom_project_complete_live
+      data_type: boolean
+    - name: custom_guided_hr_project_status
+      data_type: character varying
+    - name: custom_guided_hr_complete_date
+      data_type: timestamp without time zone
+    - name: custom_managed_hr_project_status
+      data_type: character varying
+    - name: custom_guided_payroll_project_status
+      data_type: character varying
+    - name: custom_guided_payroll_complete_date
+      data_type: timestamp without time zone
+    - name: custom_managed_payroll_project_status
+      data_type: character varying
+    - name: custom_managed_hr_complete_date
+      data_type: timestamp without time zone
+    - name: custom_managed_payroll_complete_date
+      data_type: timestamp without time zone
+    - name: custom_implementation_managed_by_3_rd_party_status
+      data_type: character varying
+    - name: custom_implementation_managed_by_3_rd_party_complete_date
+      data_type: timestamp without time zone
+  - name: domain_name
+    columns:
+    - name: organization_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: domain_name
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: user_vote
+    columns:
+    - name: id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: item_id
+      data_type: bigint
+    - name: item_type
+      data_type: character varying
+    - name: value
+      data_type: bigint
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: organization_member
+    columns:
+    - name: id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: organization_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: article
+    columns:
+    - name: id
+      data_type: bigint
+    - name: author_id
+      data_type: bigint
+    - name: permission_group_id
+      data_type: bigint
+    - name: body
+      data_type: character varying
+    - name: comments_disabled
+      data_type: boolean
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: edited_at
+      data_type: timestamp without time zone
+    - name: draft
+      data_type: boolean
+    - name: url
+      data_type: character varying
+    - name: html_url
+      data_type: character varying
+    - name: position
+      data_type: integer
+    - name: vote_sum
+      data_type: integer
+    - name: vote_count
+      data_type: integer
+    - name: section_id
+      data_type: character varying
+    - name: promoted
+      data_type: boolean
+    - name: outdated
+      data_type: boolean
+    - name: name
+      data_type: character varying
+    - name: title
+      data_type: character varying
+    - name: source_locale
+      data_type: character varying
+    - name: locale
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_account_executive
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_project_manager
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_features_supported
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: satisfaction_rating
+    columns:
+    - name: id
+      data_type: bigint
+    - name: url
+      data_type: character varying
+    - name: assignee_id
+      data_type: bigint
+    - name: group_id
+      data_type: bigint
+    - name: requester_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: score
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: reason
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: comment
+      data_type: character varying
+  - name: group_member
+    columns:
+    - name: id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: group_id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_option
+    columns:
+    - name: name
+      data_type: character varying
+    - name: value
+      data_type: character varying
+    - name: default
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: ticket_custom_field_id
+      data_type: bigint
+  - name: group
+    columns:
+    - name: deleted
+      data_type: boolean
+    - name: id
+      data_type: bigint
+    - name: name
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: url
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+  - name: ticket_link
+    columns:
+    - name: id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: issue_key
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: issue_id
+      data_type: character varying
+  - name: organization_tag
+    columns:
+    - name: tag
+      data_type: character varying
+    - name: organization_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_form_history
+    columns:
+    - name: id
+      data_type: bigint
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: name
+      data_type: character varying
+    - name: display_name
+      data_type: character varying
+    - name: end_user_visible
+      data_type: boolean
+    - name: active
+      data_type: boolean
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_custom_field
+    columns:
+    - name: id
+      data_type: bigint
+    - name: title
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_payroll_specialist_if_payroll_
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: sla_policy_metric_history
+    columns:
+    - name: sla_policy_updated_at
+      data_type: timestamp without time zone
+    - name: sla_policy_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: priority
+      data_type: character varying
+    - name: metric
+      data_type: character varying
+    - name: target
+      data_type: bigint
+    - name: business_hours
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: sla_policy_history
+    columns:
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: id
+      data_type: bigint
+    - name: title
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: position
+      data_type: bigint
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: start
+      data_type: timestamp with time zone
+    - name: progress
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+  - name: article_label_name
+    columns:
+    - name: article_id
+      data_type: bigint
+    - name: label_name
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_churn_request_related_to_experience_reasons_select_all_that_apply_
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_form_field
+    columns:
+    - name: ticket_form_id
+      data_type: bigint
+    - name: ticket_field_id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: agent_condition
+    columns:
+    - name: _fivetran_id
+      data_type: character varying
+    - name: parent_field_id
+      data_type: bigint
+    - name: ticket_form_id
+      data_type: bigint
+    - name: child_field_id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: end_user_condition
+    columns:
+    - name: _fivetran_id
+      data_type: character varying
+    - name: parent_field_id
+      data_type: bigint
+    - name: ticket_form_id
+      data_type: bigint
+    - name: child_field_id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: custom_role
+    columns:
+    - name: id
+      data_type: bigint
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: role_type
+      data_type: bigint
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: configuration_chat_access
+      data_type: boolean
+    - name: configuration_manage_business_rules
+      data_type: boolean
+    - name: configuration_manage_dynamic_content
+      data_type: boolean
+    - name: configuration_manage_extensions_and_channels
+      data_type: boolean
+    - name: configuration_manage_facebook
+      data_type: boolean
+    - name: configuration_organization_editing
+      data_type: boolean
+    - name: configuration_organization_notes_editing
+      data_type: boolean
+    - name: configuration_ticket_deletion
+      data_type: boolean
+    - name: configuration_view_deleted_tickets
+      data_type: boolean
+    - name: configuration_ticket_tag_editing
+      data_type: boolean
+    - name: configuration_twitter_search_access
+      data_type: boolean
+    - name: configuration_forum_access_restricted_content
+      data_type: boolean
+    - name: configuration_end_user_list_access
+      data_type: character varying
+    - name: configuration_ticket_access
+      data_type: character varying
+    - name: configuration_ticket_comment_access
+      data_type: character varying
+    - name: configuration_voice_access
+      data_type: boolean
+    - name: configuration_moderate_forums
+      data_type: boolean
+    - name: configuration_group_access
+      data_type: boolean
+    - name: configuration_light_agent
+      data_type: boolean
+    - name: configuration_end_user_profile_access
+      data_type: character varying
+    - name: configuration_forum_access
+      data_type: character varying
+    - name: configuration_macro_access
+      data_type: character varying
+    - name: configuration_report_access
+      data_type: character varying
+    - name: configuration_ticket_editing
+      data_type: boolean
+    - name: configuration_ticket_merge
+      data_type: boolean
+    - name: configuration_view_access
+      data_type: character varying
+    - name: configuration_user_view_access
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: article_content_tag
+    columns:
+    - name: article_id
+      data_type: bigint
+    - name: content_tag_id
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_training_areas
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_custom_status
+    columns:
+    - name: id
+      data_type: bigint
+    - name: ticket_custom_field_id
+      data_type: bigint
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: schedule
+    columns:
+    - name: id
+      data_type: bigint
+    - name: name
+      data_type: character varying
+    - name: time_zone
+      data_type: character varying
+    - name: start_time
+      data_type: integer
+    - name: end_time
+      data_type: integer
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: end_time_utc
+      data_type: integer
+    - name: start_time_utc
+      data_type: integer
+    - name: created_at
+      data_type: timestamp without time zone
+  - name: schedule_holiday
+    columns:
+    - name: schedule_id
+      data_type: bigint
+    - name: id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_form_restricted_brand
+    columns:
+    - name: ticket_form_id
+      data_type: bigint
+    - name: brand_id
+      data_type: bigint
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: agent_condition_required_status
+    columns:
+    - name: _fivetran_id
+      data_type: character varying
+    - name: agent_condition_id
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_related_award_s_
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_upsell_options
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_proserve_offerings_experienced
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_paid_training_type
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_crm_department
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_product_line
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_experience_feedback
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_outcome
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_products
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_support_attribution_reason
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_proserv_attribution_reason
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_setup_mode_on_off_at_first_contact_
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: skip_ticket_history
+    columns:
+    - name: id
+      data_type: bigint
+    - name: updated_at
+      data_type: timestamp without time zone
+    - name: ticket_id
+      data_type: bigint
+    - name: user_id
+      data_type: bigint
+    - name: reason
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: brand
+    columns:
+    - name: id
+      data_type: bigint
+    - name: url
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: brand_url
+      data_type: character varying
+    - name: active
+      data_type: boolean
+    - name: subdomain
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: default
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: has_help_center
+      data_type: boolean
+    - name: logo_mapped_content_url
+      data_type: character varying
+    - name: logo_id
+      data_type: bigint
+    - name: logo_url
+      data_type: character varying
+    - name: logo_file_name
+      data_type: character varying
+    - name: logo_size
+      data_type: bigint
+    - name: logo_content_type
+      data_type: character varying
+    - name: help_center_state
+      data_type: character varying
+    - name: logo_content_url
+      data_type: character varying
+    - name: logo_inline
+      data_type: boolean
+    - name: logo_deleted
+      data_type: boolean
+    - name: logo_height
+      data_type: integer
+    - name: logo_width
+      data_type: integer
+  - name: ticket_field_features
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_internal_ticket_collaborator_s_
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: field_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: forum_topic
+    columns:
+    - name: id
+      data_type: bigint
+    - name: name
+      data_type: character varying
+    - name: description
+      data_type: character varying
+    - name: _fivetran_deleted
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: daylight_time
+    columns:
+    - name: year
+      data_type: integer
+    - name: time_zone
+      data_type: character varying
+    - name: daylight_start_utc
+      data_type: timestamp without time zone
+    - name: daylight_end_utc
+      data_type: timestamp without time zone
+    - name: daylight_offset
+      data_type: integer
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: support_ticket_resolution_and_handling_time_2022
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: ticket_solved_month
+      data_type: character varying
+    - name: purpose_of_ticket
+      data_type: character varying
+    - name: product
+      data_type: character varying
+    - name: ticket_created_month
+      data_type: character varying
+    - name: first_assignment_to_resolution_time_hrs
+      data_type: double precision
+    - name: ticket_solved_month_number
+      data_type: integer
+    - name: ticket_group
+      data_type: character varying
+    - name: ticket_channel
+      data_type: character varying
+    - name: full_resolution_time_hrs
+      data_type: double precision
+    - name: employment_hero_payroll
+      data_type: character varying
+    - name: requester_organization_external_id
+      data_type: character varying
+    - name: employment_hero_hr
+      data_type: character varying
+    - name: ticket_id
+      data_type: integer
+    - name: ticket_handling_time_mins
+      data_type: double precision
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: ticket_field_nps_outcome
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: field_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: time_zone
+    columns:
+    - name: time_zone
+      data_type: character varying
+    - name: standard_offset
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_product_csm
+    columns:
+    - name: ticket_id
+      data_type: bigint
+    - name: field_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: ticket_field_escalation_reason
+    columns:
+    - name: field_id
+      data_type: bigint
+    - name: ticket_id
+      data_type: bigint
+    - name: index
+      data_type: integer
+    - name: value
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone

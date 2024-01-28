@@ -1,0 +1,26 @@
+version: 2
+sources:
+- name: outreach
+  tables:
+  - name: outreach_mails
+    columns:
+    - name: id
+      data_type: bigint
+    - name: error_reason
+      data_type: character varying
+    - name: state
+      data_type: character varying
+    - name: employee_name
+      data_type: character varying
+    - name: manager_name
+      data_type: character varying
+    - name: step_name
+      data_type: character varying
+    - name: step_type
+      data_type: character varying
+    - name: prospect_name
+      data_type: character varying
+    - name: sequence_name
+      data_type: character varying
+    - name: sequence_tag
+      data_type: character varying

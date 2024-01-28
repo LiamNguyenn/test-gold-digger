@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: int__keypay_dwh__business
+    schema: int__keypay_dwh
+    alias: business
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+
+
+  - name: int__keypay_dwh__employee
+    schema: int__keypay_dwh
+    alias: employee
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: mobile_phone
+        meta:
+          sensitive: true
+          masking_rules:
+            full_mask:
+              mask_function: sha2-256
+
+
+  - name: int__keypay_dwh__suburb
+    schema: int__keypay_dwh
+    alias: suburb

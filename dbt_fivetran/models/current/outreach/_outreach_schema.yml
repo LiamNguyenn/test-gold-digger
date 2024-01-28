@@ -1,0 +1,13 @@
+version: 2
+
+models:
+    - name: outreach_mails
+      schema: outreach
+      alias: mails
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (id || state || prospect_name || step_name || sequence_name)
+          tests:
+            - not_null

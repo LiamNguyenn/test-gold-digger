@@ -1,0 +1,118 @@
+version: 2
+sources:
+- name: stg_checkly
+  tables:
+  - name: sync_logs
+    columns:
+    - name: job_id
+      data_type: character varying
+    - name: org_job_id
+      data_type: character varying
+    - name: job_name
+      data_type: character varying
+    - name: schema_name
+      data_type: character varying
+    - name: table_name
+      data_type: character varying
+    - name: start_time
+      data_type: timestamp without time zone
+    - name: end_time
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: message
+      data_type: character varying
+  - name: all_checks_results
+    columns:
+    - name: id
+      data_type: character varying
+    - name: has_errors
+      data_type: boolean
+    - name: has_failures
+      data_type: boolean
+    - name: run_location
+      data_type: character varying
+    - name: started_at
+      data_type: character varying
+    - name: stopped_at
+      data_type: character varying
+    - name: response_time
+      data_type: bigint
+    - name: check_id
+      data_type: character varying
+    - name: created_at
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: check_run_id
+      data_type: bigint
+    - name: attempts
+      data_type: bigint
+    - name: is_degraded
+      data_type: boolean
+    - name: over_max_response_time
+      data_type: boolean
+    - name: result_type
+      data_type: character varying
+    - name: _transaction_date
+      data_type: timestamp without time zone
+    - name: _etl_date
+      data_type: timestamp without time zone
+  - name: all_checks
+    columns:
+    - name: id
+      data_type: character varying
+    - name: check_type
+      data_type: character varying
+    - name: name
+      data_type: character varying
+    - name: frequency
+      data_type: bigint
+    - name: frequency_offset
+      data_type: bigint
+    - name: activated
+      data_type: boolean
+    - name: muted
+      data_type: boolean
+    - name: should_fail
+      data_type: boolean
+    - name: locations
+      data_type: character varying
+    - name: script
+      data_type: character varying
+    - name: created_at
+      data_type: character varying
+    - name: updated_at
+      data_type: character varying
+    - name: double_check
+      data_type: boolean
+    - name: ssl_check_domain
+      data_type: character varying
+    - name: tear_down_snippet_id
+      data_type: bigint
+    - name: local_setup_script
+      data_type: character varying
+    - name: local_tear_down_script
+      data_type: character varying
+    - name: use_global_alert_settings
+      data_type: boolean
+    - name: degraded_response_time
+      data_type: bigint
+    - name: max_response_time
+      data_type: bigint
+    - name: group_id
+      data_type: bigint
+    - name: group_order
+      data_type: bigint
+    - name: runtime_id
+      data_type: boolean
+    - name: script_path
+      data_type: boolean
+    - name: _transaction_date
+      data_type: timestamp without time zone
+    - name: _etl_date
+      data_type: timestamp without time zone
+    - name: setup_snippet_id
+      data_type: bigint

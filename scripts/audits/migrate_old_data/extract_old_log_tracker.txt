@@ -1,0 +1,935 @@
+------------------------ 2020-02 ------------------------
+   (220.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-01' AND created_at < '2020-02-02'
+Date: 2020-02-01. Count: 131985
+   (14945.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-01'' AND created_at < ''2020-02-02''', 'eh-audits-prod', 'tmp/2020/02/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (83.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-02' AND created_at < '2020-02-03'
+Date: 2020-02-02. Count: 198167
+   (14945.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-02'' AND created_at < ''2020-02-03''', 'eh-audits-prod', 'tmp/2020/02/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (137.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-03' AND created_at < '2020-02-04'
+Date: 2020-02-03. Count: 488383
+   (27902.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-03'' AND created_at < ''2020-02-04''', 'eh-audits-prod', 'tmp/2020/02/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (96.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-04' AND created_at < '2020-02-05'
+Date: 2020-02-04. Count: 543805
+   (43506.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-04'' AND created_at < ''2020-02-05''', 'eh-audits-prod', 'tmp/2020/02/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (202.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-05' AND created_at < '2020-02-06'
+Date: 2020-02-05. Count: 505905
+   (67378.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-05'' AND created_at < ''2020-02-06''', 'eh-audits-prod', 'tmp/2020/02/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (186.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-06' AND created_at < '2020-02-07'
+Date: 2020-02-06. Count: 427030
+   (42247.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-06'' AND created_at < ''2020-02-07''', 'eh-audits-prod', 'tmp/2020/02/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (61.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-07' AND created_at < '2020-02-08'
+Date: 2020-02-07. Count: 276676
+   (15074.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-07'' AND created_at < ''2020-02-08''', 'eh-audits-prod', 'tmp/2020/02/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (20.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-08' AND created_at < '2020-02-09'
+Date: 2020-02-08. Count: 110320
+   (2621.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-08'' AND created_at < ''2020-02-09''', 'eh-audits-prod', 'tmp/2020/02/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (58.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-09' AND created_at < '2020-02-10'
+Date: 2020-02-09. Count: 179442
+   (5099.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-09'' AND created_at < ''2020-02-10''', 'eh-audits-prod', 'tmp/2020/02/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (118.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-10' AND created_at < '2020-02-11'
+Date: 2020-02-10. Count: 552414
+   (32023.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-10'' AND created_at < ''2020-02-11''', 'eh-audits-prod', 'tmp/2020/02/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (94.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-11' AND created_at < '2020-02-12'
+Date: 2020-02-11. Count: 538732
+   (52158.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-11'' AND created_at < ''2020-02-12''', 'eh-audits-prod', 'tmp/2020/02/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (81.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-12' AND created_at < '2020-02-13'
+Date: 2020-02-12. Count: 527147
+   (50390.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-12'' AND created_at < ''2020-02-13''', 'eh-audits-prod', 'tmp/2020/02/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (122.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-13' AND created_at < '2020-02-14'
+Date: 2020-02-13. Count: 463080
+   (50315.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-13'' AND created_at < ''2020-02-14''', 'eh-audits-prod', 'tmp/2020/02/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (112.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-14' AND created_at < '2020-02-15'
+Date: 2020-02-14. Count: 352625
+   (34983.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-14'' AND created_at < ''2020-02-15''', 'eh-audits-prod', 'tmp/2020/02/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (68.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-15' AND created_at < '2020-02-16'
+Date: 2020-02-15. Count: 134116
+   (5684.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-15'' AND created_at < ''2020-02-16''', 'eh-audits-prod', 'tmp/2020/02/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (60.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-16' AND created_at < '2020-02-17'
+Date: 2020-02-16. Count: 197015
+   (7025.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-16'' AND created_at < ''2020-02-17''', 'eh-audits-prod', 'tmp/2020/02/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (82.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-17' AND created_at < '2020-02-18'
+Date: 2020-02-17. Count: 523353
+   (38063.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-17'' AND created_at < ''2020-02-18''', 'eh-audits-prod', 'tmp/2020/02/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (93.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-18' AND created_at < '2020-02-19'
+Date: 2020-02-18. Count: 526554
+   (33947.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-18'' AND created_at < ''2020-02-19''', 'eh-audits-prod', 'tmp/2020/02/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (114.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-19' AND created_at < '2020-02-20'
+Date: 2020-02-19. Count: 494648
+   (72113.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-19'' AND created_at < ''2020-02-20''', 'eh-audits-prod', 'tmp/2020/02/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (95.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-20' AND created_at < '2020-02-21'
+Date: 2020-02-20. Count: 430291
+   (40486.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-20'' AND created_at < ''2020-02-21''', 'eh-audits-prod', 'tmp/2020/02/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (127.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-21' AND created_at < '2020-02-22'
+Date: 2020-02-21. Count: 286460
+   (18991.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-21'' AND created_at < ''2020-02-22''', 'eh-audits-prod', 'tmp/2020/02/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (16.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-22' AND created_at < '2020-02-23'
+Date: 2020-02-22. Count: 108702
+   (3010.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-22'' AND created_at < ''2020-02-23''', 'eh-audits-prod', 'tmp/2020/02/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (64.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-23' AND created_at < '2020-02-24'
+Date: 2020-02-23. Count: 208887
+   (5903.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-23'' AND created_at < ''2020-02-24''', 'eh-audits-prod', 'tmp/2020/02/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (77.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-24' AND created_at < '2020-02-25'
+Date: 2020-02-24. Count: 504770
+   (30583.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-24'' AND created_at < ''2020-02-25''', 'eh-audits-prod', 'tmp/2020/02/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (143.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-25' AND created_at < '2020-02-26'
+Date: 2020-02-25. Count: 543949
+   (50268.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-25'' AND created_at < ''2020-02-26''', 'eh-audits-prod', 'tmp/2020/02/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (112.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-26' AND created_at < '2020-02-27'
+Date: 2020-02-26. Count: 479862
+   (61879.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-26'' AND created_at < ''2020-02-27''', 'eh-audits-prod', 'tmp/2020/02/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (114.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-27' AND created_at < '2020-02-28'
+Date: 2020-02-27. Count: 462542
+   (54291.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-27'' AND created_at < ''2020-02-28''', 'eh-audits-prod', 'tmp/2020/02/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (95.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-28' AND created_at < '2020-02-29'
+Date: 2020-02-28. Count: 323119
+   (29658.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-28'' AND created_at < ''2020-02-29''', 'eh-audits-prod', 'tmp/2020/02/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (31.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-02-29' AND created_at < '2020-03-01'
+Date: 2020-02-29. Count: 111272
+   (3147.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-02-29'' AND created_at < ''2020-03-01''', 'eh-audits-prod', 'tmp/2020/02/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-03 ------------------------
+   (65.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-01' AND created_at < '2020-03-02'
+Date: 2020-03-01. Count: 212855
+   (7590.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-01'' AND created_at < ''2020-03-02''', 'eh-audits-prod', 'tmp/2020/03/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (96.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-02' AND created_at < '2020-03-03'
+Date: 2020-03-02. Count: 493665
+   (28941.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-02'' AND created_at < ''2020-03-03''', 'eh-audits-prod', 'tmp/2020/03/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (121.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-03' AND created_at < '2020-03-04'
+Date: 2020-03-03. Count: 550548
+   (45130.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-03'' AND created_at < ''2020-03-04''', 'eh-audits-prod', 'tmp/2020/03/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (87.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-04' AND created_at < '2020-03-05'
+Date: 2020-03-04. Count: 602503
+   (73580.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-04'' AND created_at < ''2020-03-05''', 'eh-audits-prod', 'tmp/2020/03/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (84.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-05' AND created_at < '2020-03-06'
+Date: 2020-03-05. Count: 465839
+   (54534.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-05'' AND created_at < ''2020-03-06''', 'eh-audits-prod', 'tmp/2020/03/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (336.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-06' AND created_at < '2020-03-07'
+Date: 2020-03-06. Count: 316456
+   (27695.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-06'' AND created_at < ''2020-03-07''', 'eh-audits-prod', 'tmp/2020/03/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (24.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-07' AND created_at < '2020-03-08'
+Date: 2020-03-07. Count: 100945
+   (3197.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-07'' AND created_at < ''2020-03-08''', 'eh-audits-prod', 'tmp/2020/03/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (81.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-08' AND created_at < '2020-03-09'
+Date: 2020-03-08. Count: 128409
+   (4252.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-08'' AND created_at < ''2020-03-09''', 'eh-audits-prod', 'tmp/2020/03/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (95.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-09' AND created_at < '2020-03-10'
+Date: 2020-03-09. Count: 400797
+   (25676.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-09'' AND created_at < ''2020-03-10''', 'eh-audits-prod', 'tmp/2020/03/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (92.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-10' AND created_at < '2020-03-11'
+Date: 2020-03-10. Count: 565349
+   (68174.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-10'' AND created_at < ''2020-03-11''', 'eh-audits-prod', 'tmp/2020/03/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (88.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-11' AND created_at < '2020-03-12'
+Date: 2020-03-11. Count: 520832
+   (66862.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-11'' AND created_at < ''2020-03-12''', 'eh-audits-prod', 'tmp/2020/03/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (82.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-12' AND created_at < '2020-03-13'
+Date: 2020-03-12. Count: 459752
+   (65592.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-12'' AND created_at < ''2020-03-13''', 'eh-audits-prod', 'tmp/2020/03/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (203.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-13' AND created_at < '2020-03-14'
+Date: 2020-03-13. Count: 367292
+   (44793.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-13'' AND created_at < ''2020-03-14''', 'eh-audits-prod', 'tmp/2020/03/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (62.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-14' AND created_at < '2020-03-15'
+Date: 2020-03-14. Count: 105437
+   (6083.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-14'' AND created_at < ''2020-03-15''', 'eh-audits-prod', 'tmp/2020/03/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (93.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-15' AND created_at < '2020-03-16'
+Date: 2020-03-15. Count: 166484
+   (7027.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-15'' AND created_at < ''2020-03-16''', 'eh-audits-prod', 'tmp/2020/03/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (90.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-16' AND created_at < '2020-03-17'
+Date: 2020-03-16. Count: 610338
+   (56669.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-16'' AND created_at < ''2020-03-17''', 'eh-audits-prod', 'tmp/2020/03/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (92.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-17' AND created_at < '2020-03-18'
+Date: 2020-03-17. Count: 561011
+   (53586.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-17'' AND created_at < ''2020-03-18''', 'eh-audits-prod', 'tmp/2020/03/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (156.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-18' AND created_at < '2020-03-19'
+Date: 2020-03-18. Count: 1051756
+   (115221.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-18'' AND created_at < ''2020-03-19''', 'eh-audits-prod', 'tmp/2020/03/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (339.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-19' AND created_at < '2020-03-20'
+Date: 2020-03-19. Count: 584853
+   (51535.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-19'' AND created_at < ''2020-03-20''', 'eh-audits-prod', 'tmp/2020/03/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (108.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-20' AND created_at < '2020-03-21'
+Date: 2020-03-20. Count: 525686
+   (44735.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-20'' AND created_at < ''2020-03-21''', 'eh-audits-prod', 'tmp/2020/03/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (70.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-21' AND created_at < '2020-03-22'
+Date: 2020-03-21. Count: 283137
+   (31158.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-21'' AND created_at < ''2020-03-22''', 'eh-audits-prod', 'tmp/2020/03/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (67.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-22' AND created_at < '2020-03-23'
+Date: 2020-03-22. Count: 183023
+   (7035.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-22'' AND created_at < ''2020-03-23''', 'eh-audits-prod', 'tmp/2020/03/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (85.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-23' AND created_at < '2020-03-24'
+Date: 2020-03-23. Count: 475132
+   (40976.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-23'' AND created_at < ''2020-03-24''', 'eh-audits-prod', 'tmp/2020/03/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (91.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-24' AND created_at < '2020-03-25'
+Date: 2020-03-24. Count: 592292
+   (54975.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-24'' AND created_at < ''2020-03-25''', 'eh-audits-prod', 'tmp/2020/03/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (103.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-25' AND created_at < '2020-03-26'
+Date: 2020-03-25. Count: 500200
+   (68167.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-25'' AND created_at < ''2020-03-26''', 'eh-audits-prod', 'tmp/2020/03/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (396.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-26' AND created_at < '2020-03-27'
+Date: 2020-03-26. Count: 506479
+   (58532.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-26'' AND created_at < ''2020-03-27''', 'eh-audits-prod', 'tmp/2020/03/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (65.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-27' AND created_at < '2020-03-28'
+Date: 2020-03-27. Count: 287509
+   (24192.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-27'' AND created_at < ''2020-03-28''', 'eh-audits-prod', 'tmp/2020/03/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (15.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-28' AND created_at < '2020-03-29'
+Date: 2020-03-28. Count: 92274
+   (3323.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-28'' AND created_at < ''2020-03-29''', 'eh-audits-prod', 'tmp/2020/03/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (58.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-29' AND created_at < '2020-03-30'
+Date: 2020-03-29. Count: 159673
+   (5128.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-29'' AND created_at < ''2020-03-30''', 'eh-audits-prod', 'tmp/2020/03/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (152.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-30' AND created_at < '2020-03-31'
+Date: 2020-03-30. Count: 543642
+   (52096.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-30'' AND created_at < ''2020-03-31''', 'eh-audits-prod', 'tmp/2020/03/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (179.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-03-31' AND created_at < '2020-04-01'
+Date: 2020-03-31. Count: 506397
+   (40945.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-03-31'' AND created_at < ''2020-04-01''', 'eh-audits-prod', 'tmp/2020/03/31/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-04 ------------------------
+   (148.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-01' AND created_at < '2020-04-02'
+Date: 2020-04-01. Count: 525961
+   (68050.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-01'' AND created_at < ''2020-04-02''', 'eh-audits-prod', 'tmp/2020/04/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (91.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-02' AND created_at < '2020-04-03'
+Date: 2020-04-02. Count: 390238
+   (35678.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-02'' AND created_at < ''2020-04-03''', 'eh-audits-prod', 'tmp/2020/04/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (63.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-03' AND created_at < '2020-04-04'
+Date: 2020-04-03. Count: 265855
+   (18397.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-03'' AND created_at < ''2020-04-04''', 'eh-audits-prod', 'tmp/2020/04/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (21.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-04' AND created_at < '2020-04-05'
+Date: 2020-04-04. Count: 109161
+   (6432.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-04'' AND created_at < ''2020-04-05''', 'eh-audits-prod', 'tmp/2020/04/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (53.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-05' AND created_at < '2020-04-06'
+Date: 2020-04-05. Count: 142252
+   (4315.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-05'' AND created_at < ''2020-04-06''', 'eh-audits-prod', 'tmp/2020/04/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (81.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-06' AND created_at < '2020-04-07'
+Date: 2020-04-06. Count: 472670
+   (44159.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-06'' AND created_at < ''2020-04-07''', 'eh-audits-prod', 'tmp/2020/04/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (98.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-07' AND created_at < '2020-04-08'
+Date: 2020-04-07. Count: 432481
+   (40602.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-07'' AND created_at < ''2020-04-08''', 'eh-audits-prod', 'tmp/2020/04/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (82.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-08' AND created_at < '2020-04-09'
+Date: 2020-04-08. Count: 417895
+   (60579.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-08'' AND created_at < ''2020-04-09''', 'eh-audits-prod', 'tmp/2020/04/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (86.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-09' AND created_at < '2020-04-10'
+Date: 2020-04-09. Count: 382991
+   (64848.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-09'' AND created_at < ''2020-04-10''', 'eh-audits-prod', 'tmp/2020/04/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (18.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-10' AND created_at < '2020-04-11'
+Date: 2020-04-10. Count: 117894
+   (6573.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-10'' AND created_at < ''2020-04-11''', 'eh-audits-prod', 'tmp/2020/04/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (23.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-11' AND created_at < '2020-04-12'
+Date: 2020-04-11. Count: 78382
+   (3123.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-11'' AND created_at < ''2020-04-12''', 'eh-audits-prod', 'tmp/2020/04/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (16.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-12' AND created_at < '2020-04-13'
+Date: 2020-04-12. Count: 76116
+   (3233.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-12'' AND created_at < ''2020-04-13''', 'eh-audits-prod', 'tmp/2020/04/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (143.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-13' AND created_at < '2020-04-14'
+Date: 2020-04-13. Count: 241828
+   (11395.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-13'' AND created_at < ''2020-04-14''', 'eh-audits-prod', 'tmp/2020/04/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (146.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-14' AND created_at < '2020-04-15'
+Date: 2020-04-14. Count: 595330
+   (66584.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-14'' AND created_at < ''2020-04-15''', 'eh-audits-prod', 'tmp/2020/04/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (82.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-15' AND created_at < '2020-04-16'
+Date: 2020-04-15. Count: 486888
+   (88400.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-15'' AND created_at < ''2020-04-16''', 'eh-audits-prod', 'tmp/2020/04/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (83.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-16' AND created_at < '2020-04-17'
+Date: 2020-04-16. Count: 410475
+   (44665.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-16'' AND created_at < ''2020-04-17''', 'eh-audits-prod', 'tmp/2020/04/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (76.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-17' AND created_at < '2020-04-18'
+Date: 2020-04-17. Count: 277831
+   (24902.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-17'' AND created_at < ''2020-04-18''', 'eh-audits-prod', 'tmp/2020/04/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (15.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-18' AND created_at < '2020-04-19'
+Date: 2020-04-18. Count: 78724
+   (2126.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-18'' AND created_at < ''2020-04-19''', 'eh-audits-prod', 'tmp/2020/04/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (68.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-19' AND created_at < '2020-04-20'
+Date: 2020-04-19. Count: 127009
+   (4225.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-19'' AND created_at < ''2020-04-20''', 'eh-audits-prod', 'tmp/2020/04/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (70.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-20' AND created_at < '2020-04-21'
+Date: 2020-04-20. Count: 413124
+   (30040.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-20'' AND created_at < ''2020-04-21''', 'eh-audits-prod', 'tmp/2020/04/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (84.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-21' AND created_at < '2020-04-22'
+Date: 2020-04-21. Count: 431390
+   (36491.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-21'' AND created_at < ''2020-04-22''', 'eh-audits-prod', 'tmp/2020/04/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (101.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-22' AND created_at < '2020-04-23'
+Date: 2020-04-22. Count: 398207
+   (57828.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-22'' AND created_at < ''2020-04-23''', 'eh-audits-prod', 'tmp/2020/04/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (257.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-23' AND created_at < '2020-04-24'
+Date: 2020-04-23. Count: 411295
+   (53701.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-23'' AND created_at < ''2020-04-24''', 'eh-audits-prod', 'tmp/2020/04/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (91.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-24' AND created_at < '2020-04-25'
+Date: 2020-04-24. Count: 343256
+   (25592.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-24'' AND created_at < ''2020-04-25''', 'eh-audits-prod', 'tmp/2020/04/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (14.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-25' AND created_at < '2020-04-26'
+Date: 2020-04-25. Count: 86060
+   (5422.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-25'' AND created_at < ''2020-04-26''', 'eh-audits-prod', 'tmp/2020/04/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (57.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-26' AND created_at < '2020-04-27'
+Date: 2020-04-26. Count: 128531
+   (4243.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-26'' AND created_at < ''2020-04-27''', 'eh-audits-prod', 'tmp/2020/04/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (79.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-27' AND created_at < '2020-04-28'
+Date: 2020-04-27. Count: 408188
+   (31178.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-27'' AND created_at < ''2020-04-28''', 'eh-audits-prod', 'tmp/2020/04/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (103.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-28' AND created_at < '2020-04-29'
+Date: 2020-04-28. Count: 598746
+   (41826.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-28'' AND created_at < ''2020-04-29''', 'eh-audits-prod', 'tmp/2020/04/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (87.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-29' AND created_at < '2020-04-30'
+Date: 2020-04-29. Count: 436020
+   (62884.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-29'' AND created_at < ''2020-04-30''', 'eh-audits-prod', 'tmp/2020/04/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (103.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-04-30' AND created_at < '2020-05-01'
+Date: 2020-04-30. Count: 420939
+   (49280.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-04-30'' AND created_at < ''2020-05-01''', 'eh-audits-prod', 'tmp/2020/04/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-05 ------------------------
+   (105.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-01' AND created_at < '2020-05-02'
+Date: 2020-05-01. Count: 302922
+   (18980.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-01'' AND created_at < ''2020-05-02''', 'eh-audits-prod', 'tmp/2020/05/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (23.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-02' AND created_at < '2020-05-03'
+Date: 2020-05-02. Count: 81574
+   (2508.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-02'' AND created_at < ''2020-05-03''', 'eh-audits-prod', 'tmp/2020/05/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (49.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-03' AND created_at < '2020-05-04'
+Date: 2020-05-03. Count: 114639
+   (3437.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-03'' AND created_at < ''2020-05-04''', 'eh-audits-prod', 'tmp/2020/05/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (91.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-04' AND created_at < '2020-05-05'
+Date: 2020-05-04. Count: 376677
+   (21870.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-04'' AND created_at < ''2020-05-05''', 'eh-audits-prod', 'tmp/2020/05/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (163.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-05' AND created_at < '2020-05-06'
+Date: 2020-05-05. Count: 416932
+   (44811.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-05'' AND created_at < ''2020-05-06''', 'eh-audits-prod', 'tmp/2020/05/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (75.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-06' AND created_at < '2020-05-07'
+Date: 2020-05-06. Count: 379885
+   (48551.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-06'' AND created_at < ''2020-05-07''', 'eh-audits-prod', 'tmp/2020/05/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (85.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-07' AND created_at < '2020-05-08'
+Date: 2020-05-07. Count: 355058
+   (50042.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-07'' AND created_at < ''2020-05-08''', 'eh-audits-prod', 'tmp/2020/05/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (195.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-08' AND created_at < '2020-05-09'
+Date: 2020-05-08. Count: 270168
+   (24553.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-08'' AND created_at < ''2020-05-09''', 'eh-audits-prod', 'tmp/2020/05/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (31.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-09' AND created_at < '2020-05-10'
+Date: 2020-05-09. Count: 86974
+   (3950.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-09'' AND created_at < ''2020-05-10''', 'eh-audits-prod', 'tmp/2020/05/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (109.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-10' AND created_at < '2020-05-11'
+Date: 2020-05-10. Count: 130775
+   (4737.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-10'' AND created_at < ''2020-05-11''', 'eh-audits-prod', 'tmp/2020/05/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (88.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-11' AND created_at < '2020-05-12'
+Date: 2020-05-11. Count: 405853
+   (23266.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-11'' AND created_at < ''2020-05-12''', 'eh-audits-prod', 'tmp/2020/05/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (90.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-12' AND created_at < '2020-05-13'
+Date: 2020-05-12. Count: 462419
+   (42318.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-12'' AND created_at < ''2020-05-13''', 'eh-audits-prod', 'tmp/2020/05/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (106.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-13' AND created_at < '2020-05-14'
+Date: 2020-05-13. Count: 424493
+   (72296.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-13'' AND created_at < ''2020-05-14''', 'eh-audits-prod', 'tmp/2020/05/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (156.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-14' AND created_at < '2020-05-15'
+Date: 2020-05-14. Count: 407147
+   (57006.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-14'' AND created_at < ''2020-05-15''', 'eh-audits-prod', 'tmp/2020/05/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (63.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-15' AND created_at < '2020-05-16'
+Date: 2020-05-15. Count: 282687
+   (26811.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-15'' AND created_at < ''2020-05-16''', 'eh-audits-prod', 'tmp/2020/05/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (14.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-16' AND created_at < '2020-05-17'
+Date: 2020-05-16. Count: 81160
+   (2477.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-16'' AND created_at < ''2020-05-17''', 'eh-audits-prod', 'tmp/2020/05/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (79.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-17' AND created_at < '2020-05-18'
+Date: 2020-05-17. Count: 136532
+   (6216.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-17'' AND created_at < ''2020-05-18''', 'eh-audits-prod', 'tmp/2020/05/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (79.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-18' AND created_at < '2020-05-19'
+Date: 2020-05-18. Count: 438951
+   (32392.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-18'' AND created_at < ''2020-05-19''', 'eh-audits-prod', 'tmp/2020/05/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (222.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-19' AND created_at < '2020-05-20'
+Date: 2020-05-19. Count: 451365
+   (47513.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-19'' AND created_at < ''2020-05-20''', 'eh-audits-prod', 'tmp/2020/05/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (100.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-20' AND created_at < '2020-05-21'
+Date: 2020-05-20. Count: 381848
+   (55727.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-20'' AND created_at < ''2020-05-21''', 'eh-audits-prod', 'tmp/2020/05/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (89.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-21' AND created_at < '2020-05-22'
+Date: 2020-05-21. Count: 364487
+   (43859.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-21'' AND created_at < ''2020-05-22''', 'eh-audits-prod', 'tmp/2020/05/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (72.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-22' AND created_at < '2020-05-23'
+Date: 2020-05-22. Count: 282327
+   (20799.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-22'' AND created_at < ''2020-05-23''', 'eh-audits-prod', 'tmp/2020/05/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (14.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-23' AND created_at < '2020-05-24'
+Date: 2020-05-23. Count: 82100
+   (3294.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-23'' AND created_at < ''2020-05-24''', 'eh-audits-prod', 'tmp/2020/05/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (22.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-24' AND created_at < '2020-05-25'
+Date: 2020-05-24. Count: 89187
+   (3450.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-24'' AND created_at < ''2020-05-25''', 'eh-audits-prod', 'tmp/2020/05/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (84.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-25' AND created_at < '2020-05-26'
+Date: 2020-05-25. Count: 483109
+   (38239.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-25'' AND created_at < ''2020-05-26''', 'eh-audits-prod', 'tmp/2020/05/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (128.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-26' AND created_at < '2020-05-27'
+Date: 2020-05-26. Count: 485664
+   (50107.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-26'' AND created_at < ''2020-05-27''', 'eh-audits-prod', 'tmp/2020/05/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (179.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-27' AND created_at < '2020-05-28'
+Date: 2020-05-27. Count: 513597
+   (87186.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-27'' AND created_at < ''2020-05-28''', 'eh-audits-prod', 'tmp/2020/05/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (73.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-28' AND created_at < '2020-05-29'
+Date: 2020-05-28. Count: 415640
+   (42140.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-28'' AND created_at < ''2020-05-29''', 'eh-audits-prod', 'tmp/2020/05/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (236.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-29' AND created_at < '2020-05-30'
+Date: 2020-05-29. Count: 269692
+   (22337.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-29'' AND created_at < ''2020-05-30''', 'eh-audits-prod', 'tmp/2020/05/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (21.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-30' AND created_at < '2020-05-31'
+Date: 2020-05-30. Count: 108255
+   (4005.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-30'' AND created_at < ''2020-05-31''', 'eh-audits-prod', 'tmp/2020/05/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (66.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-05-31' AND created_at < '2020-06-01'
+Date: 2020-05-31. Count: 223910
+   (6803.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-05-31'' AND created_at < ''2020-06-01''', 'eh-audits-prod', 'tmp/2020/05/31/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+------------------------ 2020-06 ------------------------
+   (222.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-01' AND created_at < '2020-06-02'
+Date: 2020-06-01. Count: 512708
+   (36194.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-01'' AND created_at < ''2020-06-02''', 'eh-audits-prod', 'tmp/2020/06/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (171.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-02' AND created_at < '2020-06-03'
+Date: 2020-06-02. Count: 570725
+   (52673.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-02'' AND created_at < ''2020-06-03''', 'eh-audits-prod', 'tmp/2020/06/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (112.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-03' AND created_at < '2020-06-04'
+Date: 2020-06-03. Count: 514241
+   (55267.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-03'' AND created_at < ''2020-06-04''', 'eh-audits-prod', 'tmp/2020/06/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (100.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-04' AND created_at < '2020-06-05'
+Date: 2020-06-04. Count: 517217
+   (44668.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-04'' AND created_at < ''2020-06-05''', 'eh-audits-prod', 'tmp/2020/06/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (73.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-05' AND created_at < '2020-06-06'
+Date: 2020-06-05. Count: 368878
+   (26675.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-05'' AND created_at < ''2020-06-06''', 'eh-audits-prod', 'tmp/2020/06/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (65.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-06' AND created_at < '2020-06-07'
+Date: 2020-06-06. Count: 99628
+   (3236.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-06'' AND created_at < ''2020-06-07''', 'eh-audits-prod', 'tmp/2020/06/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (25.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-07' AND created_at < '2020-06-08'
+Date: 2020-06-07. Count: 104902
+   (3639.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-07'' AND created_at < ''2020-06-08''', 'eh-audits-prod', 'tmp/2020/06/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (71.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-08' AND created_at < '2020-06-09'
+Date: 2020-06-08. Count: 343406
+   (17109.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-08'' AND created_at < ''2020-06-09''', 'eh-audits-prod', 'tmp/2020/06/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (200.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-09' AND created_at < '2020-06-10'
+Date: 2020-06-09. Count: 661858
+   (67295.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-09'' AND created_at < ''2020-06-10''', 'eh-audits-prod', 'tmp/2020/06/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (91.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-10' AND created_at < '2020-06-11'
+Date: 2020-06-10. Count: 543808
+   (68588.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-10'' AND created_at < ''2020-06-11''', 'eh-audits-prod', 'tmp/2020/06/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (97.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-11' AND created_at < '2020-06-12'
+Date: 2020-06-11. Count: 506788
+   (52158.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-11'' AND created_at < ''2020-06-12''', 'eh-audits-prod', 'tmp/2020/06/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (131.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-12' AND created_at < '2020-06-13'
+Date: 2020-06-12. Count: 322534
+   (31613.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-12'' AND created_at < ''2020-06-13''', 'eh-audits-prod', 'tmp/2020/06/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (24.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-13' AND created_at < '2020-06-14'
+Date: 2020-06-13. Count: 92181
+   (4893.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-13'' AND created_at < ''2020-06-14''', 'eh-audits-prod', 'tmp/2020/06/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (185.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-14' AND created_at < '2020-06-15'
+Date: 2020-06-14. Count: 117817
+   (5306.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-14'' AND created_at < ''2020-06-15''', 'eh-audits-prod', 'tmp/2020/06/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (116.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-15' AND created_at < '2020-06-16'
+Date: 2020-06-15. Count: 622284
+   (56623.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-15'' AND created_at < ''2020-06-16''', 'eh-audits-prod', 'tmp/2020/06/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (113.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-16' AND created_at < '2020-06-17'
+Date: 2020-06-16. Count: 498835
+   (51101.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-16'' AND created_at < ''2020-06-17''', 'eh-audits-prod', 'tmp/2020/06/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (540.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-17' AND created_at < '2020-06-18'
+Date: 2020-06-17. Count: 529470
+   (76448.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-17'' AND created_at < ''2020-06-18''', 'eh-audits-prod', 'tmp/2020/06/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (94.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-18' AND created_at < '2020-06-19'
+Date: 2020-06-18. Count: 414277
+   (77192.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-18'' AND created_at < ''2020-06-19''', 'eh-audits-prod', 'tmp/2020/06/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (131.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-19' AND created_at < '2020-06-20'
+Date: 2020-06-19. Count: 293260
+   (20389.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-19'' AND created_at < ''2020-06-20''', 'eh-audits-prod', 'tmp/2020/06/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (16.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-20' AND created_at < '2020-06-21'
+Date: 2020-06-20. Count: 82948
+   (2823.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-20'' AND created_at < ''2020-06-21''', 'eh-audits-prod', 'tmp/2020/06/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (165.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-21' AND created_at < '2020-06-22'
+Date: 2020-06-21. Count: 161246
+   (5661.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-21'' AND created_at < ''2020-06-22''', 'eh-audits-prod', 'tmp/2020/06/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (109.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-22' AND created_at < '2020-06-23'
+Date: 2020-06-22. Count: 549782
+   (42719.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-22'' AND created_at < ''2020-06-23''', 'eh-audits-prod', 'tmp/2020/06/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (316.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-23' AND created_at < '2020-06-24'
+Date: 2020-06-23. Count: 577469
+   (49442.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-23'' AND created_at < ''2020-06-24''', 'eh-audits-prod', 'tmp/2020/06/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (87.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-24' AND created_at < '2020-06-25'
+Date: 2020-06-24. Count: 500282
+   (66361.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-24'' AND created_at < ''2020-06-25''', 'eh-audits-prod', 'tmp/2020/06/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (70.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-25' AND created_at < '2020-06-26'
+Date: 2020-06-25. Count: 249870
+   (17262.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-25'' AND created_at < ''2020-06-26''', 'eh-audits-prod', 'tmp/2020/06/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (95.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-26' AND created_at < '2020-06-27'
+Date: 2020-06-26. Count: 648629
+   (54869.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-26'' AND created_at < ''2020-06-27''', 'eh-audits-prod', 'tmp/2020/06/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (29.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-27' AND created_at < '2020-06-28'
+Date: 2020-06-27. Count: 89667
+   (3561.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-27'' AND created_at < ''2020-06-28''', 'eh-audits-prod', 'tmp/2020/06/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (99.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-28' AND created_at < '2020-06-29'
+Date: 2020-06-28. Count: 167746
+   (4536.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-28'' AND created_at < ''2020-06-29''', 'eh-audits-prod', 'tmp/2020/06/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (132.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-29' AND created_at < '2020-06-30'
+Date: 2020-06-29. Count: 537921
+   (45213.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-29'' AND created_at < ''2020-06-30''', 'eh-audits-prod', 'tmp/2020/06/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (211.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-06-30' AND created_at < '2020-07-01'
+Date: 2020-06-30. Count: 609347
+   (60991.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-06-30'' AND created_at < ''2020-07-01''', 'eh-audits-prod', 'tmp/2020/06/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-07 ------------------------
+
+   (128.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-01' AND created_at < '2020-07-02'
+Date: 2020-07-01. Count: 500232
+   (66558.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-01'' AND created_at < ''2020-07-02''', 'eh-audits-prod', 'tmp/2020/07/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (96.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-02' AND created_at < '2020-07-03'
+Date: 2020-07-02. Count: 530672
+   (62989.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-02'' AND created_at < ''2020-07-03''', 'eh-audits-prod', 'tmp/2020/07/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (84.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-03' AND created_at < '2020-07-04'
+Date: 2020-07-03. Count: 329421
+   (26206.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-03'' AND created_at < ''2020-07-04''', 'eh-audits-prod', 'tmp/2020/07/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (16.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-04' AND created_at < '2020-07-05'
+Date: 2020-07-04. Count: 90828
+   (2973.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-04'' AND created_at < ''2020-07-05''', 'eh-audits-prod', 'tmp/2020/07/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (74.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-05' AND created_at < '2020-07-06'
+Date: 2020-07-05. Count: 161721
+   (5507.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-05'' AND created_at < ''2020-07-06''', 'eh-audits-prod', 'tmp/2020/07/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (115.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-06' AND created_at < '2020-07-07'
+Date: 2020-07-06. Count: 586793
+   (41522.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-06'' AND created_at < ''2020-07-07''', 'eh-audits-prod', 'tmp/2020/07/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (97.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-07' AND created_at < '2020-07-08'
+Date: 2020-07-07. Count: 592206
+   (56661.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-07'' AND created_at < ''2020-07-08''', 'eh-audits-prod', 'tmp/2020/07/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (95.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-08' AND created_at < '2020-07-09'
+Date: 2020-07-08. Count: 547037
+   (75509.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-08'' AND created_at < ''2020-07-09''', 'eh-audits-prod', 'tmp/2020/07/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (358.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-09' AND created_at < '2020-07-10'
+Date: 2020-07-09. Count: 493619
+   (47225.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-09'' AND created_at < ''2020-07-10''', 'eh-audits-prod', 'tmp/2020/07/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (93.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-10' AND created_at < '2020-07-11'
+Date: 2020-07-10. Count: 339949
+   (24673.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-10'' AND created_at < ''2020-07-11''', 'eh-audits-prod', 'tmp/2020/07/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (22.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-11' AND created_at < '2020-07-12'
+Date: 2020-07-11. Count: 92658
+   (2525.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-11'' AND created_at < ''2020-07-12''', 'eh-audits-prod', 'tmp/2020/07/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (73.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-12' AND created_at < '2020-07-13'
+Date: 2020-07-12. Count: 172575
+   (5394.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-12'' AND created_at < ''2020-07-13''', 'eh-audits-prod', 'tmp/2020/07/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (86.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-13' AND created_at < '2020-07-14'
+Date: 2020-07-13. Count: 552651
+   (58282.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-13'' AND created_at < ''2020-07-14''', 'eh-audits-prod', 'tmp/2020/07/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (136.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-14' AND created_at < '2020-07-15'
+Date: 2020-07-14. Count: 669783
+   (73026.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-14'' AND created_at < ''2020-07-15''', 'eh-audits-prod', 'tmp/2020/07/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (142.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-15' AND created_at < '2020-07-16'
+Date: 2020-07-15. Count: 1071236
+   (81443.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-15'' AND created_at < ''2020-07-16''', 'eh-audits-prod', 'tmp/2020/07/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (86.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-16' AND created_at < '2020-07-17'
+Date: 2020-07-16. Count: 475064
+   (62733.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-16'' AND created_at < ''2020-07-17''', 'eh-audits-prod', 'tmp/2020/07/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (81.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-17' AND created_at < '2020-07-18'
+Date: 2020-07-17. Count: 361015
+   (26286.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-17'' AND created_at < ''2020-07-18''', 'eh-audits-prod', 'tmp/2020/07/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (18.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-18' AND created_at < '2020-07-19'
+Date: 2020-07-18. Count: 102741
+   (3324.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-18'' AND created_at < ''2020-07-19''', 'eh-audits-prod', 'tmp/2020/07/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (59.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-19' AND created_at < '2020-07-20'
+Date: 2020-07-19. Count: 166033
+   (5276.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-19'' AND created_at < ''2020-07-20''', 'eh-audits-prod', 'tmp/2020/07/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (92.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-20' AND created_at < '2020-07-21'
+Date: 2020-07-20. Count: 558907
+   (37657.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-20'' AND created_at < ''2020-07-21''', 'eh-audits-prod', 'tmp/2020/07/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (221.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-21' AND created_at < '2020-07-22'
+Date: 2020-07-21. Count: 598261
+   (65004.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-21'' AND created_at < ''2020-07-22''', 'eh-audits-prod', 'tmp/2020/07/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (110.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-22' AND created_at < '2020-07-23'
+Date: 2020-07-22. Count: 533275
+   (73258.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-22'' AND created_at < ''2020-07-23''', 'eh-audits-prod', 'tmp/2020/07/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (98.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-23' AND created_at < '2020-07-24'
+Date: 2020-07-23. Count: 455382
+   (54227.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-23'' AND created_at < ''2020-07-24''', 'eh-audits-prod', 'tmp/2020/07/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (65.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-24' AND created_at < '2020-07-25'
+Date: 2020-07-24. Count: 305693
+   (22073.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-24'' AND created_at < ''2020-07-25''', 'eh-audits-prod', 'tmp/2020/07/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (19.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-25' AND created_at < '2020-07-26'
+Date: 2020-07-25. Count: 98054
+   (3562.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-25'' AND created_at < ''2020-07-26''', 'eh-audits-prod', 'tmp/2020/07/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (55.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-26' AND created_at < '2020-07-27'
+Date: 2020-07-26. Count: 175893
+   (7817.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-26'' AND created_at < ''2020-07-27''', 'eh-audits-prod', 'tmp/2020/07/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (84.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-27' AND created_at < '2020-07-28'
+Date: 2020-07-27. Count: 515499
+   (33179.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-27'' AND created_at < ''2020-07-28''', 'eh-audits-prod', 'tmp/2020/07/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (170.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-28' AND created_at < '2020-07-29'
+Date: 2020-07-28. Count: 575798
+   (54895.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-28'' AND created_at < ''2020-07-29''', 'eh-audits-prod', 'tmp/2020/07/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (322.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-29' AND created_at < '2020-07-30'
+Date: 2020-07-29. Count: 463937
+   (60270.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-29'' AND created_at < ''2020-07-30''', 'eh-audits-prod', 'tmp/2020/07/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (113.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-30' AND created_at < '2020-07-31'
+Date: 2020-07-30. Count: 496676
+   (53569.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-30'' AND created_at < ''2020-07-31''', 'eh-audits-prod', 'tmp/2020/07/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (177.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-07-31' AND created_at < '2020-08-01'
+Date: 2020-07-31. Count: 344854
+   (22788.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-07-31'' AND created_at < ''2020-08-01''', 'eh-audits-prod', 'tmp/2020/07/31/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-08 ------------------------
+
+   (37.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-01' AND created_at < '2020-08-02'
+Date: 2020-08-01. Count: 105549
+   (5689.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-01'' AND created_at < ''2020-08-02''', 'eh-audits-prod', 'tmp/2020/08/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (55.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-02' AND created_at < '2020-08-03'
+Date: 2020-08-02. Count: 167221
+   (6332.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-02'' AND created_at < ''2020-08-03''', 'eh-audits-prod', 'tmp/2020/08/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (153.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-03' AND created_at < '2020-08-04'
+Date: 2020-08-03. Count: 521865
+   (35667.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-03'' AND created_at < ''2020-08-04''', 'eh-audits-prod', 'tmp/2020/08/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (90.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-04' AND created_at < '2020-08-05'
+Date: 2020-08-04. Count: 584187
+   (57666.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-04'' AND created_at < ''2020-08-05''', 'eh-audits-prod', 'tmp/2020/08/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (182.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-05' AND created_at < '2020-08-06'
+Date: 2020-08-05. Count: 572565
+   (84184.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-05'' AND created_at < ''2020-08-06''', 'eh-audits-prod', 'tmp/2020/08/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (79.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-06' AND created_at < '2020-08-07'
+Date: 2020-08-06. Count: 472365
+   (55335.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-06'' AND created_at < ''2020-08-07''', 'eh-audits-prod', 'tmp/2020/08/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (76.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-07' AND created_at < '2020-08-08'
+Date: 2020-08-07. Count: 313738
+   (24637.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-07'' AND created_at < ''2020-08-08''', 'eh-audits-prod', 'tmp/2020/08/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (61.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-08' AND created_at < '2020-08-09'
+Date: 2020-08-08. Count: 165646
+   (4275.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-08'' AND created_at < ''2020-08-09''', 'eh-audits-prod', 'tmp/2020/08/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (60.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-09' AND created_at < '2020-08-10'
+Date: 2020-08-09. Count: 172180
+   (5125.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-09'' AND created_at < ''2020-08-10''', 'eh-audits-prod', 'tmp/2020/08/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (109.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-10' AND created_at < '2020-08-11'
+Date: 2020-08-10. Count: 487484
+   (37186.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-10'' AND created_at < ''2020-08-11''', 'eh-audits-prod', 'tmp/2020/08/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (107.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-11' AND created_at < '2020-08-12'
+Date: 2020-08-11. Count: 636543
+   (68615.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-11'' AND created_at < ''2020-08-12''', 'eh-audits-prod', 'tmp/2020/08/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (81.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-12' AND created_at < '2020-08-13'
+Date: 2020-08-12. Count: 547789
+   (58785.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-12'' AND created_at < ''2020-08-13''', 'eh-audits-prod', 'tmp/2020/08/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (143.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-13' AND created_at < '2020-08-14'
+Date: 2020-08-13. Count: 524095
+   (58001.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-13'' AND created_at < ''2020-08-14''', 'eh-audits-prod', 'tmp/2020/08/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (87.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-14' AND created_at < '2020-08-15'
+Date: 2020-08-14. Count: 390192
+   (50393.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-14'' AND created_at < ''2020-08-15''', 'eh-audits-prod', 'tmp/2020/08/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (121.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-15' AND created_at < '2020-08-16'
+Date: 2020-08-15. Count: 109213
+   (7425.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-15'' AND created_at < ''2020-08-16''', 'eh-audits-prod', 'tmp/2020/08/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (59.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-16' AND created_at < '2020-08-17'
+Date: 2020-08-16. Count: 171627
+   (9138.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-16'' AND created_at < ''2020-08-17''', 'eh-audits-prod', 'tmp/2020/08/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (83.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-17' AND created_at < '2020-08-18'
+Date: 2020-08-17. Count: 550351
+   (41291.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-17'' AND created_at < ''2020-08-18''', 'eh-audits-prod', 'tmp/2020/08/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (262.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-18' AND created_at < '2020-08-19'
+Date: 2020-08-18. Count: 560443
+   (56874.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-18'' AND created_at < ''2020-08-19''', 'eh-audits-prod', 'tmp/2020/08/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (165.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-19' AND created_at < '2020-08-20'
+Date: 2020-08-19. Count: 513937
+   (70344.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-19'' AND created_at < ''2020-08-20''', 'eh-audits-prod', 'tmp/2020/08/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (82.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-20' AND created_at < '2020-08-21'
+Date: 2020-08-20. Count: 462041
+   (49586.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-20'' AND created_at < ''2020-08-21''', 'eh-audits-prod', 'tmp/2020/08/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (73.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-21' AND created_at < '2020-08-22'
+Date: 2020-08-21. Count: 304892
+   (21076.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-21'' AND created_at < ''2020-08-22''', 'eh-audits-prod', 'tmp/2020/08/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (18.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-22' AND created_at < '2020-08-23'
+Date: 2020-08-22. Count: 119391
+   (4739.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-22'' AND created_at < ''2020-08-23''', 'eh-audits-prod', 'tmp/2020/08/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (68.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-23' AND created_at < '2020-08-24'
+Date: 2020-08-23. Count: 171906
+   (6897.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-23'' AND created_at < ''2020-08-24''', 'eh-audits-prod', 'tmp/2020/08/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (145.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-24' AND created_at < '2020-08-25'
+Date: 2020-08-24. Count: 542664
+   (40081.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-24'' AND created_at < ''2020-08-25''', 'eh-audits-prod', 'tmp/2020/08/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (131.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-25' AND created_at < '2020-08-26'
+Date: 2020-08-25. Count: 652223
+   (61628.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-25'' AND created_at < ''2020-08-26''', 'eh-audits-prod', 'tmp/2020/08/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (187.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-26' AND created_at < '2020-08-27'
+Date: 2020-08-26. Count: 511298
+   (57569.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-26'' AND created_at < ''2020-08-27''', 'eh-audits-prod', 'tmp/2020/08/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (100.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-27' AND created_at < '2020-08-28'
+Date: 2020-08-27. Count: 573535
+   (62315.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-27'' AND created_at < ''2020-08-28''', 'eh-audits-prod', 'tmp/2020/08/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (69.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-28' AND created_at < '2020-08-29'
+Date: 2020-08-28. Count: 336268
+   (26337.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-28'' AND created_at < ''2020-08-29''', 'eh-audits-prod', 'tmp/2020/08/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (62.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-29' AND created_at < '2020-08-30'
+Date: 2020-08-29. Count: 103373
+   (5147.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-29'' AND created_at < ''2020-08-30''', 'eh-audits-prod', 'tmp/2020/08/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (81.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-30' AND created_at < '2020-08-31'
+Date: 2020-08-30. Count: 173881
+   (6622.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-30'' AND created_at < ''2020-08-31''', 'eh-audits-prod', 'tmp/2020/08/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (152.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-08-31' AND created_at < '2020-09-01'
+Date: 2020-08-31. Count: 641235
+   (60667.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-08-31'' AND created_at < ''2020-09-01''', 'eh-audits-prod', 'tmp/2020/08/31/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-09 ------------------------
+
+   (124.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-01' AND created_at < '2020-09-02'
+Date: 2020-09-01. Count: 650870
+   (53772.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-01'' AND created_at < ''2020-09-02''', 'eh-audits-prod', 'tmp/2020/09/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (88.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-02' AND created_at < '2020-09-03'
+Date: 2020-09-02. Count: 538963
+   (84011.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-02'' AND created_at < ''2020-09-03''', 'eh-audits-prod', 'tmp/2020/09/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (90.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-03' AND created_at < '2020-09-04'
+Date: 2020-09-03. Count: 495323
+   (53620.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-03'' AND created_at < ''2020-09-04''', 'eh-audits-prod', 'tmp/2020/09/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (117.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-04' AND created_at < '2020-09-05'
+Date: 2020-09-04. Count: 341425
+   (27718.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-04'' AND created_at < ''2020-09-05''', 'eh-audits-prod', 'tmp/2020/09/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (22.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-05' AND created_at < '2020-09-06'
+Date: 2020-09-05. Count: 97895
+   (3357.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-05'' AND created_at < ''2020-09-06''', 'eh-audits-prod', 'tmp/2020/09/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (74.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-06' AND created_at < '2020-09-07'
+Date: 2020-09-06. Count: 170272
+   (5208.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-06'' AND created_at < ''2020-09-07''', 'eh-audits-prod', 'tmp/2020/09/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (123.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-07' AND created_at < '2020-09-08'
+Date: 2020-09-07. Count: 606670
+   (43869.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-07'' AND created_at < ''2020-09-08''', 'eh-audits-prod', 'tmp/2020/09/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (148.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-08' AND created_at < '2020-09-09'
+Date: 2020-09-08. Count: 749438
+   (91169.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-08'' AND created_at < ''2020-09-09''', 'eh-audits-prod', 'tmp/2020/09/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (86.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-09' AND created_at < '2020-09-10'
+Date: 2020-09-09. Count: 576557
+   (60379.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-09'' AND created_at < ''2020-09-10''', 'eh-audits-prod', 'tmp/2020/09/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (132.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-10' AND created_at < '2020-09-11'
+Date: 2020-09-10. Count: 523613
+   (58951.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-10'' AND created_at < ''2020-09-11''', 'eh-audits-prod', 'tmp/2020/09/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (133.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-11' AND created_at < '2020-09-12'
+Date: 2020-09-11. Count: 379183
+   (33369.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-11'' AND created_at < ''2020-09-12''', 'eh-audits-prod', 'tmp/2020/09/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (91.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-12' AND created_at < '2020-09-13'
+Date: 2020-09-12. Count: 100462
+   (3203.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-12'' AND created_at < ''2020-09-13''', 'eh-audits-prod', 'tmp/2020/09/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (162.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-13' AND created_at < '2020-09-14'
+Date: 2020-09-13. Count: 181350
+   (6764.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-13'' AND created_at < ''2020-09-14''', 'eh-audits-prod', 'tmp/2020/09/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (101.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-14' AND created_at < '2020-09-15'
+Date: 2020-09-14. Count: 663862
+   (62603.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-14'' AND created_at < ''2020-09-15''', 'eh-audits-prod', 'tmp/2020/09/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (103.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-15' AND created_at < '2020-09-16'
+Date: 2020-09-15. Count: 694591
+   (79049.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-15'' AND created_at < ''2020-09-16''', 'eh-audits-prod', 'tmp/2020/09/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (140.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-16' AND created_at < '2020-09-17'
+Date: 2020-09-16. Count: 572152
+   (98243.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-16'' AND created_at < ''2020-09-17''', 'eh-audits-prod', 'tmp/2020/09/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (86.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-17' AND created_at < '2020-09-18'
+Date: 2020-09-17. Count: 525125
+   (51875.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-17'' AND created_at < ''2020-09-18''', 'eh-audits-prod', 'tmp/2020/09/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (377.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-18' AND created_at < '2020-09-19'
+Date: 2020-09-18. Count: 372725
+   (37144.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-18'' AND created_at < ''2020-09-19''', 'eh-audits-prod', 'tmp/2020/09/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (80.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-19' AND created_at < '2020-09-20'
+Date: 2020-09-19. Count: 101395
+   (4777.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-19'' AND created_at < ''2020-09-20''', 'eh-audits-prod', 'tmp/2020/09/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (133.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-20' AND created_at < '2020-09-21'
+Date: 2020-09-20. Count: 187073
+   (6890.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-20'' AND created_at < ''2020-09-21''', 'eh-audits-prod', 'tmp/2020/09/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (169.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-21' AND created_at < '2020-09-22'
+Date: 2020-09-21. Count: 625848
+   (43764.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-21'' AND created_at < ''2020-09-22''', 'eh-audits-prod', 'tmp/2020/09/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (102.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-22' AND created_at < '2020-09-23'
+Date: 2020-09-22. Count: 672338
+   (73840.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-22'' AND created_at < ''2020-09-23''', 'eh-audits-prod', 'tmp/2020/09/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (416.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-23' AND created_at < '2020-09-24'
+Date: 2020-09-23. Count: 497383
+   (60377.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-23'' AND created_at < ''2020-09-24''', 'eh-audits-prod', 'tmp/2020/09/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (93.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-24' AND created_at < '2020-09-25'
+Date: 2020-09-24. Count: 542715
+   (64212.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-24'' AND created_at < ''2020-09-25''', 'eh-audits-prod', 'tmp/2020/09/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (94.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-25' AND created_at < '2020-09-26'
+Date: 2020-09-25. Count: 388743
+   (35477.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-25'' AND created_at < ''2020-09-26''', 'eh-audits-prod', 'tmp/2020/09/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (53.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-26' AND created_at < '2020-09-27'
+Date: 2020-09-26. Count: 103666
+   (5230.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-26'' AND created_at < ''2020-09-27''', 'eh-audits-prod', 'tmp/2020/09/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (74.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-27' AND created_at < '2020-09-28'
+Date: 2020-09-27. Count: 181476
+   (7725.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-27'' AND created_at < ''2020-09-28''', 'eh-audits-prod', 'tmp/2020/09/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (93.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-28' AND created_at < '2020-09-29'
+Date: 2020-09-28. Count: 572757
+   (42807.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-28'' AND created_at < ''2020-09-29''', 'eh-audits-prod', 'tmp/2020/09/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (99.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-29' AND created_at < '2020-09-30'
+Date: 2020-09-29. Count: 680579
+   (69995.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-29'' AND created_at < ''2020-09-30''', 'eh-audits-prod', 'tmp/2020/09/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (111.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-09-30' AND created_at < '2020-10-01'
+Date: 2020-09-30. Count: 652323
+   (95920.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-09-30'' AND created_at < ''2020-10-01''', 'eh-audits-prod', 'tmp/2020/09/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-10 ------------------------
+
+   (88.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-01' AND created_at < '2020-10-02'
+Date: 2020-10-01. Count: 521344
+   (54822.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-01'' AND created_at < ''2020-10-02''', 'eh-audits-prod', 'tmp/2020/10/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (112.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-02' AND created_at < '2020-10-03'
+Date: 2020-10-02. Count: 350891
+   (26292.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-02'' AND created_at < ''2020-10-03''', 'eh-audits-prod', 'tmp/2020/10/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (25.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-03' AND created_at < '2020-10-04'
+Date: 2020-10-03. Count: 94981
+   (4073.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-03'' AND created_at < ''2020-10-04''', 'eh-audits-prod', 'tmp/2020/10/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (20.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-04' AND created_at < '2020-10-05'
+Date: 2020-10-04. Count: 136370
+   (6904.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-04'' AND created_at < ''2020-10-05''', 'eh-audits-prod', 'tmp/2020/10/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (159.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-05' AND created_at < '2020-10-06'
+Date: 2020-10-05. Count: 436017
+   (26278.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-05'' AND created_at < ''2020-10-06''', 'eh-audits-prod', 'tmp/2020/10/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (106.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-06' AND created_at < '2020-10-07'
+Date: 2020-10-06. Count: 673330
+   (70062.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-06'' AND created_at < ''2020-10-07''', 'eh-audits-prod', 'tmp/2020/10/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (260.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-07' AND created_at < '2020-10-08'
+Date: 2020-10-07. Count: 566376
+   (67573.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-07'' AND created_at < ''2020-10-08''', 'eh-audits-prod', 'tmp/2020/10/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (147.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-08' AND created_at < '2020-10-09'
+Date: 2020-10-08. Count: 524794
+   (66645.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-08'' AND created_at < ''2020-10-09''', 'eh-audits-prod', 'tmp/2020/10/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (78.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-09' AND created_at < '2020-10-10'
+Date: 2020-10-09. Count: 388688
+   (33578.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-09'' AND created_at < ''2020-10-10''', 'eh-audits-prod', 'tmp/2020/10/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (15.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-10' AND created_at < '2020-10-11'
+Date: 2020-10-10. Count: 100935
+   (3166.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-10'' AND created_at < ''2020-10-11''', 'eh-audits-prod', 'tmp/2020/10/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (68.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-11' AND created_at < '2020-10-12'
+Date: 2020-10-11. Count: 210587
+   (7762.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-11'' AND created_at < ''2020-10-12''', 'eh-audits-prod', 'tmp/2020/10/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (164.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-12' AND created_at < '2020-10-13'
+Date: 2020-10-12. Count: 629606
+   (44272.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-12'' AND created_at < ''2020-10-13''', 'eh-audits-prod', 'tmp/2020/10/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (111.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-13' AND created_at < '2020-10-14'
+Date: 2020-10-13. Count: 682297
+   (67978.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-13'' AND created_at < ''2020-10-14''', 'eh-audits-prod', 'tmp/2020/10/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (122.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-14' AND created_at < '2020-10-15'
+Date: 2020-10-14. Count: 748208
+   (128258.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-14'' AND created_at < ''2020-10-15''', 'eh-audits-prod', 'tmp/2020/10/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (89.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-15' AND created_at < '2020-10-16'
+Date: 2020-10-15. Count: 560327
+   (68834.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-15'' AND created_at < ''2020-10-16''', 'eh-audits-prod', 'tmp/2020/10/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (99.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-16' AND created_at < '2020-10-17'
+Date: 2020-10-16. Count: 348560
+   (22772.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-16'' AND created_at < ''2020-10-17''', 'eh-audits-prod', 'tmp/2020/10/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (17.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-17' AND created_at < '2020-10-18'
+Date: 2020-10-17. Count: 95492
+   (2685.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-17'' AND created_at < ''2020-10-18''', 'eh-audits-prod', 'tmp/2020/10/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (73.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-18' AND created_at < '2020-10-19'
+Date: 2020-10-18. Count: 280934
+   (17329.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-18'' AND created_at < ''2020-10-19''', 'eh-audits-prod', 'tmp/2020/10/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (107.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-19' AND created_at < '2020-10-20'
+Date: 2020-10-19. Count: 601692
+   (43512.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-19'' AND created_at < ''2020-10-20''', 'eh-audits-prod', 'tmp/2020/10/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (146.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-20' AND created_at < '2020-10-21'
+Date: 2020-10-20. Count: 676628
+   (63985.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-20'' AND created_at < ''2020-10-21''', 'eh-audits-prod', 'tmp/2020/10/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (130.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-21' AND created_at < '2020-10-22'
+Date: 2020-10-21. Count: 534616
+   (62224.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-21'' AND created_at < ''2020-10-22''', 'eh-audits-prod', 'tmp/2020/10/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (186.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-22' AND created_at < '2020-10-23'
+Date: 2020-10-22. Count: 610321
+   (68340.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-22'' AND created_at < ''2020-10-23''', 'eh-audits-prod', 'tmp/2020/10/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (94.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-23' AND created_at < '2020-10-24'
+Date: 2020-10-23. Count: 319605
+   (29400.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-23'' AND created_at < ''2020-10-24''', 'eh-audits-prod', 'tmp/2020/10/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (79.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-24' AND created_at < '2020-10-25'
+Date: 2020-10-24. Count: 99234
+   (4171.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-24'' AND created_at < ''2020-10-25''', 'eh-audits-prod', 'tmp/2020/10/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (58.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-25' AND created_at < '2020-10-26'
+Date: 2020-10-25. Count: 206418
+   (8281.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-25'' AND created_at < ''2020-10-26''', 'eh-audits-prod', 'tmp/2020/10/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (269.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-26' AND created_at < '2020-10-27'
+Date: 2020-10-26. Count: 663835
+   (48146.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-26'' AND created_at < ''2020-10-27''', 'eh-audits-prod', 'tmp/2020/10/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (129.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-27' AND created_at < '2020-10-28'
+Date: 2020-10-27. Count: 814385
+   (90570.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-27'' AND created_at < ''2020-10-28''', 'eh-audits-prod', 'tmp/2020/10/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (90.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-28' AND created_at < '2020-10-29'
+Date: 2020-10-28. Count: 631228
+   (87067.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-28'' AND created_at < ''2020-10-29''', 'eh-audits-prod', 'tmp/2020/10/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (119.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-29' AND created_at < '2020-10-30'
+Date: 2020-10-29. Count: 618166
+   (60334.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-29'' AND created_at < ''2020-10-30''', 'eh-audits-prod', 'tmp/2020/10/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (80.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-30' AND created_at < '2020-10-31'
+Date: 2020-10-30. Count: 413295
+   (32064.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-30'' AND created_at < ''2020-10-31''', 'eh-audits-prod', 'tmp/2020/10/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (28.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-10-31' AND created_at < '2020-11-01'
+Date: 2020-10-31. Count: 111624
+   (3223.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-10-31'' AND created_at < ''2020-11-01''', 'eh-audits-prod', 'tmp/2020/10/31/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+
+------------------------ 2020-11 ------------------------
+
+   (75.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-01' AND created_at < '2020-11-02'
+Date: 2020-11-01. Count: 288371
+   (7779.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-01'' AND created_at < ''2020-11-02''', 'eh-audits-prod', 'tmp/2020/11/01/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (114.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-02' AND created_at < '2020-11-03'
+Date: 2020-11-02. Count: 627198
+   (50785.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-02'' AND created_at < ''2020-11-03''', 'eh-audits-prod', 'tmp/2020/11/02/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (240.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-03' AND created_at < '2020-11-04'
+Date: 2020-11-03. Count: 617247
+   (65335.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-03'' AND created_at < ''2020-11-04''', 'eh-audits-prod', 'tmp/2020/11/03/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (235.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-04' AND created_at < '2020-11-05'
+Date: 2020-11-04. Count: 618717
+   (86924.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-04'' AND created_at < ''2020-11-05''', 'eh-audits-prod', 'tmp/2020/11/04/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (102.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-05' AND created_at < '2020-11-06'
+Date: 2020-11-05. Count: 552363
+   (57082.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-05'' AND created_at < ''2020-11-06''', 'eh-audits-prod', 'tmp/2020/11/05/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (135.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-06' AND created_at < '2020-11-07'
+Date: 2020-11-06. Count: 401718
+   (35294.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-06'' AND created_at < ''2020-11-07''', 'eh-audits-prod', 'tmp/2020/11/06/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (33.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-07' AND created_at < '2020-11-08'
+Date: 2020-11-07. Count: 109127
+   (4411.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-07'' AND created_at < ''2020-11-08''', 'eh-audits-prod', 'tmp/2020/11/07/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (72.9ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-08' AND created_at < '2020-11-09'
+Date: 2020-11-08. Count: 223047
+   (9929.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-08'' AND created_at < ''2020-11-09''', 'eh-audits-prod', 'tmp/2020/11/08/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (112.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-09' AND created_at < '2020-11-10'
+Date: 2020-11-09. Count: 716944
+   (45544.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-09'' AND created_at < ''2020-11-10''', 'eh-audits-prod', 'tmp/2020/11/09/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (115.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-10' AND created_at < '2020-11-11'
+Date: 2020-11-10. Count: 736877
+   (72872.5ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-10'' AND created_at < ''2020-11-11''', 'eh-audits-prod', 'tmp/2020/11/10/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (144.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-11' AND created_at < '2020-11-12'
+Date: 2020-11-11. Count: 685112
+   (116090.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-11'' AND created_at < ''2020-11-12''', 'eh-audits-prod', 'tmp/2020/11/11/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (89.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-12' AND created_at < '2020-11-13'
+Date: 2020-11-12. Count: 556421
+   (73829.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-12'' AND created_at < ''2020-11-13''', 'eh-audits-prod', 'tmp/2020/11/12/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (90.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-13' AND created_at < '2020-11-14'
+Date: 2020-11-13. Count: 455501
+   (38977.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-13'' AND created_at < ''2020-11-14''', 'eh-audits-prod', 'tmp/2020/11/13/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (68.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-14' AND created_at < '2020-11-15'
+Date: 2020-11-14. Count: 114304
+   (3963.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-14'' AND created_at < ''2020-11-15''', 'eh-audits-prod', 'tmp/2020/11/14/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (62.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-15' AND created_at < '2020-11-16'
+Date: 2020-11-15. Count: 238215
+   (6953.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-15'' AND created_at < ''2020-11-16''', 'eh-audits-prod', 'tmp/2020/11/15/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (242.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-16' AND created_at < '2020-11-17'
+Date: 2020-11-16. Count: 791669
+   (49280.3ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-16'' AND created_at < ''2020-11-17''', 'eh-audits-prod', 'tmp/2020/11/16/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (115.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-17' AND created_at < '2020-11-18'
+Date: 2020-11-17. Count: 713650
+   (67167.4ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-17'' AND created_at < ''2020-11-18''', 'eh-audits-prod', 'tmp/2020/11/17/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (374.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-18' AND created_at < '2020-11-19'
+Date: 2020-11-18. Count: 626273
+   (68676.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-18'' AND created_at < ''2020-11-19''', 'eh-audits-prod', 'tmp/2020/11/18/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (135.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-19' AND created_at < '2020-11-20'
+Date: 2020-11-19. Count: 586399
+   (69810.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-19'' AND created_at < ''2020-11-20''', 'eh-audits-prod', 'tmp/2020/11/19/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (195.3ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-20' AND created_at < '2020-11-21'
+Date: 2020-11-20. Count: 393335
+   (26921.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-20'' AND created_at < ''2020-11-21''', 'eh-audits-prod', 'tmp/2020/11/20/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (86.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-21' AND created_at < '2020-11-22'
+Date: 2020-11-21. Count: 107061
+   (3595.8ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-21'' AND created_at < ''2020-11-22''', 'eh-audits-prod', 'tmp/2020/11/21/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (64.1ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-22' AND created_at < '2020-11-23'
+Date: 2020-11-22. Count: 230455
+   (9115.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-22'' AND created_at < ''2020-11-23''', 'eh-audits-prod', 'tmp/2020/11/22/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (129.0ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-23' AND created_at < '2020-11-24'
+Date: 2020-11-23. Count: 715829
+   (49494.6ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-23'' AND created_at < ''2020-11-24''', 'eh-audits-prod', 'tmp/2020/11/23/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (128.2ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-24' AND created_at < '2020-11-25'
+Date: 2020-11-24. Count: 732884
+   (60910.7ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-24'' AND created_at < ''2020-11-25''', 'eh-audits-prod', 'tmp/2020/11/24/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (122.6ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-25' AND created_at < '2020-11-26'
+Date: 2020-11-25. Count: 652735
+   (81203.2ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-25'' AND created_at < ''2020-11-26''', 'eh-audits-prod', 'tmp/2020/11/25/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (247.7ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-26' AND created_at < '2020-11-27'
+Date: 2020-11-26. Count: 579276
+   (64785.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-26'' AND created_at < ''2020-11-27''', 'eh-audits-prod', 'tmp/2020/11/26/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (92.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-27' AND created_at < '2020-11-28'
+Date: 2020-11-27. Count: 431379
+   (26298.0ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-27'' AND created_at < ''2020-11-28''', 'eh-audits-prod', 'tmp/2020/11/27/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (74.4ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-28' AND created_at < '2020-11-29'
+Date: 2020-11-28. Count: 111104
+   (7533.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-28'' AND created_at < ''2020-11-29''', 'eh-audits-prod', 'tmp/2020/11/28/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (238.8ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-29' AND created_at < '2020-11-30'
+Date: 2020-11-29. Count: 278904
+   (13005.1ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-29'' AND created_at < ''2020-11-30''', 'eh-audits-prod', 'tmp/2020/11/29/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )
+   (114.5ms)  SELECT COUNT(*) FROM audits WHERE created_at >= '2020-11-30' AND created_at < '2020-12-01'
+Date: 2020-11-30. Count: 743922
+   (65429.9ms)  SELECT * FROM aws_s3.query_export_to_s3( 'SELECT * FROM audits WHERE created_at >= ''2020-11-30'' AND created_at < ''2020-12-01''', 'eh-audits-prod', 'tmp/2020/11/30/audits.csv', 'ap-southeast-2', options :='format CSV, delimiter $$;$$' )

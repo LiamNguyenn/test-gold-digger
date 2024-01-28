@@ -1,0 +1,51 @@
+name: Deploy dbt Docs
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'dbt_fivetran/**'
+
+jobs:
+  pr-merged:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 'Checkout to gh-pages'
+      uses: actions/checkout@v3
+
+    - name: 'Setup python'
+      uses: actions/setup-python@v4
+      with:
+        python-version-file: 'pyproject.toml'
+        cache-dependency-path: 'poetry.lock'
+
+    - name: 'Install Poetry packages'
+      uses: snok/install-poetry@v1
+      with:
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+        installer-parallel: true
+
+    # run dbt docs command
+    - name: 'Run dbt docs'
+      run: |
+        poetry run dbt deps
+        poetry run dbt docs generate --target prod
+      env:
+        DBT_REDSHIFT_HOST: ${{ secrets.REDSHIFT_HOST }}
+        DBT_USER: ${{ secrets.REDSHIFT_USERNAME }}
+        DBT_PASSWORD: ${{ secrets.REDSHIFT_PASSWORD }}
+        DBT_DATABASE: dev
+        DBT_DEV_SCHEMA: ci
+
+    # push publish dir to gh-pages branch
+    - name: 'Push to gh-pages'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: './target'
+        force_orphan: true
+        commit_message: 'dbt docs generated on ${{ github.sha }}'
+        allow_empty_commit: true
+        keep_files: true

@@ -1,0 +1,74 @@
+version: 2
+
+models:
+    - name: customer_support_ticket_status_daily
+      schema: customer_support
+      alias: ticket_status_daily
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (date || group_name || country)
+          tests:
+            - not_null
+            - unique
+
+    - name: customer_support_ticket_key_metrics
+      schema: customer_support
+      alias: ticket_key_metrics
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (date || group_name || country)
+          tests:
+            - not_null
+            - unique
+
+    - name: customer_support_project_status_daily
+      schema: customer_support
+      alias: project_status_daily
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (date || service_offering || country)
+          tests:
+            - not_null
+            - unique
+
+    - name: customer_support_project_key_metrics
+      schema: customer_support
+      alias: project_key_metrics
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (date || data_type || country || sub_type || sub_value)
+          tests:
+            - not_null
+            - unique
+
+    - name: customer_support_ticket
+      schema: customer_support
+      alias: ticket
+      columns:
+        - name: id   
+          tests:            
+            - not_null
+            - unique
+    - name: ticket
+      schema: customer_support
+      columns:
+        - name: assignee_email
+          meta:
+            sensitive: true
+            masking_rules:
+              full_mask:
+                mask_function: sha2-256
+        - name: requester_email
+          meta:
+            sensitive: true
+            masking_rules:
+              full_mask:
+                mask_function: sha2-256

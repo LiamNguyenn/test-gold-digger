@@ -1,0 +1,413 @@
+version: 2
+
+models:
+
+  - name: int__keypay__aba_details
+    description: intermediate table for aba_details
+    schema: int__keypay
+    alias: aba_details
+
+
+  - name: int__keypay__accrual_status
+    description: intermediate table for accrual_status
+    schema: int__keypay
+    alias: accrual_status
+
+
+  - name: int__keypay__award_package
+    description: intermediate table for award_package
+    schema: int__keypay
+    alias: award_package
+
+
+  - name: int__keypay__bacs_details
+    description: intermediate table for bacs_details
+    schema: int__keypay
+    alias: bacs_details
+
+
+  - name: int__keypay__billing_plan
+    description: intermediate table for billing_plan
+    schema: int__keypay
+    alias: billing_plan
+
+
+  - name: int__keypay__business_award_package
+    description: intermediate table for business_award_package
+    schema: int__keypay
+    alias: business_award_package
+
+
+  - name: int__keypay__contribution_info
+    description: intermediate table for contribution_info
+    schema: int__keypay
+    alias: contribution_info
+
+
+  - name: int__keypay__contribution_info_deduction
+    description: intermediate table for contribution_info_deduction
+    schema: int__keypay
+    alias: contribution_info_deduction
+
+
+  - name: int__keypay__csn_details
+    description: intermediate table for csn_details
+    schema: int__keypay
+    alias: csn_details
+
+
+  - name: int__keypay__deduction
+    description: intermediate table for deduction
+    schema: int__keypay
+    alias: deduction
+
+
+  - name: int__keypay__deduction_category
+    description: intermediate table for deduction_category
+    schema: int__keypay
+    alias: deduction_category
+
+
+  - name: int__keypay__device_token
+    description: intermediate table for device_token
+    schema: int__keypay
+    alias: device_token
+
+
+  - name: int__keypay__earnings_line
+    description: intermediate table for earnings_line
+    schema: int__keypay
+    alias: earnings_line
+
+
+  - name: int__keypay__earnings_line_ext_au
+    description: intermediate table for earnings_line_ext_au
+    schema: int__keypay
+    alias: earnings_line_ext_au
+
+
+  - name: int__keypay__employee_deduction_category
+    description: intermediate table for employee_deduction_category
+    schema: int__keypay
+    alias: employee_deduction_category
+
+
+  - name: int__keypay__employee_expense
+    description: intermediate table for employee_expense
+    schema: int__keypay
+    alias: employee_expense
+
+
+  - name: int__keypay__employee_expense_request
+    description: intermediate table for employee_expense_request
+    schema: int__keypay
+    alias: employee_expense_request
+
+
+  - name: int__keypay__employee_history
+    description: intermediate table for employee_history
+    schema: int__keypay
+    alias: employee_history
+
+
+  - name: int__keypay__employee_pay_category
+    description: intermediate table for employee_pay_category
+    schema: int__keypay
+    alias: employee_pay_category
+
+
+  - name: int__keypay__employee_super_fund
+    description: intermediate table for employee_super_fund
+    schema: int__keypay
+    alias: employee_super_fund
+
+
+  - name: int__keypay__employment_agreement
+    description: intermediate table for employment_agreement
+    schema: int__keypay
+    alias: employment_agreement
+
+
+  - name: int__keypay__employment_type
+    description: intermediate table for employment_type
+    schema: int__keypay
+    alias: employment_type
+
+
+  - name: int__keypay__expense
+    description: intermediate table for expense
+    schema: int__keypay
+    alias: expense
+
+
+  - name: int__keypay__expense_type
+    description: intermediate table for expense_type
+    schema: int__keypay
+    alias: expense_type
+
+
+  - name: int__keypay__fair_work_award
+    description: intermediate table for fair_work_award
+    schema: int__keypay
+    alias: fair_work_award
+
+
+  - name: int__keypay__fair_work_award_selection
+    description: intermediate table for fair_work_award_selection
+    schema: int__keypay
+    alias: fair_work_award_selection
+
+
+  - name: int__keypay__industry
+    description: intermediate table for industry
+    schema: int__keypay
+    alias: industry
+
+
+  - name: int__keypay__invoice
+    description: intermediate table for invoice
+    schema: int__keypay
+    alias: invoice
+
+
+  - name: int__keypay__invoice_line_item
+    description: intermediate table for invoice_line_item
+    schema: int__keypay
+    alias: invoice_line_item
+
+
+  - name: int__keypay__journal_default_account
+    description: intermediate table for journal_default_account
+    schema: int__keypay
+    alias: journal_default_account
+
+
+  - name: int__keypay__leave_accrual
+    description: intermediate table for leave_accrual
+    schema: int__keypay
+    alias: leave_accrual
+
+
+  - name: int__keypay__leave_allowance_template
+    description: intermediate table for leave_allowance_template
+    schema: int__keypay
+    alias: leave_allowance_template
+
+
+  - name: int__keypay__leave_category
+    description: intermediate table for leave_category
+    schema: int__keypay
+    alias: leave_category
+
+
+  - name: int__keypay__leave_request
+    description: intermediate table for leave_request
+    schema: int__keypay
+    alias: leave_request
+
+
+  - name: int__keypay__location
+    description: intermediate table for location
+    schema: int__keypay
+    alias: location
+
+
+  - name: int__keypay__location_restriction
+    description: intermediate table for location_restriction
+    schema: int__keypay
+    alias: location_restriction
+
+
+  - name: int__keypay__pay_category
+    description: intermediate table for pay_category
+    schema: int__keypay
+    alias: pay_category
+
+
+  - name: int__keypay__pay_cycle
+    description: intermediate table for pay_cycle
+    schema: int__keypay
+    alias: pay_cycle
+
+
+  - name: int__keypay__pay_cycle_frequency
+    description: intermediate table for pay_cycle_frequency
+    schema: int__keypay
+    alias: pay_cycle_frequency
+
+
+  - name: int__keypay__pay_day_filing
+    description: intermediate table for pay_day_filing
+    schema: int__keypay
+    alias: pay_day_filing
+
+
+  - name: int__keypay__pay_event
+    description: intermediate table for pay_event
+    schema: int__keypay
+    alias: pay_event
+
+
+  - name: int__keypay__pay_run_lodgement_data
+    description: intermediate table for pay_run_lodgement_data
+    schema: int__keypay
+    alias: pay_run_lodgement_data
+
+
+  - name: int__keypay__payrun
+    description: intermediate table for payrun
+    schema: int__keypay
+    alias: payrun
+
+
+  - name: int__keypay__payrun_default
+    description: intermediate table for payrun_default
+    schema: int__keypay
+    alias: payrun_default
+
+
+  - name: int__keypay__payrun_total
+    description: intermediate table for payrun_total
+    schema: int__keypay
+    alias: payrun_total
+
+  - name: int__keypay__payrun_total_history
+    description: intermediate table for payrun_total_history
+    schema: int__keypay
+    alias: payrun_total_history
+
+  - name: int__keypay__pension_scheme_contribution_plan
+    description: intermediate table for pension_scheme_contribution_plan
+    schema: int__keypay
+    alias: pension_scheme_contribution_plan
+
+
+  - name: int__keypay__rate_unit
+    description: intermediate table for rate_unit
+    schema: int__keypay
+    alias: rate_unit
+
+
+  - name: int__keypay__region
+    description: intermediate table for region
+    schema: int__keypay
+    alias: region
+
+
+  - name: int__keypay__resellers
+    description: intermediate table for resellers
+    schema: int__keypay
+    alias: resellers
+
+
+  - name: int__keypay__statutory_settings
+    description: intermediate table for statutory_settings
+    schema: int__keypay
+    alias: statutory_settings
+
+
+  - name: int__keypay__super_details
+    description: intermediate table for super_details
+    schema: int__keypay
+    alias: super_details
+
+
+  - name: int__keypay__super_details_default_fund
+    description: intermediate table for super_details_default_fund
+    schema: int__keypay
+    alias: super_details_default_fund
+
+
+  - name: int__keypay__super_fund_product
+    description: intermediate table for super_fund_product
+    schema: int__keypay
+    alias: super_fund_product
+
+
+  - name: int__keypay__super_payment
+    description: intermediate table for super_payment
+    schema: int__keypay
+    alias: super_payment
+
+
+  - name: int__keypay__superfund_ato
+    description: intermediate table for superfund_ato
+    schema: int__keypay
+    alias: superfund_ato
+
+
+  - name: int__keypay__tax_file_declaration
+    description: intermediate table for tax_file_declaration
+    schema: int__keypay
+    alias: tax_file_declaration
+
+
+  - name: int__keypay__timesheet_line
+    description: intermediate table for timesheet_line
+    schema: int__keypay
+    alias: timesheet_line
+
+
+  - name: int__keypay__user
+    description: intermediate table for user
+    schema: int__keypay
+    alias: user
+
+
+  - name: int__keypay__user_business
+    description: intermediate table for user_business
+    schema: int__keypay
+    alias: user_business
+
+
+  - name: int__keypay__user_employee
+    description: intermediate table for user_employee
+    schema: int__keypay
+    alias: user_employee
+
+
+  - name: int__keypay__user_employee_group
+    description: intermediate table for user_employee_group
+    schema: int__keypay
+    alias: user_employee_group
+
+
+  - name: int__keypay__user_report_access
+    description: intermediate table for user_report_access
+    schema: int__keypay
+    alias: user_report_access
+
+
+  - name: int__keypay__user_reseller
+    description: intermediate table for user_reseller
+    schema: int__keypay
+    alias: user_reseller
+
+
+  - name: int__keypay__user_whitelabel
+    description: intermediate table for user_whitelabel
+    schema: int__keypay
+    alias: user_whitelabel
+
+
+  - name: int__keypay__white_label
+    description: intermediate table for white_label
+    schema: int__keypay
+    alias: white_label
+
+
+  - name: int__keypay__bank_payment_file_details
+    description: intermediate table for bank_payment_file_details
+    schema: int__keypay
+    alias: bank_payment_file_details
+
+
+  - name: int__keypay__reseller_contact
+    description: intermediate table for reseller_contact
+    schema: int__keypay
+    alias: reseller_contact
+
+  - name: int__keypay__bank_account
+    description: intermediate table for bank_account
+    schema: int__keypay
+    alias: bank_account

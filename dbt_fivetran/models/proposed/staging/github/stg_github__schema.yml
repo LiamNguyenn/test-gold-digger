@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: stg_github__repository
+    description: This is the staging table for repository, sourced directly from github.repository table
+    meta:
+      upstream_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+        tests:
+          - not_null
+      - name: full_name
+        tests:
+          - not_null
+      - name: created_at
+        tests:
+          - not_null
+  - name: stg_github__team
+    description: This is the staging table for team, sourced directly from github.team table
+    meta:
+      upstream_owner: ""
+      data_owner: "gold-diggers"
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+        tests:
+          - not_null

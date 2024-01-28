@@ -1,0 +1,139 @@
+version: 2
+
+models:      
+    - name: tableau_monthly_ats_jobs_posted_industry
+      schema: tableau
+      alias: monthly_ats_jobs_posted_industry
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (industry || month_posted || country || is_test_job || is_remote_job)
+          tests:
+            - not_null
+            - unique
+
+    - name: tableau_monthly_onboardings_industry
+      schema: tableau
+      alias: monthly_onboardings_industry
+      config:
+        grants:
+          select: ['tableau']
+      columns:
+        - name: (industry || onboarded_month || country)
+          tests:
+            - not_null
+            - unique
+
+    - name: tableau_swag_avg_applicants
+      schema: tableau
+      alias: swag_avg_applicants
+      columns:
+        - name: surrogate_key
+          tests:            
+            - not_null
+            - unique
+        
+    - name: tableau_companydash_cx_metrics
+      schema: tableau
+      alias: companydash_cx_metrics
+      columns:
+        - name: (date || country)
+
+    - name: tableau_swag_avg_time_filled
+      schema: tableau
+      alias: swag_avg_time_filled
+      columns:
+        - name: surrogate_key
+          tests:            
+            - not_null
+            - unique
+
+    - name: tableau_swag_pass_probation
+      schema: tableau
+      alias: swag_pass_probation
+      columns:
+        - name: surrogate_key
+          tests:            
+            - not_null
+            - unique
+            
+    - name: tableau_companydash_product_metrics
+      schema: tableau
+      alias: companydash_product_metrics
+      columns:
+        - name: (date || country)
+          tests:            
+            - not_null
+            - unique
+
+    - name: tableau_swag_inactive_users
+      schema: tableau
+      alias: swag_inactive_users
+      columns:
+        - name: (user_email || month)
+          tests:            
+            - not_null
+            - unique
+        - name: user_email
+          meta:
+            sensitive: true
+            masking_rules:
+              full_mask:
+                mask_function: sha2-256
+    - name: tableau_companydash_revenue_metrics
+      schema: tableau
+      alias: companydash_revenue_metrics
+      columns:
+        - name: (date || country)
+          tests:            
+            - not_null
+            - unique
+
+    - name: tableau_salary_range
+      schema: tableau
+      columns:
+        - name: id
+          tests:            
+            - not_null
+            - unique
+
+    - name: tableau_companydash_eh_members_managers
+      schema: tableau
+      columns:
+        - name: member_uuid
+          tests:            
+            - not_null
+            - unique
+
+    - name: tableau_companydash_pnc_surv
+      schema: tableau
+      columns:
+        - name: (member_id || question || survey_name || score)
+          tests:            
+            - unique
+    
+    - name: tableau_companydash_registered_users
+      alias: companydash_registered_users
+      schema: tableau
+
+    - name: tableau_companydash_mmau_by_platform
+      alias: companydash_mmau_by_platform
+      schema: tableau
+
+    - name: tableau_organisations
+      alias: organisations
+      schema: tableau
+
+    - name: tableau_smartmatch_conversion_funnel_fct
+      alias: smartmatch_conversion_funnel_fct
+      schema: tableau
+    
+    - name: tableau_smartmatch_conversion_funnel_dim
+      alias: smartmatch_conversion_funnel_dim
+      schema: tableau
+
+    - name: app_store__app_version_review_daily
+      schema: tableau 
+
+

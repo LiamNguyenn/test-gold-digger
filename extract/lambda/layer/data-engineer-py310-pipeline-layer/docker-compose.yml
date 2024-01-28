@@ -1,0 +1,19 @@
+version: '2.1'
+services:
+######################################################
+# LAMBDA ENB
+######################################################
+
+  lambda_linux:
+    build: ./docker
+    platform: linux/amd64
+    tty: true
+    restart: always
+    container_name: lambda_linux
+    volumes:
+      - ./layer_setup:/opt/lambda_linux/layer_setup
+    healthcheck:
+      test: [ "CMD", "aws", "--version"]
+      timeout: 45s
+      interval: 10s
+      retries: 10

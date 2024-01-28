@@ -1,0 +1,146 @@
+version: 2
+sources:
+- name: marketo
+  tables:
+  - name: subscription
+    columns:
+    - name: email
+      data_type: character varying
+    - name: phone_number
+      data_type: character varying
+    - name: _emmit_at
+      data_type: timestamp without time zone
+    - name: email_subscribed
+      data_type: boolean
+    - name: sms_subscribed
+      data_type: boolean
+    - name: whatsapp_subscribed
+      data_type: boolean
+  - name: test
+    columns:
+    - name: id
+      data_type: integer
+  - name: lead_describe
+    columns:
+    - name: id
+      data_type: bigint
+    - name: display_name
+      data_type: character varying
+    - name: data_type
+      data_type: character varying
+    - name: length
+      data_type: integer
+    - name: restname
+      data_type: character varying
+    - name: restread_only
+      data_type: boolean
+    - name: soapname
+      data_type: character varying
+    - name: soapread_only
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: lead
+    columns:
+    - name: id
+      data_type: bigint
+    - name: geo_code_c
+      data_type: character varying
+    - name: unsubscribed
+      data_type: boolean
+    - name: updated_at
+      data_type: timestamp with time zone
+    - name: email
+      data_type: character varying
+    - name: created_at
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: referral_partner_agreement_signed_date_c
+      data_type: date
+    - name: email_domain_score
+      data_type: integer
+    - name: c_wcompany_size_score
+      data_type: integer
+    - name: c_wjob_titles_score
+      data_type: integer
+    - name: target_account_c
+      data_type: boolean
+    - name: c_wlead_source_score
+      data_type: integer
+    - name: job_titles_score
+      data_type: integer
+    - name: lead_source_score
+      data_type: integer
+    - name: industry_score
+      data_type: integer
+    - name: valid_billing_account_c
+      data_type: integer
+    - name: c_windustry_score
+      data_type: integer
+    - name: company_size_score
+      data_type: integer
+    - name: c_wemail_domain_score
+      data_type: integer
+    - name: current_activity_score_sao_c
+      data_type: integer
+    - name: current_activity_score_cw_c
+      data_type: integer
+    - name: marketo_created_datetime_c
+      data_type: timestamp with time zone
+    - name: c_wactivity_behaviour_score
+      data_type: integer
+    - name: temp_partner_contact_c
+      data_type: character varying
+    - name: small_business_lead_date_c
+      data_type: date
+    - name: navattic_last_viewed_flow_title
+      data_type: character varying
+    - name: navattic_last_viewed_project_id
+      data_type: character varying
+    - name: navattic_last_viewed_step_id
+      data_type: character varying
+    - name: navattic_last_viewed_flow_id
+      data_type: character varying
+    - name: navattic_last_viewed_project_title
+      data_type: character varying
+    - name: navattic_last_viewed_flow_step_number
+      data_type: bigint
+    - name: navattic_last_viewed_flow_step_title
+      data_type: character varying
+  - name: merged_lead
+    columns:
+    - name: into_lead
+      data_type: bigint
+    - name: merged_lead
+      data_type: bigint
+    - name: merge_date
+      data_type: timestamp with time zone
+    - name: _fivetran_synced
+      data_type: timestamp with time zone

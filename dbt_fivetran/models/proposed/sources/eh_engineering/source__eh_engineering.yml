@@ -1,0 +1,81 @@
+version: 2
+sources:
+- name: eh_engineering
+  tables: 
+  - name: service_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: nonapplicable
+      data_type: boolean
+    - name: squad
+      data_type: character varying
+    - name: service
+      data_type: character varying
+    - name: platform
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: squad_members
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: member_id
+      data_type: integer
+    - name: squad
+      data_type: character varying
+    - name: workstream
+      data_type: character varying
+    - name: termination_date
+      data_type: character varying
+    - name: last_name
+      data_type: character varying
+    - name: squad_added_date
+      data_type: character varying
+    - name: middle_name
+      data_type: character varying
+    - name: first_name
+      data_type: character varying
+    - name: start_date
+      data_type: character varying
+    - name: archived
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: github_historical_vulnerability_alerts
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: alert_github_repository
+      data_type: character varying
+    - name: squad
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_started
+      data_type: timestamp without time zone
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: start
+      data_type: timestamp without time zone
+    - name: done
+      data_type: timestamp without time zone
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: progress
+      data_type: timestamp without time zone
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+

@@ -1,0 +1,9 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+gem 'aws-sdk-athena'
+gem 'aws-sdk-lambda'
+gem 'aws-sdk-s3'
+gem 'aws-sdk-dynamodb'
+
+gem 'byebug'

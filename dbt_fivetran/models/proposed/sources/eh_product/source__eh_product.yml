@@ -1,0 +1,158 @@
+version: 2
+sources:
+- name: eh_product
+  tables:
+  - name: product_families
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: product_manager
+      data_type: character varying
+    - name: workstream
+      data_type: character varying
+    - name: product_family
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: fivetran_audit
+    columns:
+    - name: id
+      data_type: character varying
+    - name: message
+      data_type: character varying
+    - name: update_id
+      data_type: character varying
+    - name: schema
+      data_type: character varying
+    - name: table
+      data_type: character varying
+    - name: rows_updated_or_inserted
+      data_type: bigint
+    - name: status
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: update_started
+      data_type: timestamp with time zone
+    - name: start
+      data_type: timestamp with time zone
+    - name: progress
+      data_type: timestamp with time zone
+    - name: done
+      data_type: timestamp with time zone
+  - name: workstream_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: product_owner
+      data_type: character varying
+    - name: product_escalation
+      data_type: character varying
+    - name: product_family
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: product_line
+      data_type: character varying
+    - name: workstream
+      data_type: character varying
+  - name: module_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: workstream
+      data_type: character varying
+    - name: product_family
+      data_type: character varying
+    - name: event_module
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: squad_board_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: board_name
+      data_type: character varying
+    - name: comments
+      data_type: character varying
+    - name: include_in_product_reporting
+      data_type: character varying
+    - name: kev_sian_reviewed
+      data_type: character varying
+    - name: board_key
+      data_type: character varying
+    - name: squad
+      data_type: character varying
+    - name: archived
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: workstream
+      data_type: character varying
+    - name: squad_owner
+      data_type: character varying
+  - name: opp_lost_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: lost_sub_reason
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp without time zone
+    - name: workstream
+      data_type: character varying
+  - name: product_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: product_escalation
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: sub_sub_category
+      data_type: character varying
+    - name: product_family
+      data_type: character varying
+    - name: workstream
+      data_type: character varying
+    - name: product_owner
+      data_type: character varying
+    - name: sub_category
+      data_type: character varying
+    - name: sidebar
+      data_type: character varying
+    - name: payroll_integration
+      data_type: character varying
+    - name: hr_page
+      data_type: character varying
+  - name: cost
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: product_family
+      data_type: character varying
+    - name: cost_aud
+      data_type: double precision
+    - name: date
+      data_type: character varying
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+  - name: feature_ownership
+    columns:
+    - name: _row
+      data_type: bigint
+    - name: feature
+      data_type: character varying
+    - name: inapplicable
+      data_type: boolean
+    - name: _fivetran_synced
+      data_type: timestamp with time zone
+    - name: workstream
+      data_type: character varying
+    - name: product
+      data_type: character varying
+    - name: status
+      data_type: character varying
+    - name: event_module
+      data_type: character varying

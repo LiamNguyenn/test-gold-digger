@@ -1,0 +1,19 @@
+version: 2
+
+models:
+
+    - name: github_pull_request_jira
+      description: Link github pr to jira card based on the jira issue key in the pr title. 
+      schema: github
+      alias: pull_request_jira
+      columns:
+        - name: github_issue_id          
+          tests:            
+            - not_null
+        - name: jira_issue_id      
+          tests:            
+            - not_null
+        - name: github_issue_title
+        - name: jira_issue_id
+        - name: jira_issue_key
+        - name: _fivetran_transformed
