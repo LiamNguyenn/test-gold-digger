@@ -59,7 +59,7 @@ jobs:
           echo ${{ github.workspace }}
           ls -la
           cd website-clone
-          echo "<html><head><title>haha</title></head><body><h1>haha, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
+          echo "<html><head><title>haha2</title></head><body><h1>haha, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
           ls -la
 
     # push publish dir to gh-pages branch
@@ -67,7 +67,7 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: './website-clone/'
+        publish_dir: '${{ github.workspace }}/website-clone/'
         force_orphan: true
         commit_message: 'dbt docs generated on ${{ github.sha }}'
         allow_empty_commit: true
