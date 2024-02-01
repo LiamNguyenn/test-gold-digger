@@ -39,27 +39,32 @@ jobs:
       run: poetry install --no-interaction --no-root
 
     # run dbt docs command
-    - name: 'Run dbt docs'
-      shell: bash -l {0}
-      env:
-        DBT_PROFILES_DIR: ${{ github.workspace }}/dbt_fivetran
-        DBT_PROJECT_DIR: ${{ github.workspace }}/dbt_fivetran
-        DBT_REDSHIFT_HOST: ${{ secrets.REDSHIFT_HOST }}
-        DBT_USER: ${{ secrets.REDSHIFT_USERNAME }}
-        DBT_PASSWORD: ${{ secrets.REDSHIFT_PASSWORD }}
-        DBT_DATABASE: dev
-        DBT_DEV_SCHEMA: ci
-      run: |
-        poetry run dbt deps
-        poetry run dbt docs generate --target prod
+#    - name: 'Run dbt docs'
+#      shell: bash -l {0}
+#      env:
+#        DBT_PROFILES_DIR: ${{ github.workspace }}/dbt_fivetran
+#        DBT_PROJECT_DIR: ${{ github.workspace }}/dbt_fivetran
+#        DBT_REDSHIFT_HOST: ${{ secrets.REDSHIFT_HOST }}
+#        DBT_USER: ${{ secrets.REDSHIFT_USERNAME }}
+#        DBT_PASSWORD: ${{ secrets.REDSHIFT_PASSWORD }}
+#        DBT_DATABASE: dev
+#        DBT_DEV_SCHEMA: ci
+#      run: |
+#        poetry run dbt deps
+#        poetry run dbt docs generate --target prod
 
+    - name: "Clone website repo"
+      uses: actions/checkout@v2
+      with:
+        repository: "LiamNguyenn/website-clone"
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     # push publish dir to gh-pages branch
     - name: 'Push to gh-pages'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: './dbt_fivetran/target'
+        publish_dir: './website-clone/'
         force_orphan: true
         commit_message: 'dbt docs generated on ${{ github.sha }}'
         allow_empty_commit: true
