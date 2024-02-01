@@ -11,7 +11,7 @@ jobs:
   pr-merged:
     runs-on: ubuntu-latest
     steps:
-    - name: 'Checkout to gh-pages'
+    - name: 'Checkout get latest code'
       uses: actions/checkout@v3
 
     - name: 'Setup python'
@@ -53,11 +53,11 @@ jobs:
 #        poetry run dbt deps
 #        poetry run dbt docs generate --target prod
 
-    - name: "Clone website repo"
-      uses: actions/checkout@v2
-      with:
-        repository: "LiamNguyenn/website-clone"
-        token: ${{ secrets.GITHUB_TOKEN }}
+    - name: 'Create html file'
+      run: |
+          mkdir website-clone
+          cd website-clone
+          echo "<html><head><title>My Simple HTML Page</title></head><body><h1>Hello, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
 
     # push publish dir to gh-pages branch
     - name: 'Push to gh-pages'
