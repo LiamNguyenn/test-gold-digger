@@ -56,6 +56,7 @@ jobs:
     - name: 'Create html file'
       run: |
           mkdir website-clone
+          echo ${{ github.workspace }}
           ls -la
           cd website-clone
           echo "<html><head><title>haha</title></head><body><h1>haha, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
