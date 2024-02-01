@@ -61,7 +61,7 @@ jobs:
           mkdir website-clone
           ls -la
           cd website-clone
-          echo "<html><head><title>My Simple HTML Page</title></head><body><h1>Hello, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
+          echo "<html><head><title>TEST CICD NUMBER 2</title></head><body><h1>Hello, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
           ls -la
 
     # push publish dir to gh-pages branch
