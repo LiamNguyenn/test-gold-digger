@@ -54,19 +54,21 @@ jobs:
 #        poetry run dbt docs generate --target prod
     - name: "test cli"
       run: |
-        echo "${{ secrets.GITHUB_TOKEN }}"
+        echo "${{ secrets.PAT }}"
 
     - name: 'Create html file'
       run: |
           mkdir website-clone
+          ls -la
           cd website-clone
           echo "<html><head><title>My Simple HTML Page</title></head><body><h1>Hello, World!</h1><p>This is a simple HTML file generated using the command line.</p></body></html>" > index.html
+          ls -la
 
     # push publish dir to gh-pages branch
     - name: 'Push to gh-pages'
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.PAT }}
         publish_dir: './website-clone/'
         force_orphan: true
         commit_message: 'dbt docs generated on ${{ github.sha }}'
