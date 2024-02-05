@@ -1,0 +1,11 @@
+
+    
+    
+
+
+
+select external_id
+from "dev"."exports"."exports_braze_user_event_payloads"
+where external_id is null
+
+
